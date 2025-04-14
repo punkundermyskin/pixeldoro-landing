@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pixeldoro - Productivity app for weird lil brains</title>
+    <link rel="icon" href="images/logo.png" type="image/png">
     <style>
         /* Reset and Base Styles */
         * {
@@ -69,13 +70,14 @@
         }
         
         .sub-heading {
-            font-size: 28px;
+            font-size: 40.8px; /* 15% smaller than main-heading (48px) */
             font-weight: normal;
             opacity: 0.9;
             text-align: left;
+            line-height: 1.2;
         }
         
-        /* App Preview */
+        /* App Preview - Rolled back */
         .app-preview {
             display: flex;
             gap: 20px;
@@ -94,24 +96,28 @@
             width: 100%;
             height: auto;
             display: block;
+            border: 8px solid rgba(255, 255, 255, 0.2);
         }
         
         /* Download Buttons */
         .download-section {
-            padding-left: 20px;
             margin: 40px 0;
+            text-align: center;
+            padding-left: 20px;
         }
         
         .download-buttons {
             display: flex;
+            justify-content: center;
             gap: 15px;
-            flex-wrap: wrap;
+            flex-wrap: nowrap;
         }
         
         .download-button {
             display: block;
-            width: 200px;
-            border-radius: 10px;
+            width: 30%;
+            min-width: 150px;
+            max-width: 200px;
             background-color: #111;
             transition: all 0.3s ease;
             overflow: hidden;
@@ -142,9 +148,9 @@
             box-shadow: 0 5px 15px rgba(255, 255, 255, 0.1);
         }
         
-        /* Features Section */
+        /* Features Section - Rolled back */
         .features-heading {
-            font-size: 24px;
+            font-size: 26.4px; /* 10% bigger than original 24px */
             font-weight: bold;
             margin: 60px 0 30px 20px;
         }
@@ -210,7 +216,7 @@
             }
             
             .sub-heading {
-                font-size: 22px;
+                font-size: 30.6px; /* 15% smaller than responsive main-heading */
             }
             
             .app-preview {
@@ -228,13 +234,12 @@
             }
             
             .download-buttons {
-                flex-direction: column;
+                justify-content: center;
             }
             
-            .download-button, .beta-button {
-                width: 80%;
-                max-width: 220px;
-                margin-bottom: 15px;
+            .download-button {
+                width: 30%;
+                min-width: 100px; /* Critical minimum width */
             }
         }
     </style>
@@ -246,9 +251,9 @@
             <span>pixeldoro</span>
         </div>
         <div class="social-icons">
-            <a href="https://google.com"><img src="images/twitter.png" alt="Twitter"></a>
-            <a href="#"><img src="images/instagram.png" alt="Instagram"></a>
-            <a href="#"><img src="images/email.png" alt="Email"></a>
+            <a href="https://play.pixeldoro.io/twitter"><img src="images/twitter.png" alt="Twitter"></a>
+            <a href="https://play.pixeldoro.io/ig"><img src="images/instagram.png" alt="Instagram"></a>
+            <a href="mailto:hello@pixeldoro.io"><img src="images/email.png" alt="Email"></a>
         </div>
     </header>
     
@@ -268,19 +273,19 @@
     
     <section class="download-section">
         <div class="download-buttons">
-            <a href="#" class="download-button">
+            <a href="https://play.pixeldoro.io/ios" class="download-button">
                 <img src="images/app_store_badge.png" alt="Download on the App Store">
             </a>
-            <a href="#" class="download-button">
+            <a href="https://play.pixeldoro.io/android" class="download-button">
                 <img src="images/google_play_badge.png" alt="Get it on Google Play">
             </a>
-            <a href="#" class="download-button">
+            <a href="https://play.pixeldoro.io/web-beta" class="download-button">
               <img src="images/play_web_badge.png" alt="Play in web">
             </a>
         </div>
     </section>
     
-    <h2 class="features-heading">what you can do in pixeldoro</h2>
+    <h2 class="features-heading">what you can do in pixeldoro:</h2>
     
     <section class="features">
         <div class="feature">
