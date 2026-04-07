@@ -100,16 +100,18 @@
         
         .buttons {
             display: flex;
-            flex-direction: column;
+            justify-content: center;
             gap: 15px;
+            flex-wrap: wrap;
             width: 100%;
-            max-width: 200px;
             margin: 0 auto 40px;
         }
         
         .app-button {
             display: block;
-            width: 100%;
+            width: 45%;
+            min-width: 130px;
+            max-width: 180px;
             transition: transform 0.2s ease, opacity 0.2s ease;
         }
         
