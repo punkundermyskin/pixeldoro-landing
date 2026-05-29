@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pixeldoro on Desktop</title>
+    <meta name="robots" content="noindex, follow">
+    <link rel="icon" sizes="32x32" href="images/favicon.ico">
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            height: 100%;
+            overflow: hidden;
+        }
+
+        body {
+            font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+            background-color: #000000;
+            color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 30px 20px;
+            text-align: center;
+        }
+
+        .headline {
+            font-size: 32px;
+            font-weight: bold;
+            line-height: 1.3;
+            margin-bottom: 30px;
+            max-width: 600px;
+        }
+
+        .headline-icon {
+            width: 36px;
+            height: 36px;
+            vertical-align: -6px;
+            margin-left: 8px;
+            image-rendering: pixelated;
+            image-rendering: -moz-crisp-edges;
+            image-rendering: crisp-edges;
+        }
+
+        .screenshot {
+            width: 100%;
+            max-width: 680px;
+            max-height: 45vh;
+            border-radius: 12px;
+            overflow: hidden;
+            margin-bottom: 30px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .screenshot img {
+            max-width: 100%;
+            max-height: 100%;
+            width: auto;
+            height: auto;
+            display: block;
+        }
+
+        .reasons {
+            display: flex;
+            gap: 40px;
+            margin-bottom: 36px;
+            max-width: 700px;
+        }
+
+        .reason {
+            flex: 1;
+            text-align: center;
+            padding: 12px 14px;
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .reason-title {
+            font-size: 15px;
+            font-weight: bold;
+            margin-bottom: 4px;
+        }
+
+        .reason-desc {
+            font-size: 13px;
+            opacity: 0.7;
+            line-height: 1.4;
+        }
+
+        .reason.highlight {
+            background: rgba(255, 200, 71, 0.08);
+            border-color: rgba(255, 200, 71, 0.35);
+            box-shadow: 0 0 10px rgba(255, 200, 71, 0.15);
+        }
+
+        .reason.highlight .reason-title {
+            color: #ffc847;
+        }
+
+        .reason.highlight .reason-desc {
+            opacity: 0.85;
+        }
+
+        .downloads {
+            display: flex;
+            gap: 16px;
+            align-items: center;
+        }
+
+        .dl-btn {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 24px;
+            background-color: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 10px;
+            color: #fff;
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 600;
+            transition: background-color 0.2s ease, border-color 0.2s ease;
+        }
+
+        .dl-btn:hover {
+            background-color: rgba(255, 255, 255, 0.14);
+            border-color: rgba(255, 255, 255, 0.25);
+        }
+
+        .dl-icon {
+            width: 20px;
+            height: 20px;
+            flex-shrink: 0;
+            filter: brightness(0) invert(1);
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 24px 16px;
+                overflow: auto;
+                justify-content: flex-start;
+                padding-top: 40px;
+            }
+
+            html, body {
+                height: auto;
+                overflow: auto;
+            }
+
+            .headline {
+                font-size: 24px;
+                margin-bottom: 24px;
+            }
+
+            .screenshot {
+                max-width: 100%;
+                max-height: none;
+                margin-bottom: 24px;
+            }
+
+            .reasons {
+                flex-direction: column;
+                gap: 16px;
+                margin-bottom: 28px;
+            }
+
+            .downloads {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 10px;
+                width: 100%;
+            }
+
+            .dl-btn {
+                padding: 10px 16px;
+                font-size: 13px;
+                gap: 6px;
+            }
+
+            .dl-icon {
+                width: 16px;
+                height: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1 class="headline">study on your laptop too now<img src="images/logo.png" alt="" class="headline-icon"></h1>
+
+    <div class="screenshot">
+        <img src="images/laptop.png" alt="Pixeldoro on desktop">
+    </div>
+
+    <div class="reasons">
+        <div class="reason">
+            <div class="reason-title">bigger screen, deeper focus</div>
+            <div class="reason-desc">fullscreen pixel world, no phone distractions</div>
+        </div>
+        <div class="reason">
+            <div class="reason-title">everything syncs</div>
+            <div class="reason-desc">coins, progress, character, all there</div>
+        </div>
+        <div class="reason highlight">
+            <div class="reason-title">100 coins on your first pomo</div>
+            <div class="reason-desc">just for trying it</div>
+        </div>
+    </div>
+
+    <div class="downloads">
+        <a href="https://play.pixeldoro.io/dl-mac" class="dl-btn">
+            <img src="images/apple.svg" alt="macOS" class="dl-icon">
+            macOS
+        </a>
+        <a href="https://play.pixeldoro.io/dl-win" class="dl-btn">
+            <img src="images/windows.svg" alt="Windows" class="dl-icon">
+            Windows
+        </a>
+        <a href="https://play.pixeldoro.io/dl-linux" class="dl-btn">
+            <img src="images/linux.svg" alt="Linux" class="dl-icon">
+            Linux
+        </a>
+        <a href="https://play.pixeldoro.io/dl-web" class="dl-btn">
+            <img src="images/web.svg" alt="Browser" class="dl-icon">
+            Browser
+        </a>
+    </div>
+</body>
+</html>

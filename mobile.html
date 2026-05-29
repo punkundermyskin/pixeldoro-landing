@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pixeldoro on Mobile</title>
+    <meta name="robots" content="noindex, follow">
+    <link rel="icon" sizes="32x32" href="images/favicon.ico">
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            height: 100%;
+            overflow: hidden;
+        }
+
+        body {
+            font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+            background-color: #000000;
+            color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 30px 20px;
+            text-align: center;
+        }
+
+        .headline {
+            font-size: 32px;
+            font-weight: bold;
+            line-height: 1.3;
+            margin-bottom: 30px;
+            max-width: 600px;
+        }
+
+        .headline-icon {
+            width: 36px;
+            height: 36px;
+            vertical-align: -6px;
+            margin-left: 8px;
+            image-rendering: pixelated;
+            image-rendering: -moz-crisp-edges;
+            image-rendering: crisp-edges;
+        }
+
+        .screenshot {
+            width: 100%;
+            max-width: 680px;
+            border-radius: 12px;
+            overflow: hidden;
+            margin-bottom: 30px;
+        }
+
+        .screenshot img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .reasons {
+            display: flex;
+            gap: 40px;
+            margin-bottom: 36px;
+            max-width: 700px;
+        }
+
+        .reason {
+            flex: 1;
+            text-align: center;
+            padding: 12px 14px;
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .reason-title {
+            font-size: 15px;
+            font-weight: bold;
+            margin-bottom: 4px;
+        }
+
+        .reason-desc {
+            font-size: 13px;
+            opacity: 0.7;
+            line-height: 1.4;
+        }
+
+        .reason.highlight {
+            background: rgba(255, 200, 71, 0.08);
+            border-color: rgba(255, 200, 71, 0.35);
+            box-shadow: 0 0 10px rgba(255, 200, 71, 0.15);
+        }
+
+        .reason.highlight .reason-title {
+            color: #ffc847;
+        }
+
+        .reason.highlight .reason-desc {
+            opacity: 0.85;
+        }
+
+        .downloads {
+            display: flex;
+            gap: 16px;
+            align-items: center;
+        }
+
+        .download-badge {
+            height: 52px;
+            transition: all 0.25s ease;
+        }
+
+        .download-badge:hover {
+            transform: translateY(-2px);
+            filter: brightness(1.15);
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 24px 16px;
+                overflow: auto;
+                justify-content: flex-start;
+                padding-top: 40px;
+            }
+
+            html, body {
+                height: auto;
+                overflow: auto;
+            }
+
+            .headline {
+                font-size: 24px;
+                margin-bottom: 24px;
+            }
+
+            .screenshot {
+                max-width: 100%;
+                margin-bottom: 24px;
+            }
+
+            .reasons {
+                flex-direction: column;
+                gap: 16px;
+                margin-bottom: 28px;
+            }
+
+            .downloads {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 12px;
+            }
+
+            .download-badge {
+                height: 44px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1 class="headline">study on your phone too now<img src="images/logo.png" alt="" class="headline-icon"></h1>
+
+    <div class="screenshot">
+        <img src="images/mobile.png" alt="Pixeldoro on mobile">
+    </div>
+
+    <div class="reasons">
+        <div class="reason">
+            <div class="reason-title">study anywhere</div>
+            <div class="reason-desc">bus, cafe, library, bed</div>
+        </div>
+        <div class="reason">
+            <div class="reason-title">everything syncs</div>
+            <div class="reason-desc">same account, same coins, same world</div>
+        </div>
+        <div class="reason highlight">
+            <div class="reason-title">100 coins on your first pomo</div>
+            <div class="reason-desc">just for trying it</div>
+        </div>
+    </div>
+
+    <div class="downloads">
+        <a href="https://play.pixeldoro.io/dl-ios">
+            <img src="images/app_store_badge.png" alt="Download on the App Store" class="download-badge">
+        </a>
+        <a href="https://play.pixeldoro.io/dl-android">
+            <img src="images/google_play_badge.png" alt="Get it on Google Play" class="download-badge">
+        </a>
+    </div>
+</body>
+</html>
