@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>a note from the dev — pixeldoro</title>
+    <meta name="robots" content="noindex, follow">
+    <link rel="icon" sizes="32x32" href="images/favicon.ico">
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            background-color: #000000;
+            color: #ffffff;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            padding: 80px 24px;
+        }
+
+        .note {
+            max-width: 480px;
+            width: 100%;
+        }
+
+        .note p {
+            font-size: 16px;
+            line-height: 1.7;
+            margin-bottom: 24px;
+            opacity: 0.9;
+        }
+
+        .note .sig {
+            margin-top: 40px;
+            margin-bottom: 0;
+            opacity: 0.6;
+        }
+
+        .sorry-gif {
+            display: block;
+            width: 240px;
+            max-width: 100%;
+            margin: 0 0 24px;
+            transform: rotate(-1.5deg);
+        }
+
+        .actions {
+            margin: 36px 0;
+        }
+
+        .actions a {
+            display: block;
+            color: #ffffff;
+            font-size: 16px;
+            text-decoration: underline;
+            text-underline-offset: 4px;
+            margin-bottom: 16px;
+            width: fit-content;
+        }
+
+        .actions a:hover {
+            background: #ffffff;
+            color: #000000;
+            text-decoration: none;
+        }
+
+        @media (max-width: 480px) {
+            body {
+                padding: 48px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="note">
+        <p>yo 👋</p>
+
+        <p>it's punk — the person building pixeldoro.</p>
+
+        <p>so. i ran out of gift cards lol. my bad.</p>
+
+        <img src="images/sorry.gif" alt="" class="sorry-gif">
+
+        <p>but i got something better — <b>lifetime premium</b> in pixeldoro. forever. all yours if you hop on a quick call with me, or just email me your honest thoughts. either works.</p>
+
+        <p>your feedback literally decides what i build next. i read everything.</p>
+
+        <div class="actions">
+            <a href="https://play.pixeldoro.io/chat-about-pixeldoro">→ book a call</a>
+            <a href="mailto:punk@pixeldoro.io?subject=pixeldoro%20feedback">→ send feedback</a>
+        </div>
+
+        <p>thank you 🙏</p>
+
+        <p class="sig">— punk</p>
+    </div>
+</body>
+</html>
