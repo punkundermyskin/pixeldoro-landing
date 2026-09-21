@@ -169,6 +169,26 @@
             box-shadow: 0 5px 15px rgba(255, 255, 255, 0.1);
         }
         
+        /* Platform note under a download badge */
+        .download-button.has-note {
+            position: relative;
+            overflow: visible;
+        }
+        
+        .platform-note {
+            position: absolute;
+            top: calc(100% + 5px);
+            left: 0;
+            right: 0;
+            text-align: center;
+            font-size: 13px;
+            line-height: 1;
+            color: #fff;
+            white-space: nowrap;
+            opacity: 0.8;
+            pointer-events: none;
+        }
+        
         /* Features Section - Rolled back */
         .features-heading {
             font-size: 26.4px; /* 10% bigger than original 24px */
@@ -279,6 +299,7 @@
             
             .download-buttons {
                 justify-content: center;
+                row-gap: 30px; /* room for the platform note under the first row */
             }
             
             .download-button {
@@ -317,14 +338,16 @@
     
     <section class="download-section">
         <div class="download-buttons">
-            <a href="https://play.pixeldoro.io/ios" class="download-button">
+            <a href="https://play.pixeldoro.io/ios" class="download-button has-note">
                 <img src="images/app_store_badge.png" alt="Download on the App Store">
+                <span class="platform-note">macos + ios</span>
             </a>
             <a href="https://play.pixeldoro.io/android" class="download-button">
                 <img src="images/google_play_badge.png" alt="Get it on Google Play">
             </a>
-            <a href="https://play.pixeldoro.io/itch" class="download-button">
+            <a href="https://play.pixeldoro.io/itch" class="download-button has-note">
               <img src="images/itch.png" alt="Available on itch.io for Windows and Linux">
+              <span class="platform-note">windows + linux</span>
             </a>
             <a href="https://play.pixeldoro.io/web-beta" class="download-button">
               <img src="images/play_web_badge.png" alt="Play in web">
