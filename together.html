@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>your friend invited you to pixeldoro</title>
+    <meta name="description" content="someone wants you to lock in with them. same pixel world, same timer, real-time focus with real ppl.">
+    <meta name="robots" content="noindex, follow">
+    <link rel="icon" sizes="32x32" href="images/favicon.ico">
+    <link rel="shortcut icon" href="images/favicon.ico">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://pixeldoro.io/together.html">
+    <meta property="og:title" content="your friend invited you to pixeldoro">
+    <meta property="og:description" content="same pixel world. same timer. lofi. come lock in with them.">
+    <meta property="og:image" content="https://pixeldoro.io/images/social-preview.png">
+    <meta property="og:site_name" content="Pixeldoro">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://pixeldoro.io/together.html">
+    <meta name="twitter:title" content="your friend invited you to pixeldoro">
+    <meta name="twitter:description" content="same pixel world. same timer. lofi. come lock in with them.">
+    <meta name="twitter:image" content="https://pixeldoro.io/images/social-preview.png">
+    <meta name="twitter:site" content="@pixeldoro">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            min-height: 100%;
+        }
+
+        body {
+            font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+            background-color: #000000;
+            color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        /* invite pill */
+        .invite-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 6px 14px;
+            border-radius: 999px;
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: 0.02em;
+            color: #ffc847;
+            background: rgba(255, 200, 71, 0.08);
+            border: 1px solid rgba(255, 200, 71, 0.35);
+            box-shadow: 0 0 14px rgba(255, 200, 71, 0.15);
+            margin-bottom: 18px;
+        }
+
+        .invite-pill .dot {
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background: #ffc847;
+            box-shadow: 0 0 6px #ffc847;
+            animation: blink 1.6s ease-in-out infinite;
+        }
+
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.35; }
+        }
+
+        .headline {
+            font-size: 34px;
+            font-weight: bold;
+            line-height: 1.25;
+            margin-bottom: 12px;
+            max-width: 700px;
+        }
+
+        .headline .nowrap {
+            white-space: nowrap;
+        }
+
+        .headline .inviter {
+            color: #ffc847;
+        }
+
+        .headline-icon {
+            width: 36px;
+            height: 36px;
+            vertical-align: -6px;
+            margin-left: 8px;
+            image-rendering: pixelated;
+            image-rendering: -moz-crisp-edges;
+            image-rendering: crisp-edges;
+        }
+
+        .subline {
+            font-size: 17px;
+            opacity: 0.7;
+            line-height: 1.5;
+            margin-bottom: 28px;
+            max-width: 520px;
+        }
+
+        .screenshot {
+            width: 100%;
+            max-width: 680px;
+            border-radius: 12px;
+            overflow: hidden;
+            margin-bottom: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .screenshot img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .reasons {
+            display: flex;
+            gap: 24px;
+            margin-bottom: 36px;
+            max-width: 720px;
+            width: 100%;
+        }
+
+        .reason {
+            flex: 1;
+            text-align: center;
+            padding: 14px 14px;
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .reason-title {
+            font-size: 15px;
+            font-weight: bold;
+            margin-bottom: 4px;
+        }
+
+        .reason-desc {
+            font-size: 13px;
+            opacity: 0.7;
+            line-height: 1.4;
+        }
+
+        .reason.highlight {
+            background: rgba(255, 200, 71, 0.08);
+            border-color: rgba(255, 200, 71, 0.35);
+            box-shadow: 0 0 10px rgba(255, 200, 71, 0.15);
+        }
+
+        .reason.highlight .reason-title {
+            color: #ffc847;
+        }
+
+        .reason.highlight .reason-desc {
+            opacity: 0.85;
+        }
+
+        .cta-label {
+            font-size: 14px;
+            opacity: 0.6;
+            margin-bottom: 14px;
+        }
+
+        .downloads {
+            display: flex;
+            gap: 14px;
+            align-items: flex-start;
+            justify-content: center;
+            flex-wrap: wrap;
+            row-gap: 30px; /* room for platform notes */
+        }
+
+        .download-link {
+            position: relative;
+            display: block;
+        }
+
+        .download-badge {
+            height: 52px;
+            display: block;
+            transition: all 0.25s ease;
+        }
+
+        .download-link:hover .download-badge {
+            transform: translateY(-2px);
+            filter: brightness(1.15);
+        }
+
+        .platform-note {
+            position: absolute;
+            top: calc(100% + 5px);
+            left: 0;
+            right: 0;
+            text-align: center;
+            font-size: 12px;
+            line-height: 1;
+            color: #fff;
+            white-space: nowrap;
+            opacity: 0.7;
+            pointer-events: none;
+        }
+
+        .what-is-this {
+            margin-top: 44px;
+            font-size: 13px;
+            opacity: 0.45;
+        }
+
+        .what-is-this a {
+            color: #fff;
+            text-decoration: underline;
+            text-underline-offset: 3px;
+        }
+
+        .what-is-this a:hover {
+            opacity: 1;
+        }
+
+        /* entrance */
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(14px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        body > * {
+            animation: fadeInUp 0.5s ease-out forwards;
+            opacity: 0;
+        }
+
+        .invite-pill { animation-delay: 0.05s; }
+        .headline { animation-delay: 0.15s; }
+        .subline { animation-delay: 0.25s; }
+        .screenshot { animation-delay: 0.35s; }
+        .reasons { animation-delay: 0.45s; }
+        .cta-label { animation-delay: 0.55s; }
+        .downloads { animation-delay: 0.6s; }
+        .what-is-this { animation-delay: 0.7s; }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 40px 16px 32px;
+                justify-content: flex-start;
+            }
+
+            .headline {
+                font-size: 26px;
+                margin-bottom: 10px;
+            }
+
+            .headline-icon {
+                width: 30px;
+                height: 30px;
+                vertical-align: -5px;
+            }
+
+            .subline {
+                font-size: 15px;
+                margin-bottom: 22px;
+            }
+
+            .screenshot {
+                max-width: 100%;
+                margin-bottom: 24px;
+            }
+
+            .reasons {
+                flex-direction: column;
+                gap: 12px;
+                margin-bottom: 28px;
+            }
+
+            .downloads {
+                gap: 10px;
+                row-gap: 28px;
+            }
+
+            .download-badge {
+                height: 44px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="invite-pill"><span class="dot"></span>you got an invite</div>
+
+    <h1 class="headline"><span class="inviter" id="inviter">your friend</span> wants you to lock in with <span class="nowrap">them<img src="images/logo.png" alt="" class="headline-icon"></span></h1>
+
+    <p class="subline">they're in there rn, grinding solo. go keep them company.</p>
+
+    <div class="screenshot">
+        <img src="images/screenshot-1.jpg" alt="Pixeldoro: study and work with real people in a pixel art world">
+    </div>
+
+    <div class="reasons">
+        <div class="reason">
+            <div class="reason-title">you'll actually see them</div>
+            <div class="reason-desc">their lil character, walking around, grinding. right there next to yours.</div>
+        </div>
+        <div class="reason">
+            <div class="reason-title">focus in sync</div>
+            <div class="reason-desc">start a pomodoro, lock in. no calls, no pressure. accountability, but cozy.</div>
+        </div>
+        <div class="reason highlight">
+            <div class="reason-title">100 coins on your first pomo</div>
+            <div class="reason-desc">just for showing up</div>
+        </div>
+    </div>
+
+    <div class="cta-label">grab it on whatever you're on 👇</div>
+
+    <div class="downloads">
+        <a href="https://play.pixeldoro.io/ios" class="download-link">
+            <img src="images/app_store_badge.png" alt="Download on the App Store" class="download-badge">
+            <span class="platform-note">macos + ios</span>
+        </a>
+        <a href="https://play.pixeldoro.io/android" class="download-link">
+            <img src="images/google_play_badge.png" alt="Get it on Google Play" class="download-badge">
+        </a>
+        <a href="https://play.pixeldoro.io/itch" class="download-link">
+            <img src="images/itch.png" alt="Available on itch.io for Windows and Linux" class="download-badge">
+            <span class="platform-note">windows + linux</span>
+        </a>
+        <a href="https://play.pixeldoro.io/web-beta" class="download-link">
+            <img src="images/play_web_badge.png" alt="Play in web" class="download-badge">
+        </a>
+    </div>
+
+    <div class="what-is-this">wait, what is this? <a href="index.html">pixeldoro, explained →</a></div>
+
+    <script>
+        // optional personalization: /together?from=zeynep  ->  "zeynep wants you to lock in with them"
+        (function () {
+            try {
+                var name = new URLSearchParams(window.location.search).get('from') || '';
+                name = name.replace(/[\u0000-\u001f<>]/g, '').replace(/\s+/g, ' ').trim().slice(0, 24);
+                if (name) {
+                    document.getElementById('inviter').textContent = name;
+                    document.title = name + ' invited you to pixeldoro';
+                }
+            } catch (e) { /* no-op */ }
+        })();
+    </script>
+</body>
+</html>
