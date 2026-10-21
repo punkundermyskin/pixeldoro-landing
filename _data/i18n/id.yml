@@ -1,0 +1,323 @@
+# Teks halaman utama, bahasa Indonesia. Struktur key mengikuti en.yml; key yang tidak ada di sini akan memakai teks dari en.yml.
+# {n}, {mon}, {d}, {y} diisi oleh template.
+
+meta:
+  title: "Pixeldoro: Timer Pomodoro Cozy untuk Fokus Belajar Bareng"
+  description: "Timer pomodoro gratis di dunia pixel art yang cozy. Fokus belajar bareng orang sungguhan, radio lofi, koin, dan kamar sendiri. Cocok untuk ADHD."
+  share: "Pixeldoro adalah timer pomodoro gratis di dalam dunia pixel art yang cozy, tempat kamu belajar bareng orang sungguhan."
+
+nav:
+  online: "{n} orang online"
+  discord: "Discord privat"
+  language: "Bahasa"
+  suggest: "lihat halaman ini dalam bahasa indonesia"
+  suggest_close: "Tutup"
+
+hero:
+  slider: "Tangkapan layar Pixeldoro"
+  prev: "Tangkapan layar sebelumnya"
+  next: "Tangkapan layar berikutnya"
+  dot: "Tampilkan tangkapan layar {n}"
+  slides:
+    countryside:
+      caption: "semua orang yang kamu lihat di sini lagi belajar beneran, saat ini juga"
+      alt: "Pedesaan pixel art dengan gerbang kuil kayu dan patung rusa emas, tempat pengguna Pixeldoro lain duduk belajar, masing-masing menampilkan jumlah pomodoro, timer, dan tugasnya"
+    rooms:
+      caption: "pilih ruangan. semuanya selalu ramai"
+      alt: "Pemilih ruangan fokus dengan area publik dan rumah teman: Bar, Pusat kota, Pedesaan, Toko, dan HQ dengan jumlah pemain secara langsung, Rumah pribadi, dan dua ruangan yang segera hadir"
+    start-timer:
+      caption: "pilih apa yang mau kamu kerjakan, lalu mulai pomodoro"
+      alt: "Layar timer fokus: preset 25/5, 45/15, 15/3, stopwatch, dan kustom, timer 25:00, serta tag fokus berwarna seperti ujian matematika, bahasa inggris, dan fisika"
+    focus-night:
+      caption: "fokus bareng yang lain. hujan nyala, lofi nyala"
+      alt: "Pomodoro berjalan di malam hari saat hujan, di samping sekelompok pengguna yang belajar di bawah lampu yang hangat, dengan tantangan mingguan komunitas di layar"
+    coins:
+      caption: "tiap pomodoro dapat koin"
+      alt: "Layar hadiah setelah sesi fokus selesai: fokusmu dapat jarahan, 30 koin, klaim"
+    shop:
+      caption: "belanjakan di toko: perabot, ruangan, outfit, hewan peliharaan"
+      alt: "Katalog toko di dalam game dengan perabot, dapur, kamar mandi, elektronik, dekorasi, item tradisional dan seremonial, plus ruangan, karakter, latar, dan hewan peliharaan"
+    home-pets:
+      caption: "ajak teman main ke rumah. kucing-kucingnya tinggal di sini"
+      alt: "Rumah yang sudah dihias dengan tiga kucing peliharaan dan dua teman yang sedang berkunjung, masing-masing menampilkan jumlah pomodoro dan apa yang sedang mereka pelajari"
+    stats:
+      caption: "lihat jam fokusmu terus bertambah"
+      alt: "Layar profil dan statistik: 1.526 tomat selama 511 hari, 107 jam fokus dalam sebulan, total 1.691 jam, dan pembagian waktu per tag fokus"
+    friends:
+      caption: "lihat temanmu lagi fokus ke apa, dan di mana"
+      alt: "Daftar teman di hub sosial: avatar tiap teman, apa yang sedang mereka fokuskan, ruangan tempat mereka berada, dan jumlah pomodoronya, di samping kafe yang penuh orang belajar"
+  tagline: "dunia pixel yang cozy, tempat kamu belajar, fokus, dan nongkrong bareng orang sungguhan."
+  play: "main sekarang"
+  browser_note: "gratis · langsung di browser"
+  or_get: "atau download untuk"
+  ios_note: "gratis · iphone + ipad"
+  android_note: "gratis di google play"
+  also_on: "juga ada di"
+  laptop: "laptop"
+  app_store_alt: "Download di App Store"
+  google_play_alt: "Temukan di Google Play"
+  ratings:
+    google_play: "5,0 google play"
+    app_store: "4,9 app store"
+    mac_app_store: "4,9 mac app store"
+
+platforms:
+  mac: "mac"
+  iphone: "iphone"
+  android: "android"
+  windows: "windows"
+  linux: "linux"
+  discord: "discord"
+
+tools:
+  title: "fitur untuk fokus penuh"
+  timer:
+    title: "timer sesukamu"
+    text: "25/5, 45/15, 15/3, atau atur sendiri. stopwatch untuk deep work yang panjang. alarm beneran saat waktunya habis."
+  radio:
+    title: "radio lofi"
+    text: "enam stasiun lofi + chill bawaan. musiknya ikut ke mana pun kamu pergi. hujan dan kabut datang saat kamu fokus."
+  tags:
+    title: "tag fokus"
+    text: "tandai apa yang sedang kamu kerjakan: ujian, coding, membaca. orang-orang di sekitarmu bisa lihat kamu lagi ngerjain apa."
+  stats:
+    title: "statistik yang terus bertambah"
+    text: "lihat ke mana jam-jammu habis, dibagi per tag. tomat menumpuk minggu demi minggu."
+
+cozy:
+  title: "sekaligus game yang cozy"
+  tabs: "Fitur game"
+  friends:
+    tab: "teman"
+    title: "teman + main ke rumah"
+    text: "tambah teman dan lihat mereka lagi fokus ke apa dan di mana. mampir ke kamar mereka buat belajar bareng, atau ajak mereka ke tempatmu."
+    alt: "Daftar teman di hub sosial yang menampilkan apa yang sedang difokuskan tiap teman dan di ruangan mana mereka berada, di samping kafe yang penuh orang belajar"
+  pets:
+    tab: "hewan"
+    title: "hewan peliharaan"
+    text: "adopsi hewan peliharaan dari toko. mereka nongkrong bareng kamu dan menemanimu selama kerja."
+    alt: "Hewan peliharaan meringkuk di samping pemiliknya di jalanan pusat kota, dengan mangkuk makanan dan bola benang, sementara pemain lain belajar di dekatnya"
+  decorate:
+    tab: "dekorasi"
+    title: "kamar sesuai gayamu"
+    text: "tiap pomodoro dapat koin. belanjakan untuk perabot, dekorasi, dan ruangan baru, lalu tata semuanya di mode edit."
+    alt: "Rumah dalam mode edit, memindahkan perabot di ruangan dengan rak buku, kursi berlengan, tanaman, dan meja komputer"
+  story:
+    tab: "cerita"
+    title: "cerita untuk dimainkan"
+    text: "warga kota memberimu misi cerita, harian, dan mingguan. selesaikan pomodoro untuk menuntaskannya dan buka tempat serta latar baru."
+    alt: "Buku misi dengan misi cerita, harian, dan mingguan: misi streak lima hari dari Lt. Michiko yang membuka latar baru"
+
+map:
+  title: "jelajahi dunianya"
+  lead: "lima tempat belajar, masing-masing dengan keramaiannya sendiri. tempat lain segera hadir."
+  tabs: "Lokasi"
+  countryside:
+    tab: "pedesaan"
+    caption: "kuil, rusa, dan sungai kecil. tempat paling tenang di kota."
+    alt: "Pedesaan di malam hari: kuil, jembatan kayu di atas sungai, dan patung rusa emas, dengan pemain yang belajar di bawah lampu yang hangat"
+  downtown:
+    tab: "pusat kota"
+    caption: "jalan utama. bar, toko, dan rumahmu cuma sebentar jalan kaki."
+    alt: "Jalanan pusat kota dengan papan penunjuk ke bar, toko, dan rumah, dengan pemain yang berjalan-jalan dan belajar di trotoar"
+  bar:
+    tab: "bar"
+    caption: "bar yang cozy, penuh orang yang lagi fokus sama kerjaannya."
+    alt: "Bar yang ramai dengan pemain di meja dan di atas karpet, masing-masing menampilkan jumlah pomodoro, timer, dan tugasnya"
+  shop:
+    tab: "toko"
+    caption: "toko di pojok jalan. ambil tempat di sofa, lalu fokus."
+    alt: "Bagian dalam toko: meja kasir, rak, dan sofa, dengan pemain yang nongkrong di sela sesi"
+  hq:
+    tab: "hq"
+    caption: "pixeldoro hq. deretan meja buat kamu yang mau mode kantor beneran."
+    alt: "Pixeldoro HQ: kantor dengan deretan meja, printer, dan gerobak kopi, dengan pemain yang bekerja di mejanya"
+
+reviews:
+  title: "kata mereka"
+  lead: "ulasan asli dari app store dan google play."
+  stars: "5 bintang"
+  app_store: "app store"
+  mac_app_store: "mac app store"
+  google_play: "google play"
+
+updates:
+  title: "catatan update"
+  lead: "update baru tiap beberapa minggu. ini semuanya."
+  older: "update sebelumnya ({n})"
+  date: "{d} {mon} {y}"
+  months: ["jan", "feb", "mar", "apr", "mei", "jun", "jul", "agu", "sep", "okt", "nov", "des"]
+
+faq:
+  title: "pertanyaan yang sering diajukan"
+  items:
+    - q: "apa itu pixeldoro?"
+      a: "pixeldoro adalah timer pomodoro gratis di dalam dunia pixel art yang cozy. kamu pilih tempat, mulai sesi fokus, lalu kerja di samping orang sungguhan yang melakukan hal yang sama. tiap sesi memberimu koin untuk kamarmu, memajukan cerita, dan menambah statistikmu. ada radio lofi bawaan, dan bisa dipakai di iphone, ipad, mac, android, windows, linux, browser, dan discord."
+    - q: "apakah pixeldoro gratis?"
+      a: "iya. timer, dunianya, pemain lain, teman, misi, hewan peliharaan, dan radio semuanya gratis, tanpa iklan dan tanpa langganan. ada paket supporter opsional yang cukup dibeli sekali: koin 25% lebih banyak tiap sesi, lencana profil, skin premium, perabot, latar, dan ruangan, plus misi bonus."
+    - q: "ini game atau aplikasi produktivitas?"
+      a: "dua-duanya, tapi timer tetap nomor satu. game-nya cuma jalan saat kamu fokus: menyelesaikan pomodoro memberimu koin, menuntaskan misi, dan membuka tempat baru. di sela sesi ada cukup hal untuk dilakukan supaya terasa memuaskan, tanpa bikin kamu lupa sama tugasmu."
+    - q: "apakah pemain lainnya orang sungguhan?"
+      a: "iya. setiap karakter yang berjalan-jalan atau duduk di meja adalah pemain sungguhan yang sedang fokus saat ini. kamu bisa lihat timer mereka, berapa pomodoro yang sudah mereka selesaikan, dan apa yang sedang mereka kerjakan."
+    - q: "apa itu body doubling?"
+      a: "body doubling artinya bekerja di samping orang lain supaya lebih gampang untuk mulai dan terus jalan. itulah kenapa belajar di perpustakaan atau kafe terasa ampuh. pixeldoro memberimu rasa itu tanpa kamera atau jadwal: buka kapan saja, dan selalu ada orang yang lagi fokus di sekitarmu."
+    - q: "bisa belajar bareng teman?"
+      a: "bisa. tambah teman, lihat siapa yang online dan apa yang sedang mereka kerjakan, lalu saling main ke rumah untuk fokus berdampingan. lewat lobi, kamu bisa ganti server dan menemukan keramaian yang lain."
+    - q: "apakah cocok untuk adhd?"
+      a: "pixeldoro dibuat untuk otak yang gampang cuek sama timer biasa. kamu dapat hadiah cukup dengan muncul, orang lain yang fokus di sekitarmu membantumu mulai, dan ceritanya memberimu alasan untuk kembali. ini bukan alat medis, cuma cara yang lebih cozy untuk mulai bergerak."
+    - q: "ada to-do list atau pemblokir aplikasi?"
+      a: "belum. tag fokus bisa dipakai untuk memberi label tiap sesi (ujian, coding, membaca), dan statistikmu membagi waktumu per tag. dua-duanya sudah masuk daftar rencana."
+    - q: "bisa dimainkan di mana, dan apakah progresku tersinkron?"
+      a: "iphone, ipad, dan mac di app store, android di google play, windows dan linux di pixeldoro.io, browser apa pun di play.pixeldoro.io, dan sebagai aktivitas di dalam discord. masuk dengan emailmu, dan progres, kamar, serta koinmu akan ikut ke semua perangkat. tersedia dalam 9 bahasa."
+
+outro:
+  title: "siap mulai fokus?"
+  lead: "gratis di semua perangkat. orang-orang lagi fokus sekarang juga."
+
+# The guide and download pages (_layouts/guide.html)
+guide:
+  questions: "pertanyaan"
+
+discord:
+  title: "discord privat"
+  text: "tidak ada undangan publik. selesaikan 30 pomodoro dan undangannya akan muncul di aplikasi."
+  note: "ini server kecil untuk para pemain paling aktif. sampai jumpa di sana."
+  close: "oke, paham"
+
+footer:
+  play: "main"
+  browser: "di browser"
+  iphone_ipad: "iphone + ipad"
+  mac: "mac"
+  android: "android"
+  discord_activity: "aktivitas discord"
+  mini: "pixeldoro mini"
+  community: "komunitas"
+  discord: "discord"
+  guides: "panduan"
+  study_with_me: "study with me"
+  pomodoro_timer: "timer pomodoro"
+  adhd_focus_app: "aplikasi fokus adhd"
+  legal: "info legal"
+  privacy: "kebijakan privasi"
+  terms: "ketentuan penggunaan"
+  languages: "bahasa"
+
+# Catatan rilis per versi; tanggal dan urutannya ada di _data/changelog.yml
+changelog:
+  "2.7.1":
+    - "pixeldoro sekarang tersedia dalam 8 bahasa baru"
+  "2.6.9":
+    - "hub sosial: lihat siapa yang online dan terhubung dengan pemain lain"
+    - "teman: kirim dan terima permintaan pertemanan, dan pantau teman belajarmu"
+    - "belajar bareng di rumah teman, berdampingan"
+    - "lobi: ganti server untuk menemukan keramaian lain buat belajar bareng"
+  "2.6.8":
+    - "multiplayer real-time: lihat orang-orang bergerak sambil fokus"
+    - "karaktermu sekarang duduk saat sesi fokus"
+    - "profil pemain publik dengan progres dan statistik"
+    - "item pribadi: kumpulkan dan pakai kosmetik"
+    - "nama pemain lain muncul perlahan saat kamu mendekat"
+    - "kunjungi rumah pemain lain dan lihat cara mereka menghiasnya"
+  "2.6.5":
+    - "progres toko: lihat berapa sesi lagi sampai tiap hadiah"
+    - "tetap dapat sebagian koin meski pomo-nya tidak selesai"
+    - "pengingat \"lanjut dulu\" sebelum kamu mengakhiri sesi lebih awal"
+    - "pengingat \"istirahat selesai\" supaya kamu kembali fokus"
+    - "50+ avatar baru"
+    - "onboarding yang lebih baik dan ui yang lebih rapi"
+  "2.6.4":
+    - "alarm beneran: pixeldoro berbunyi saat sesi fokusmu selesai"
+  "2.6.3":
+    - "perbaikan kecil dan penyempurnaan"
+  "2.6.2":
+    - "onboarding v2: intro animasi, demo pomo 15 detik, dan hadiah perabot gratis"
+    - "petunjuk yang menyala menunjukkan bagian yang perlu diketuk"
+    - "fast travel terbuka setelah kamu menjelajahi beberapa tempat"
+    - "awal yang lebih tenang, tanpa alarm atau notifikasi selama kamu belajar cara main"
+    - "sinkronisasi lebih cepat dan penyimpanan lebih ringan"
+  "2.6.0":
+    - "pixeldoro supporter: sekali beli, jadi milikmu selamanya"
+    - "koin 25% lebih banyak di setiap sesi"
+    - "lencana supporter di profilmu"
+    - "skin premium, perabot, latar, dan ruangan, semuanya terbuka"
+    - "misi bonus dengan hadiah yang tidak bisa didapat dengan cara lain"
+  "2.5.7":
+    - "buku misi baru bergaya browser"
+    - "misi harian dan mingguan"
+    - "perbaikan misi grup"
+    - "tata letak scene yang lebih rapi"
+  "2.5.6":
+    - "daftar dan masuk jadi lebih mulus"
+    - "optimasi sinkronisasi cloud"
+    - "perbaikan zona waktu di misi dan statistik"
+    - "rendering pixel art yang lebih baik"
+  "2.5.5":
+    - "jalankan timer di mana saja"
+    - "pedesaan kini bisa dijelajahi sepenuhnya (ke sana naik skuter)"
+    - "pemain lain muncul di tempat mereka benar-benar berada"
+    - "fast travel, dengan jumlah pemain di tiap tempat"
+    - "penghitung \"lagi belajar\" secara real-time"
+    - "pemain afk diringkas jadi tampilan kecil"
+    - "sesi lebih dari 2 jam menampilkan status \"lagi fokus\""
+    - "kamera lebih mulus, jalan sedikit lebih lambat"
+  "2.5.4":
+    - "panel inventaris untuk menyembunyikan atau menampilkan item-mu"
+    - "toko: tab milikmu, subkategori, dan saldo koin yang selalu terlihat"
+    - "beli perabot sebanyak yang kamu mau, termasuk duplikat"
+    - "membeli perabot langsung membawamu pulang dan membuka mode edit"
+    - "~10 item baru di toko"
+    - "aplikasi mengingat lokasi terakhirmu"
+  "2.5.3":
+    - "kustomisasi kamar: pindahkan perabotmu sesukamu"
+    - "ketuk untuk memilih, seret untuk memindahkan, simpan kalau sudah pas"
+    - "tombol reset kalau ada yang berantakan"
+    - "tata letakmu tersinkron di semua perangkat"
+  "2.5.0":
+    - "10+ latar pixel art baru"
+    - "input pomo manual"
+  "2.4.9":
+    - "25 karakter baru"
+    - "hadiah mingguan"
+  "2.4.8":
+    - "ketuk karakter dan item untuk melihat deskripsi, statistik, dan sepenggal kisah di baliknya"
+  "2.4.7":
+    - "toko baru: kategori baru dan tampilan yang lebih rapi"
+    - "karakter yang bisa dibeli, lengkap dengan tingkat kelangkaan"
+    - "rotasi karakter mingguan"
+    - "toko terbuka tepat setelah pomo pertamamu"
+    - "pendaftaran yang lebih jelas dan cepat"
+  "2.4.6":
+    - "hotfix untuk kontrol di ponsel"
+  "2.4.5":
+    - "tantangan mingguan: capai target pomodoro bersama komunitas"
+  "2.4.4":
+    - "mode zen: layar penuh, tanpa timer, cuma vibes"
+    - "warna tag fokus baru"
+    - "notifikasi di dalam aplikasi"
+  "2.4.2":
+    - "koin harian tersembunyi di sekitar kota"
+    - "hadiah hewan peliharaan kembali lagi"
+  "2.4.1":
+    - "sinkronisasi cloud: progresmu ikut ke mana pun kamu pergi"
+    - "akun: masuk dari perangkat apa pun"
+    - "performa lebih kencang dan perbaikan ui"
+  "2.3.5":
+    - "perbaikan untuk mode musik latar belakang"
+  "2.3.4":
+    - "sesi pertamamu sekarang 15/5"
+    - "suasana kerja yang diperbarui"
+    - "animasi koin terbang"
+    - "peningkatan hewan peliharaan"
+    - "aplikasi tidak lagi membisukan media lain, jadi kamu bisa memutar musikmu sendiri"
+  "2.3.2":
+    - "musim misi baru dengan tantangan stopwatch dan waktu fokus"
+    - "karakter, alur cerita, dan misi grup baru"
+    - "pratinjau multiplayer: lihat apa yang sedang dikerjakan orang lain"
+    - "kota yang lebih besar dengan lokasi baru dan lebih banyak npc"
+    - "upgrade apartemen: buka ruangan, kumpulkan dekorasi"
+    - "musik ambient"
+    - "ui yang didesain ulang"
+    - "preset timer: 25/5, 45/15, 15/3"
+    - "mode stopwatch, hingga 8 jam"
+    - "tag fokus yang bisa diedit dan diberi warna"

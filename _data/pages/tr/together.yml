@@ -1,0 +1,20 @@
+# together sayfası, Türkçe. {name} davet eden arkadaşın adıyla doldurulur; ek almaz.
+text:
+  title: "arkadaşın seni pixeldoro'ya davet etti"
+  title_from: "{name} seni pixeldoro'ya davet etti"
+  description: "biri seninle birlikte odaklanmak istiyor. aynı piksel dünya, aynı zamanlayıcı, gerçek insanlarla gerçek zamanlı odak."
+  share: "aynı piksel dünya. aynı zamanlayıcı. lofi. gel, onunla birlikte işe gömül."
+  pill: "bir davetin var"
+  friend: "arkadaşın"
+  headline: "{name} seninle birlikte odaklanmak istiyor"
+  subline: "şu an içeride, tek başına kasıyor. git ona eşlik et."
+  shot_alt: "Topluluk panelindeki arkadaş listesi: her arkadaşın avatarı, neye odaklandığı, hangi odada olduğu ve pomodoro sayısı; yanında ders çalışan insanlarla dolu bir kafe"
+  reasons:
+    - title: "onu gerçekten göreceksin"
+      text: "minik karakteri etrafta dolaşıyor, kasıyor. tam seninkinin yanında."
+    - title: "aynı anda odaklanın"
+      text: "bir pomodoro başlat, işine gömül. görüntülü arama yok, baskı yok. birbirinize gaz verin, ama sıcacık."
+    - title: "ilk pomona 100 jeton"
+      text: "sırf geldiğin için"
+  cta_label: "hangi cihazdaysan oradan indir 👇"
+  what: "dur, bu ne şimdi? <a href=\"{home}\">pixeldoro'yu anlatalım →</a>"

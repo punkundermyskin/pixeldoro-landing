@@ -1,0 +1,572 @@
+{%- comment -%}
+The home page, once per language. Text comes from _data/i18n/<page.lang>.yml, the language list from _data/languages.yml.
+{%- endcomment -%}
+{%- assign lang = site.data.languages | where: "code", page.lang | first -%}
+{%- assign t = site.data.i18n[page.lang] -%}
+{%- assign en = site.data.i18n.en -%}
+{%- assign url = "https://pixeldoro.io" | append: lang.path -%}
+{%- if lang.code == "en" -%}
+{%- assign android = "https://play.pixeldoro.io/android" -%}
+{%- else -%}
+{%- assign android = "https://play.pixeldoro.io/android?hl=" | append: lang.hl -%}
+{%- endif -%}
+<!DOCTYPE html>
+<html lang="{{ lang.html }}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ t.meta.title }}</title>
+    <meta name="description" content="{{ t.meta.description | escape }}">
+    <meta name="robots" content="index, follow">
+    <meta name="apple-itunes-app" content="app-id=6501988413">
+    <link rel="canonical" href="{{ url }}">
+{%- for l in site.data.languages %}
+    <link rel="alternate" hreflang="{{ l.hreflang }}" href="https://pixeldoro.io{{ l.path }}">
+{%- endfor %}
+    <link rel="alternate" hreflang="x-default" href="https://pixeldoro.io/">
+    <link rel="icon" href="/images/favicon.ico" sizes="any">
+    <link rel="icon" type="image/png" sizes="192x192" href="/images/favicon-192.png">
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+    <link rel="preload" href="/fonts/pixeldoro.woff2" as="font" type="font/woff2" crossorigin>
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ url }}">
+    <meta property="og:title" content="{{ t.meta.title | escape }}">
+    <meta property="og:description" content="{{ t.meta.share | escape }}">
+    <meta property="og:image" content="https://pixeldoro.io/images/social-preview.png">
+    <meta property="og:site_name" content="Pixeldoro">
+    <meta property="og:locale" content="{{ lang.og }}">
+{%- for l in site.data.languages %}{% if l.code != lang.code %}
+    <meta property="og:locale:alternate" content="{{ l.og }}">
+{%- endif %}{% endfor %}
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="{{ url }}">
+    <meta name="twitter:title" content="{{ t.meta.title | escape }}">
+    <meta name="twitter:description" content="{{ t.meta.share | escape }}">
+    <meta name="twitter:image" content="https://pixeldoro.io/images/social-preview.png">
+    <meta name="twitter:site" content="@pixeldoro">
+
+    <script type="application/ld+json">
+    {
+     "@context": "https://schema.org",
+     "@graph": [
+      {
+       "@type": "WebSite",
+       "@id": "https://pixeldoro.io/#website",
+       "url": "https://pixeldoro.io/",
+       "name": "Pixeldoro",
+       "description": {{ en.meta.share | jsonify }},
+       "inLanguage": [{% for l in site.data.languages %}{{ l.hreflang | jsonify }}{% unless forloop.last %}, {% endunless %}{% endfor %}],
+       "publisher": {
+        "@id": "https://pixeldoro.io/#org"
+       }
+      },
+      {
+       "@type": "WebPage",
+       "@id": "{{ url }}#webpage",
+       "url": "{{ url }}",
+       "name": {{ t.meta.title | jsonify }},
+       "description": {{ t.meta.description | jsonify }},
+       "inLanguage": {{ lang.hreflang | jsonify }},
+       "isPartOf": {
+        "@id": "https://pixeldoro.io/#website"
+       },
+       "about": {
+        "@id": "https://pixeldoro.io/#app"
+       }
+      },
+      {
+       "@type": "Organization",
+       "@id": "https://pixeldoro.io/#org",
+       "name": "Pixeldoro Labs",
+       "url": "https://pixeldoro.io/",
+       "logo": "https://pixeldoro.io/images/favicon-192.png",
+       "email": "hello@pixeldoro.io",
+       "sameAs": [
+        "https://www.youtube.com/@pixeldoro",
+        "https://www.tiktok.com/@pixeldoro",
+        "https://www.instagram.com/pixeldoro/",
+        "https://x.com/pixeldoro",
+        "https://www.twitch.tv/pixeldoro"
+       ]
+      },
+      {
+       "@type": "SoftwareApplication",
+       "@id": "https://pixeldoro.io/#app",
+       "name": "Pixeldoro",
+       "url": "https://pixeldoro.io/",
+       "description": {{ en.faq.items[0].a | jsonify }},
+       "applicationCategory": "BusinessApplication",
+       "applicationSubCategory": "Productivity",
+       "operatingSystem": "iOS, iPadOS, macOS, Android, Windows, Linux, Web",
+       "image": "https://pixeldoro.io/images/social-preview.png",
+       "screenshot": "https://pixeldoro.io/images/shots/countryside.webp",
+       "inLanguage": [{% for l in site.data.languages %}{{ l.hreflang | jsonify }}{% unless forloop.last %}, {% endunless %}{% endfor %}],
+       "installUrl": [
+        "https://apps.apple.com/app/id6501988413",
+        "https://play.google.com/store/apps/details?id=com.pixeldorolabs.pixeldoro",
+        "https://pixeldoro.io/windows.html",
+        "https://pixeldoro.io/linux.html",
+        "https://play.pixeldoro.io/web-beta"
+       ],
+       "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+       },
+       "publisher": {
+        "@id": "https://pixeldoro.io/#org"
+       }
+      },
+      {
+       "@type": "FAQPage",
+       "@id": "{{ url }}#faq",
+       "inLanguage": {{ lang.hreflang | jsonify }},
+       "mainEntity": [
+{%- for f in t.faq.items %}
+        {
+         "@type": "Question",
+         "name": {{ f.q | jsonify }},
+         "acceptedAnswer": {
+          "@type": "Answer",
+          "text": {{ f.a | jsonify }}
+         }
+        }{% unless forloop.last %},{% endunless %}
+{%- endfor %}
+       ]
+      }
+     ]
+    }
+    </script>
+
+    <script>
+        // Pick the hero button before first paint: ios / android / desktop.
+        // ?device=ios|android|desktop overrides it for previewing.
+        (function () {
+            var forced = new URLSearchParams(location.search).get('device');
+            var ua = navigator.userAgent;
+            var device = 'desktop';
+            if (/android/i.test(ua)) device = 'android';
+            else if (/iphone|ipad|ipod/i.test(ua) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1)) device = 'ios';
+            if (/^(ios|android|desktop)$/.test(forced)) device = forced;
+            document.documentElement.setAttribute('data-device', device);
+        })();
+    </script>
+
+    <style>
+{% include home.css %}
+    </style>
+    <script src="/analytics.js" async></script>
+</head>
+<body>
+    <div class="backdrop" aria-hidden="true"><video class="backdrop-video" muted loop playsinline></video></div>
+
+    <p class="lang-suggest" hidden><a href="/"></a><button type="button" aria-label="{{ t.nav.suggest_close | escape }}">×</button></p>
+
+    <header>
+    <nav aria-label="Main navigation">
+        {%- assign online = t.nav.online | split: "{n}" %}
+        <p class="online" hidden><span class="online-dot" aria-hidden="true"></span>{{ online[0] }}<span class="online-count"></span>{{ online[1] }}</p>
+        <a class="social" href="https://play.pixeldoro.io/youtube" aria-label="youtube"><svg viewBox="0 0 14 10" width="21" height="15" aria-hidden="true"><rect x="1" y="0" width="12" height="1"/><rect x="0" y="1" width="14" height="1"/><rect x="0" y="2" width="5" height="1"/><rect x="6" y="2" width="8" height="1"/><rect x="0" y="3" width="5" height="1"/><rect x="7" y="3" width="7" height="1"/><rect x="0" y="4" width="5" height="1"/><rect x="8" y="4" width="6" height="1"/><rect x="0" y="5" width="5" height="1"/><rect x="8" y="5" width="6" height="1"/><rect x="0" y="6" width="5" height="1"/><rect x="7" y="6" width="7" height="1"/><rect x="0" y="7" width="5" height="1"/><rect x="6" y="7" width="8" height="1"/><rect x="0" y="8" width="14" height="1"/><rect x="1" y="9" width="12" height="1"/></svg></a>
+        <a class="social" href="https://play.pixeldoro.io/tiktok" aria-label="tiktok"><svg viewBox="0 0 10 10" width="15" height="15" aria-hidden="true"><rect x="5" y="0" width="1" height="1"/><rect x="5" y="1" width="2" height="1"/><rect x="5" y="2" width="4" height="1"/><rect x="5" y="3" width="1" height="1"/><rect x="8" y="3" width="2" height="1"/><rect x="5" y="4" width="1" height="1"/><rect x="2" y="5" width="4" height="1"/><rect x="1" y="6" width="5" height="1"/><rect x="0" y="7" width="6" height="1"/><rect x="0" y="8" width="5" height="1"/><rect x="1" y="9" width="3" height="1"/></svg></a>
+        <a class="social" href="https://play.pixeldoro.io/ig" aria-label="instagram"><svg viewBox="0 0 10 10" width="15" height="15" aria-hidden="true"><rect x="1" y="0" width="8" height="1"/><rect x="0" y="1" width="1" height="1"/><rect x="9" y="1" width="1" height="1"/><rect x="0" y="2" width="1" height="1"/><rect x="7" y="2" width="1" height="1"/><rect x="9" y="2" width="1" height="1"/><rect x="0" y="3" width="1" height="1"/><rect x="4" y="3" width="2" height="1"/><rect x="9" y="3" width="1" height="1"/><rect x="0" y="4" width="1" height="1"/><rect x="3" y="4" width="1" height="1"/><rect x="6" y="4" width="1" height="1"/><rect x="9" y="4" width="1" height="1"/><rect x="0" y="5" width="1" height="1"/><rect x="3" y="5" width="1" height="1"/><rect x="6" y="5" width="1" height="1"/><rect x="9" y="5" width="1" height="1"/><rect x="0" y="6" width="1" height="1"/><rect x="4" y="6" width="2" height="1"/><rect x="9" y="6" width="1" height="1"/><rect x="0" y="7" width="1" height="1"/><rect x="9" y="7" width="1" height="1"/><rect x="0" y="8" width="1" height="1"/><rect x="9" y="8" width="1" height="1"/><rect x="1" y="9" width="8" height="1"/></svg></a>
+        <a class="social" href="https://play.pixeldoro.io/twitter" aria-label="x"><svg viewBox="0 0 10 10" width="15" height="15" aria-hidden="true"><rect x="0" y="0" width="3" height="1"/><rect x="8" y="0" width="1" height="1"/><rect x="1" y="1" width="2" height="1"/><rect x="7" y="1" width="1" height="1"/><rect x="2" y="2" width="2" height="1"/><rect x="6" y="2" width="1" height="1"/><rect x="3" y="3" width="3" height="1"/><rect x="4" y="4" width="2" height="1"/><rect x="4" y="5" width="3" height="1"/><rect x="3" y="6" width="1" height="1"/><rect x="5" y="6" width="2" height="1"/><rect x="2" y="7" width="1" height="1"/><rect x="6" y="7" width="2" height="1"/><rect x="1" y="8" width="1" height="1"/><rect x="7" y="8" width="2" height="1"/><rect x="0" y="9" width="1" height="1"/><rect x="7" y="9" width="3" height="1"/></svg></a>
+        <button class="discord-btn" type="button" popovertarget="discord-pop" aria-label="{{ t.nav.discord | escape }}"><svg viewBox="0 0 14 10" aria-hidden="true"><rect x="2" y="0" width="2" height="1"/><rect x="10" y="0" width="2" height="1"/><rect x="1" y="1" width="12" height="1"/><rect x="0" y="2" width="14" height="1"/><rect x="0" y="3" width="14" height="1"/><rect x="0" y="4" width="3" height="1"/><rect x="5" y="4" width="4" height="1"/><rect x="11" y="4" width="3" height="1"/><rect x="0" y="5" width="3" height="1"/><rect x="5" y="5" width="4" height="1"/><rect x="11" y="5" width="3" height="1"/><rect x="0" y="6" width="14" height="1"/><rect x="0" y="7" width="14" height="1"/><rect x="1" y="8" width="3" height="1"/><rect x="10" y="8" width="3" height="1"/><rect x="2" y="9" width="1" height="1"/><rect x="11" y="9" width="1" height="1"/></svg></button>
+        <button class="lang-btn" type="button" popovertarget="lang-pop" aria-label="{{ t.nav.language | escape }}"><svg viewBox="0 0 11 11" aria-hidden="true"><rect x="3" y="0" width="5" height="1"/><rect x="1" y="1" width="2" height="1"/><rect x="5" y="1" width="1" height="1"/><rect x="8" y="1" width="2" height="1"/><rect x="1" y="2" width="1" height="1"/><rect x="4" y="2" width="1" height="1"/><rect x="6" y="2" width="1" height="1"/><rect x="9" y="2" width="1" height="1"/><rect x="0" y="3" width="1" height="1"/><rect x="4" y="3" width="1" height="1"/><rect x="6" y="3" width="1" height="1"/><rect x="10" y="3" width="1" height="1"/><rect x="0" y="4" width="1" height="1"/><rect x="4" y="4" width="1" height="1"/><rect x="6" y="4" width="1" height="1"/><rect x="10" y="4" width="1" height="1"/><rect x="0" y="5" width="11" height="1"/><rect x="0" y="6" width="1" height="1"/><rect x="4" y="6" width="1" height="1"/><rect x="6" y="6" width="1" height="1"/><rect x="10" y="6" width="1" height="1"/><rect x="0" y="7" width="1" height="1"/><rect x="4" y="7" width="1" height="1"/><rect x="6" y="7" width="1" height="1"/><rect x="10" y="7" width="1" height="1"/><rect x="1" y="8" width="1" height="1"/><rect x="4" y="8" width="1" height="1"/><rect x="6" y="8" width="1" height="1"/><rect x="9" y="8" width="1" height="1"/><rect x="1" y="9" width="2" height="1"/><rect x="5" y="9" width="1" height="1"/><rect x="8" y="9" width="2" height="1"/><rect x="3" y="10" width="5" height="1"/></svg><span class="lang-code">{{ lang.code }}</span></button>
+    </nav>
+
+    <section class="hero">
+        <h1 class="wordmark"><img src="/images/tomato-48.png" width="48" height="48" alt="">pixeldoro</h1>
+
+        <div class="slider-row">
+        <button class="slider-arrow prev" type="button" aria-label="{{ t.hero.prev | escape }}"><svg viewBox="0 0 10 10" aria-hidden="true"><rect x="0" y="4" width="10" height="2"/><rect x="1" y="3" width="1" height="4"/><rect x="2" y="2" width="1" height="6"/><rect x="3" y="1" width="1" height="8"/><rect x="4" y="0" width="1" height="10"/></svg></button>
+        <div class="slider" aria-roledescription="carousel" aria-label="{{ t.hero.slider | escape }}">
+            <!-- Slides: 16:9, 1600 + 960 wide, named by content, the first one loads eagerly. data-caption shows under the frame. -->
+            {%- assign slides = "countryside,rooms,start-timer,focus-night,coins,shop,home-pets,stats,friends" | split: "," %}
+            {%- for s in slides %}
+            {%- assign slide = t.hero.slides[s] %}
+            <img class="slide{% if forloop.first %} is-active{% endif %}"{% if forloop.first %} fetchpriority="high"{% endif %} src="/images/shots/{{ s }}.webp" srcset="/images/shots/{{ s }}-960.webp 960w, /images/shots/{{ s }}.webp 1600w" sizes="min(92vw, 880px)" width="1600" height="900"{% unless forloop.first %} loading="lazy"{% endunless %} data-caption="{{ slide.caption | escape }}" alt="{{ slide.alt | escape }}">
+            {%- endfor %}
+        </div>
+        <button class="slider-arrow next" type="button" aria-label="{{ t.hero.next | escape }}"><svg viewBox="0 0 10 10" aria-hidden="true"><rect x="0" y="4" width="10" height="2"/><rect x="1" y="3" width="1" height="4"/><rect x="2" y="2" width="1" height="6"/><rect x="3" y="1" width="1" height="8"/><rect x="4" y="0" width="1" height="10"/></svg></button>
+        </div>
+        <div class="slider-meta">
+            <p class="slide-caption" aria-live="polite">{{ t.hero.slides.countryside.caption }}</p>
+            <div class="dots" data-label="{{ t.hero.dot | escape }}"></div>
+        </div>
+
+        <p class="tagline">{{ t.hero.tagline }}</p>
+
+        <div class="cta-desktop">
+            <a class="btn-play" href="https://play.pixeldoro.io/web-beta">{% include play-icon.html %}{{ t.hero.play }}</a>
+            <p class="cta-note">{{ t.hero.browser_note }}</p>
+            <p class="other-platforms">{{ t.hero.or_get }}
+                <a href="https://play.pixeldoro.io/macos">{{ t.platforms.mac }}</a> ·
+                <a href="https://play.pixeldoro.io/ios">{{ t.platforms.iphone }}</a> ·
+                <a href="{{ android }}">{{ t.platforms.android }}</a> ·
+                <a href="{{ lang.path }}windows.html">{{ t.platforms.windows }}</a> ·
+                <a href="{{ lang.path }}linux.html">{{ t.platforms.linux }}</a> ·
+                <a href="https://play.pixeldoro.io/discord-activity">{{ t.platforms.discord }}</a>
+            </p>
+        </div>
+
+        <div class="cta-ios">
+            <a class="store-badge" href="https://play.pixeldoro.io/ios"><img src="{{ lang.app_store_badge }}" width="{{ lang.app_store_size[0] }}" height="{{ lang.app_store_size[1] }}" alt="{{ t.hero.app_store_alt | escape }}"></a>
+            <p class="cta-note">{{ t.hero.ios_note }}</p>
+            <p class="other-platforms">{{ t.hero.also_on }} <a href="{{ android }}">{{ t.platforms.android }}</a> · <a href="https://play.pixeldoro.io/web-beta">{{ t.hero.laptop }}</a></p>
+        </div>
+
+        <div class="cta-android">
+            <a class="store-badge" href="{{ android }}"><img src="{{ lang.google_play_badge }}" width="{% if lang.code == 'en' %}558{% else %}555{% endif %}" height="165" alt="{{ t.hero.google_play_alt | escape }}"></a>
+            <p class="cta-note">{{ t.hero.android_note }}</p>
+            <p class="other-platforms">{{ t.hero.also_on }} <a href="https://play.pixeldoro.io/ios">{{ t.platforms.iphone }}</a> · <a href="https://play.pixeldoro.io/web-beta">{{ t.hero.laptop }}</a></p>
+        </div>
+
+        <p class="ratings"><b><span>★</span> {{ t.hero.ratings.google_play }}</b> · <b><span>★</span> {{ t.hero.ratings.app_store }}</b> · <b><span>★</span> {{ t.hero.ratings.mac_app_store }}</b></p>
+    </section>
+    </header>
+
+    <section class="focus-tools" aria-labelledby="focus-tools-title">
+        <h2 class="section-title" id="focus-tools-title">{{ t.tools.title }}</h2>
+        <div class="tool-grid">
+            {%- assign tools = "tomato:timer,radio:radio,folder:tags,stats:stats" | split: "," %}
+            {%- for pair in tools %}
+            {%- assign icon = pair | split: ":" | first %}
+            {%- assign key = pair | split: ":" | last %}
+            <div class="tool">
+                <img src="/images/icons/{{ icon }}.png" width="11" height="11" alt="">
+                <h3>{{ t.tools[key].title }}</h3>
+                <p>{{ t.tools[key].text }}</p>
+            </div>
+            {%- endfor %}
+        </div>
+    </section>
+
+    <section class="cozy" aria-labelledby="cozy-title">
+        <h2 class="section-title" id="cozy-title">{{ t.cozy.title }}</h2>
+        <!-- Without JS every panel shows, stacked; the script turns them into tabs -->
+        {%- assign cozy = "friends,pets,decorate,story" | split: "," %}
+        <div class="tabs" role="tablist" aria-label="{{ t.cozy.tabs | escape }}" hidden>
+            {%- for c in cozy %}
+            <button type="button" role="tab" id="tab-{{ c }}" aria-controls="panel-{{ c }}" aria-selected="{{ forloop.first }}"{% unless forloop.first %} tabindex="-1"{% endunless %}>{{ t.cozy[c].tab }}</button>
+            {%- endfor %}
+        </div>
+        {%- for c in cozy %}
+        <div class="tab-panel" role="tabpanel" id="panel-{{ c }}" aria-labelledby="tab-{{ c }}">
+            <img src="/images/cozy/{{ c }}.webp" width="1280" height="800" loading="lazy" alt="{{ t.cozy[c].alt | escape }}">
+            <div class="tab-text">
+                <h3>{{ t.cozy[c].title }}</h3>
+                <p>{{ t.cozy[c].text }}</p>
+            </div>
+        </div>
+        {%- endfor %}
+    </section>
+
+    <section class="map" aria-labelledby="map-title">
+        <h2 class="section-title" id="map-title">{{ t.map.title }}</h2>
+        <p class="section-lead">{{ t.map.lead }}</p>
+        {%- assign places = "countryside,downtown,bar,shop,hq" | split: "," %}
+        <div class="tabs" role="tablist" aria-label="{{ t.map.tabs | escape }}" hidden>
+            {%- for p in places %}
+            <button type="button" role="tab" id="tab-{{ p }}" aria-controls="panel-{{ p }}" aria-selected="{{ forloop.first }}"{% unless forloop.first %} tabindex="-1"{% endunless %}>{{ t.map[p].tab }}</button>
+            {%- endfor %}
+        </div>
+        {%- for p in places %}
+        <figure class="map-panel" role="tabpanel" id="panel-{{ p }}" aria-labelledby="tab-{{ p }}">
+            <img src="/images/map/{{ p }}.webp" srcset="/images/map/{{ p }}-960.webp 960w, /images/map/{{ p }}.webp 1600w" sizes="min(92vw, 1048px)" width="1600" height="900" loading="lazy" alt="{{ t.map[p].alt | escape }}">
+            <figcaption>{{ t.map[p].caption }}</figcaption>
+        </figure>
+        {%- endfor %}
+    </section>
+
+    <section class="reviews" aria-labelledby="reviews-title">
+        <h2 class="section-title" id="reviews-title">{{ t.reviews.title }}</h2>
+        <p class="section-lead">{{ t.reviews.lead }}</p>
+        <!-- Quotes stay in the reviewer's own words -->
+        <div class="review-grid">
+            <div class="review-col">
+                <figure class="review">
+                    <blockquote lang="en">“Feels like club penguin but for real life goals”</blockquote>
+                    <figcaption><span aria-label="{{ t.reviews.stars | escape }}">★★★★★</span> {{ t.reviews.mac_app_store }}</figcaption>
+                </figure>
+                <figure class="review">
+                    <blockquote lang="en">“Not just a timer and not just a game that happens to include a Pomodoro timer: this is a game where you advance by using the timers, and the plot is directly tied to productivity.”</blockquote>
+                    <figcaption><span aria-label="{{ t.reviews.stars | escape }}">★★★★★</span> {{ t.reviews.google_play }}</figcaption>
+                </figure>
+            </div>
+            <div class="review-col">
+                <figure class="review">
+                    <blockquote lang="en">“It seems at first glance to be another study timer, but it is the only one that has gotten me to regularly look forward to doing work!”</blockquote>
+                    <figcaption><span aria-label="{{ t.reviews.stars | escape }}">★★★★★</span> {{ t.reviews.app_store }}</figcaption>
+                </figure>
+                <figure class="review">
+                    <blockquote lang="en">“Top tier for neurodivergents”</blockquote>
+                    <figcaption><span aria-label="{{ t.reviews.stars | escape }}">★★★★★</span> {{ t.reviews.mac_app_store }}</figcaption>
+                </figure>
+            </div>
+            <div class="review-col">
+                <figure class="review">
+                    <blockquote lang="en">“it feels similar to working in a coffee shop or library together with other people and it’s been incredibly motivating.”</blockquote>
+                    <figcaption><span aria-label="{{ t.reviews.stars | escape }}">★★★★★</span> {{ t.reviews.app_store }}</figcaption>
+                </figure>
+                <figure class="review">
+                    <blockquote lang="en">“This app has helped me build a less resistant, if not outright positive, relationship with my tasks.”</blockquote>
+                    <figcaption><span aria-label="{{ t.reviews.stars | escape }}">★★★★★</span> {{ t.reviews.app_store }}</figcaption>
+                </figure>
+            </div>
+        </div>
+    </section>
+
+    <section class="changelog" aria-labelledby="changelog-title">
+        <h2 class="section-title" id="changelog-title">{{ t.updates.title }}</h2>
+        <p class="section-lead">{{ t.updates.lead }}</p>
+        {%- assign older = site.data.changelog.size | minus: 3 %}
+        {%- for r in site.data.changelog %}
+        {%- if forloop.index == 4 %}
+        {%- assign summary = t.updates.older | replace: "{n}", older %}
+        <details class="older">
+            <summary>{{ summary }}</summary>
+        {%- endif %}
+        {%- assign items = t.changelog[r.version] | default: en.changelog[r.version] %}
+        {%- assign m = r.date | date: "%-m" | minus: 1 %}
+        {%- assign mon = t.updates.months[m] %}
+        {%- assign d = r.date | date: "%-d" %}
+        {%- assign y = r.date | date: "%Y" %}
+        {%- assign when = t.updates.date | replace: "{mon}", mon | replace: "{d}", d | replace: "{y}", y %}
+        <article class="release">
+            <h3>v{{ r.version }} <time datetime="{{ r.date | date: '%Y-%m-%d' }}">{{ when }}</time></h3>
+            <ul>
+                {%- for item in items %}
+                <li>{{ item }}</li>
+                {%- endfor %}
+            </ul>
+        </article>
+        {%- if forloop.last and forloop.index > 3 %}
+        </details>
+        {%- endif %}
+        {%- endfor %}
+    </section>
+
+    <section class="faq" aria-labelledby="faq-title">
+        <h2 class="section-title" id="faq-title">{{ t.faq.title }}</h2>
+        {%- for f in t.faq.items %}
+        <details>
+            <summary>{{ f.q }}</summary>
+            <p>{{ f.a }}</p>
+        </details>
+        {%- endfor %}
+    </section>
+
+
+    <section class="outro" aria-labelledby="outro-title">
+        <h2 class="section-title" id="outro-title">{{ t.outro.title }}</h2>
+        <p class="section-lead">{{ t.outro.lead }}</p>
+        <div class="cta-desktop">
+            <a class="btn-play" href="https://play.pixeldoro.io/web-beta">{% include play-icon.html %}{{ t.hero.play }}</a>
+            <p class="cta-note">{{ t.hero.browser_note }}</p>
+        </div>
+        <div class="cta-ios">
+            <a class="store-badge" href="https://play.pixeldoro.io/ios"><img src="{{ lang.app_store_badge }}" width="{{ lang.app_store_size[0] }}" height="{{ lang.app_store_size[1] }}" loading="lazy" alt="{{ t.hero.app_store_alt | escape }}"></a>
+            <p class="cta-note">{{ t.hero.ios_note }}</p>
+        </div>
+        <div class="cta-android">
+            <a class="store-badge" href="{{ android }}"><img src="{{ lang.google_play_badge }}" width="{% if lang.code == 'en' %}558{% else %}555{% endif %}" height="165" loading="lazy" alt="{{ t.hero.google_play_alt | escape }}"></a>
+            <p class="cta-note">{{ t.hero.android_note }}</p>
+        </div>
+    </section>
+
+    <div class="discord-pop" id="discord-pop" popover>
+        <img src="/images/icons/tomato.png" width="11" height="11" alt="">
+        <h2>{{ t.discord.title }}</h2>
+        <p>{{ t.discord.text }}</p>
+        <p>{{ t.discord.note }}</p>
+        <button type="button" popovertarget="discord-pop" popovertargetaction="hide">{{ t.discord.close }}</button>
+    </div>
+
+    <div class="lang-pop" id="lang-pop" popover>
+        <h2>{{ t.nav.language }}</h2>
+        {%- for l in site.data.languages %}
+        <a href="{{ l.path }}" hreflang="{{ l.hreflang }}" lang="{{ l.html }}"{% if l.code == lang.code %} aria-current="page"{% endif %}>{{ l.name }}</a>
+        {%- endfor %}
+    </div>
+
+    <footer>
+        <div class="footer-cols">
+            <div>
+                <h2>{{ t.footer.play }}</h2>
+                <a href="https://play.pixeldoro.io/web-beta">{{ t.footer.browser }}</a>
+                <a href="https://play.pixeldoro.io/ios">{{ t.footer.iphone_ipad }}</a>
+                <a href="https://play.pixeldoro.io/macos">{{ t.footer.mac }}</a>
+                <a href="{{ android }}">{{ t.footer.android }}</a>
+                <a href="{{ lang.path }}windows.html">{{ t.platforms.windows }}</a>
+                <a href="{{ lang.path }}linux.html">{{ t.platforms.linux }}</a>
+                <a href="https://play.pixeldoro.io/discord-activity">{{ t.footer.discord_activity }}</a>
+                <a href="{{ lang.path }}mini.html">{{ t.footer.mini }}</a>
+            </div>
+            <div>
+                <h2>{{ t.footer.community }}</h2>
+                <a href="https://play.pixeldoro.io/youtube">youtube</a>
+                <a href="https://play.pixeldoro.io/tiktok">tiktok</a>
+                <a href="https://play.pixeldoro.io/ig">instagram</a>
+                <a href="https://play.pixeldoro.io/twitter">x</a>
+                <a href="https://play.pixeldoro.io/twitch">twitch</a>
+                <button type="button" popovertarget="discord-pop">{{ t.footer.discord }}</button>
+                <a href="mailto:hello@pixeldoro.io">hello@pixeldoro.io</a>
+            </div>
+            <div>
+                <h2>{{ t.footer.guides }}</h2>
+                <a href="{{ lang.path }}study-with-me.html">{{ t.footer.study_with_me }}</a>
+                <a href="{{ lang.path }}pomodoro-timer.html">{{ t.footer.pomodoro_timer }}</a>
+                <a href="{{ lang.path }}adhd-focus-app.html">{{ t.footer.adhd_focus_app }}</a>
+            </div>
+            <div>
+                <h2>{{ t.footer.legal }}</h2>
+                <a href="/privacy.html"{% if lang.code != "en" %} hreflang="en"{% endif %}>{{ t.footer.privacy }}</a>
+                <a href="/terms.html"{% if lang.code != "en" %} hreflang="en"{% endif %}>{{ t.footer.terms }}</a>
+            </div>
+        </div>
+        <p class="footer-langs" aria-label="{{ t.footer.languages | escape }}">
+            {%- for l in site.data.languages %}
+            <a href="{{ l.path }}" hreflang="{{ l.hreflang }}" lang="{{ l.html }}"{% if l.code == lang.code %} aria-current="page"{% endif %}>{{ l.name }}</a>
+            {%- endfor %}
+        </p>
+        <p class="copyright">© 2026 Pixeldoro Labs · Sergei Andrei Postnov, IE</p>
+    </footer>
+
+    <script>
+        (function () {
+            var slider = document.querySelector('.slider');
+            var slides = slider.querySelectorAll('.slide');
+            var dots = document.querySelector('.slider-meta .dots');
+            var caption = document.querySelector('.slide-caption');
+            var current = 0;
+            var timer = null;
+            if (slides.length < 2) return;
+
+            function show(i) {
+                slides[current].classList.remove('is-active');
+                dots.children[current].removeAttribute('aria-current');
+                current = (i + slides.length) % slides.length;
+                slides[current].classList.add('is-active');
+                dots.children[current].setAttribute('aria-current', 'true');
+                caption.textContent = slides[current].dataset.caption;
+            }
+
+            function start() {
+                if (timer || matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+                timer = setInterval(function () { show(current + 1); }, 4500);
+            }
+
+            function stop() {
+                clearInterval(timer);
+                timer = null;
+            }
+
+            function go(i) {
+                stop();
+                show(i);
+                start();
+            }
+
+            document.querySelector('.slider-arrow.prev').addEventListener('click', function () { go(current - 1); });
+            document.querySelector('.slider-arrow.next').addEventListener('click', function () { go(current + 1); });
+
+            slides.forEach(function (_, i) {
+                var dot = document.createElement('button');
+                dot.type = 'button';
+                dot.setAttribute('aria-label', dots.dataset.label.replace('{n}', i + 1));
+                dot.addEventListener('click', function () { go(i); });
+                dots.appendChild(dot);
+            });
+            dots.children[0].setAttribute('aria-current', 'true');
+
+            // Swipe, or tap the left / right half of the frame
+            var startX = null;
+            slider.addEventListener('pointerdown', function (e) { startX = e.clientX; });
+            slider.addEventListener('pointerup', function (e) {
+                if (startX === null) return;
+                var dx = e.clientX - startX;
+                startX = null;
+                if (Math.abs(dx) >= 40) {
+                    go(current + (dx < 0 ? 1 : -1));
+                } else if (Math.abs(dx) < 10) {
+                    var rect = slider.getBoundingClientRect();
+                    go(current + (e.clientX < rect.left + rect.width / 2 ? -1 : 1));
+                }
+            });
+
+            slider.addEventListener('mouseenter', stop);
+            slider.addEventListener('mouseleave', start);
+            document.addEventListener('visibilitychange', function () {
+                if (document.hidden) stop(); else start();
+            });
+            start();
+        })();
+
+        // Online counter: players across all servers, refreshed every minute. Hidden on any error or a tiny count.
+        (function () {
+            var box = document.querySelector('.online');
+
+            function load() {
+                fetch('https://pixeldoro-backend.fly.dev/v1/shards')
+                    .then(function (r) { return r.ok ? r.json() : null; })
+                    .then(function (data) {
+                        if (!data || !data.shards) return;
+                        var total = data.shards.reduce(function (sum, s) { return sum + (s.online || 0); }, 0);
+                        box.querySelector('.online-count').textContent = total;
+                        box.hidden = total < 20;
+                    })
+                    .catch(function () {});
+            }
+
+            load();
+            setInterval(function () { if (!document.hidden) load(); }, 60000);
+        })();
+
+        // Tabs (cozy game, map): arrow keys move between tabs, one panel shows at a time
+        document.querySelectorAll('.tabs').forEach(function (tablist) {
+            var tabs = Array.prototype.slice.call(tablist.querySelectorAll('[role="tab"]'));
+
+            function select(tab) {
+                tabs.forEach(function (t) {
+                    var on = t === tab;
+                    t.setAttribute('aria-selected', on);
+                    t.tabIndex = on ? 0 : -1;
+                    document.getElementById(t.getAttribute('aria-controls')).hidden = !on;
+                });
+            }
+
+            tabs.forEach(function (tab, i) {
+                tab.addEventListener('click', function () { select(tab); });
+                tab.addEventListener('keydown', function (e) {
+                    var step = e.key === 'ArrowRight' ? 1 : e.key === 'ArrowLeft' ? -1 : 0;
+                    if (!step) return;
+                    var next = tabs[(i + step + tabs.length) % tabs.length];
+                    select(next);
+                    next.focus();
+                });
+            });
+
+            tablist.hidden = false;
+            select(tabs[0]);
+        });
+
+        // Background video: loads after the page, skipped for reduced motion and data saver
+        (function () {
+            var video = document.querySelector('.backdrop-video');
+            if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+            if (navigator.connection && navigator.connection.saveData) return;
+            window.addEventListener('load', function () {
+                video.addEventListener('playing', function () { video.classList.add('is-playing'); }, { once: true });
+                video.src = '/images/bg-urban-night.mp4';
+                video.play().catch(function () {});
+            });
+        })();
+    </script>
+
+{% include lang-suggest.html %}
+</body>
+</html>

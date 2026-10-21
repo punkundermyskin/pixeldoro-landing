@@ -1,0 +1,1112 @@
+@font-face {
+    font-family: 'Pixeldoro';
+    src: url('/fonts/pixeldoro.woff2') format('woff2');
+    font-display: swap;
+}
+
+:root {
+    /* Design system colors */
+    --green: #bdffb3;
+    --blue: #228bdc;
+    --purple: #bf88f6;
+    --orange: #edb83f;
+    --red: #bf1d1d;
+    --red-dark: #8a1414;
+    --white: #ffffff;
+    --black: #000000;
+    --grey: #707a7d;
+    --dark: #212b2c;
+    /* Text on the background scene */
+    --on-bg: #ffffff;
+    --on-bg-muted: rgba(255, 255, 255, 0.82);
+    --pixel: 'Pixeldoro', 'Courier New', monospace;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--pixel);
+    background-color: #060f1a;
+    color: var(--on-bg);
+    text-shadow: 0 2px 0 rgba(0, 0, 0, 0.35);
+    line-height: 1.5;
+    -webkit-font-smoothing: none;
+}
+
+a {
+    color: inherit;
+}
+
+/* Nav */
+nav {
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: 6px 18px;
+    padding: 16px 24px;
+    font-size: 15px;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--on-bg-muted);
+}
+
+nav a:hover {
+    color: var(--on-bg);
+}
+
+/* The game's Urban_Night1 scene stays put behind the whole page: the still first, its looping video on top once it plays */
+.backdrop {
+    position: fixed;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    height: 100lvh;
+    background: #060f1a url('/images/bg-urban-night.webp') center / cover no-repeat;
+    image-rendering: pixelated;
+}
+
+.backdrop::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(rgba(33, 43, 44, 0.35), rgba(33, 43, 44, 0.6));
+}
+
+/* No rubber-band bounce: it pulls the page off the fixed backdrop */
+html {
+    overscroll-behavior: none;
+}
+
+.backdrop-video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    image-rendering: pixelated;
+    opacity: 0;
+}
+
+.backdrop-video.is-playing {
+    opacity: 1;
+}
+
+/* Hero */
+.hero {
+    min-height: calc(100svh - 58px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 8px 16px 48px;
+}
+
+.wordmark {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 50px;
+    line-height: 1;
+    margin-bottom: 20px;
+}
+
+.wordmark img {
+    width: 48px;
+    height: 48px;
+    image-rendering: pixelated;
+}
+
+/* Screenshot slider */
+.slider-row {
+    position: relative;
+}
+
+.slider {
+    position: relative;
+    cursor: pointer;
+    width: min(92vw, clamp(320px, calc((100svh - 490px) * 1.7778), 880px));
+    aspect-ratio: 16 / 9;
+    border: 4px solid var(--white);
+    border-radius: 14px;
+    overflow: hidden;
+    background: var(--dark);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+}
+
+/* The language bar above the nav takes its height out of the slider's budget */
+body:has(> .lang-suggest:not([hidden])) .slider {
+    width: min(92vw, clamp(320px, calc((100svh - 535px) * 1.7778), 880px));
+}
+
+.slide {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.8s ease;
+}
+
+.slide.is-active {
+    opacity: 1;
+}
+
+/* Prev / next: beside the frame on wide screens, over its edges on narrow ones */
+.slider-arrow {
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    display: grid;
+    place-items: center;
+    width: 48px;
+    height: 48px;
+    transform: translateY(-50%);
+    border: 3px solid var(--white);
+    border-radius: 10px;
+    background: rgba(33, 43, 44, 0.6);
+    color: var(--white);
+    cursor: pointer;
+    box-shadow: 0 4px 0 rgba(0, 0, 0, 0.35);
+}
+
+.slider-arrow:hover {
+    background: rgba(33, 43, 44, 0.85);
+}
+
+.slider-arrow:active {
+    transform: translateY(calc(-50% + 3px));
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.35);
+}
+
+.slider-arrow svg {
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+    shape-rendering: crispEdges;
+}
+
+.slider-arrow.prev {
+    left: -72px;
+}
+
+.slider-arrow.next {
+    right: -72px;
+}
+
+.slider-arrow.next svg {
+    transform: scaleX(-1);
+}
+
+@media (max-width: 1060px) {
+    .slider-arrow {
+        width: 40px;
+        height: 40px;
+    }
+
+    .slider-arrow.prev {
+        left: 10px;
+    }
+
+    .slider-arrow.next {
+        right: 10px;
+    }
+}
+
+.slider-meta {
+    margin-top: 10px;
+}
+
+/* A small muted caption under the screenshot, not a second headline */
+.slide-caption {
+    font-size: 15px;
+    color: var(--on-bg-muted);
+    min-height: 1.5em;
+}
+
+@media (max-width: 600px) {
+    .slide-caption {
+        min-height: 3em;
+    }
+}
+
+.dots {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 8px;
+}
+
+.dots button {
+    width: 10px;
+    height: 10px;
+    border: none;
+    border-radius: 2px;
+    background: rgba(255, 255, 255, 0.35);
+    cursor: pointer;
+}
+
+.dots button[aria-current="true"] {
+    background: var(--white);
+}
+
+.tagline {
+    max-width: 560px;
+    font-size: 20px;
+    margin: 14px 0 20px;
+}
+
+/* Live player count from the backend: left end of the nav, hidden until it loads */
+.online {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-right: auto;
+    color: var(--on-bg-muted);
+}
+
+/* Phones: the count gets its own centered row above the links, and the language button shows just the globe */
+@media (max-width: 600px) {
+    nav {
+        justify-content: center;
+        gap: 6px 14px;
+        padding: 16px;
+        font-size: 15px;
+    }
+
+    .online {
+        flex-basis: 100%;
+        justify-content: center;
+        margin-right: 0;
+    }
+
+    .lang-code {
+        display: none;
+    }
+}
+
+/* Narrow phones: tighter links so the globe stays on their row */
+@media (max-width: 389px) {
+    nav {
+        column-gap: 8px;
+    }
+}
+
+.online[hidden] {
+    display: none;
+}
+
+.online-dot {
+    width: 8px;
+    height: 8px;
+    background: var(--green);
+    animation: online-blink 2s steps(1) infinite;
+}
+
+@keyframes online-blink {
+    50% {
+        opacity: 0.3;
+    }
+}
+
+/* Call to action: one variant per device, desktop is the no-JS default */
+.cta-ios,
+.cta-android,
+[data-device="ios"] .cta-desktop,
+[data-device="android"] .cta-desktop {
+    display: none;
+}
+
+[data-device="ios"] .cta-ios,
+[data-device="android"] .cta-android {
+    display: block;
+}
+
+.btn-play {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 16px 40px;
+    background: var(--red);
+    color: var(--white);
+    font-size: 25px;
+    text-decoration: none;
+    border-radius: 12px;
+    box-shadow: 0 5px 0 var(--red-dark);
+    transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+
+/* The play arrow is its own icon, nudged a touch below the middle of the lowercase letters */
+.play-icon {
+    position: relative;
+    top: 4px;
+    width: 9px;
+    height: 15px;
+    fill: currentColor;
+    shape-rendering: crispEdges;
+}
+
+.btn-play:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 7px 0 var(--red-dark);
+}
+
+.btn-play:active {
+    transform: translateY(4px);
+    box-shadow: 0 1px 0 var(--red-dark);
+}
+
+/* Badges differ in width per language, so they share a height */
+.store-badge img {
+    height: 65px;
+    width: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.cta-note {
+    font-size: 15px;
+    color: var(--on-bg-muted);
+    margin-top: 12px;
+}
+
+.other-platforms {
+    font-size: 15px;
+    color: var(--on-bg-muted);
+    margin-top: 6px;
+}
+
+.ratings {
+    font-size: 15px;
+    margin-top: 18px;
+    color: var(--on-bg-muted);
+}
+
+.ratings b {
+    font-weight: normal;
+    white-space: nowrap;
+}
+
+.ratings span {
+    color: var(--orange);
+}
+
+/* Focus tools: four small cards, one game icon each */
+.focus-tools {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 24px 16px 64px;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 30px;
+    font-weight: normal;
+    margin-bottom: 24px;
+}
+
+.tool-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+}
+
+.tool {
+    padding: 24px 18px;
+    border: 3px solid var(--white);
+    border-radius: 14px;
+    background: rgba(33, 43, 44, 0.75);
+    box-shadow: 0 4px 0 rgba(0, 0, 0, 0.35);
+}
+
+.tool img {
+    width: 44px;
+    height: 44px;
+    image-rendering: pixelated;
+    margin-bottom: 12px;
+}
+
+.tool h3 {
+    font-size: 20px;
+    font-weight: normal;
+    margin-bottom: 8px;
+}
+
+.tool p {
+    font-size: 15px;
+    color: var(--on-bg-muted);
+}
+
+@media (max-width: 900px) {
+    .tool-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .section-title {
+        font-size: 25px;
+    }
+
+    .tool-grid {
+        gap: 10px;
+    }
+
+    .tool {
+        padding: 18px 12px;
+    }
+
+    .tool h3 {
+        font-size: 20px;
+    }
+
+    .tool p {
+        font-size: 15px;
+    }
+}
+
+/* Cozy game: tabs, a screenshot and a short blurb per tab */
+.cozy {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 24px 16px 64px;
+    text-align: center;
+}
+
+.tabs {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 24px;
+}
+
+.tabs[hidden] {
+    display: none;
+}
+
+.tabs button {
+    padding: 10px 18px;
+    border: 3px solid var(--white);
+    border-radius: 10px;
+    background: rgba(33, 43, 44, 0.6);
+    color: var(--white);
+    font: inherit;
+    font-size: 20px;
+    text-shadow: inherit;
+    cursor: pointer;
+    box-shadow: 0 4px 0 rgba(0, 0, 0, 0.35);
+}
+
+.tabs button:hover {
+    background: rgba(33, 43, 44, 0.85);
+}
+
+.tabs button[aria-selected="true"] {
+    background: var(--blue);
+}
+
+.tab-panel {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    gap: 24px;
+    align-items: center;
+    text-align: left;
+}
+
+.tab-panel + .tab-panel {
+    margin-top: 24px;
+}
+
+.tab-panel[hidden] {
+    display: none;
+}
+
+.tab-panel img {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 10;
+    border: 4px solid var(--white);
+    border-radius: 14px;
+    background: var(--dark);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+}
+
+.tab-text {
+    padding: 24px;
+    border: 3px solid var(--white);
+    border-radius: 14px;
+    background: rgba(33, 43, 44, 0.75);
+    box-shadow: 0 4px 0 rgba(0, 0, 0, 0.35);
+}
+
+.tab-text h3 {
+    font-size: 20px;
+    font-weight: normal;
+    margin-bottom: 8px;
+}
+
+.tab-text p {
+    font-size: 15px;
+    color: var(--on-bg-muted);
+}
+
+@media (max-width: 800px) {
+    .tab-panel {
+        grid-template-columns: 1fr;
+        gap: 14px;
+        text-align: center;
+    }
+
+    .tab-text {
+        padding: 18px 16px;
+    }
+}
+
+@media (max-width: 600px) {
+    .tabs {
+        gap: 8px;
+    }
+
+    .tabs button {
+        padding: 7px 10px;
+        font-size: 15px;
+    }
+
+    .tab-text h3 {
+        font-size: 20px;
+    }
+
+    .tab-text p {
+        font-size: 15px;
+    }
+}
+
+/* Explore the world: the tab buttons switch which location fills the frame */
+.map {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 24px 16px 64px;
+    text-align: center;
+}
+
+.section-lead {
+    font-size: 20px;
+    color: var(--on-bg-muted);
+    margin: -12px 0 20px;
+}
+
+.map-panel[hidden] {
+    display: none;
+}
+
+.map-panel + .map-panel {
+    margin-top: 24px;
+}
+
+.map-panel img {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    border: 4px solid var(--white);
+    border-radius: 14px;
+    background: var(--dark);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+}
+
+.map-panel figcaption {
+    font-size: 20px;
+    margin-top: 12px;
+}
+
+@media (max-width: 600px) {
+    .section-lead,
+    .map-panel figcaption {
+        font-size: 15px;
+    }
+}
+
+/* What people say: short quotes from store reviews */
+.reviews {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 24px 16px 64px;
+    text-align: center;
+}
+
+.review-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    align-items: start;
+}
+
+.review-col {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.review {
+    padding: 22px 20px;
+    border: 3px solid var(--white);
+    border-radius: 14px;
+    background: rgba(33, 43, 44, 0.75);
+    box-shadow: 0 4px 0 rgba(0, 0, 0, 0.35);
+}
+
+.review blockquote {
+    font-size: 20px;
+    line-height: 1.4;
+}
+
+.review figcaption {
+    margin-top: 14px;
+    font-size: 15px;
+    color: var(--on-bg-muted);
+}
+
+.review figcaption span {
+    color: var(--orange);
+    margin-right: 4px;
+}
+
+@media (max-width: 900px) {
+    .review-grid {
+        grid-template-columns: 1fr;
+        max-width: 560px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 600px) {
+    .review blockquote {
+        font-size: 15px;
+    }
+}
+
+/* Changelog: the latest releases up front, the rest folded away */
+.changelog {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 24px 16px 64px;
+    text-align: center;
+}
+
+.release {
+    text-align: left;
+    padding: 18px 22px;
+    margin-bottom: 16px;
+    border: 3px solid var(--white);
+    border-radius: 14px;
+    background: rgba(33, 43, 44, 0.75);
+    box-shadow: 0 4px 0 rgba(0, 0, 0, 0.35);
+}
+
+.release h3 {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 12px;
+    font-size: 20px;
+    font-weight: normal;
+    margin-bottom: 8px;
+}
+
+.release time {
+    font-size: 15px;
+    color: var(--on-bg-muted);
+}
+
+.release ul {
+    padding-left: 20px;
+    font-size: 15px;
+    line-height: 1.45;
+}
+
+.release li + li {
+    margin-top: 4px;
+}
+
+.older summary {
+    display: inline-block;
+    padding: 8px 16px;
+    margin-bottom: 16px;
+    border: 3px solid var(--white);
+    border-radius: 10px;
+    background: rgba(33, 43, 44, 0.6);
+    font-size: 20px;
+    cursor: pointer;
+    list-style: none;
+}
+
+.older summary::-webkit-details-marker {
+    display: none;
+}
+
+.older[open] summary {
+    background: var(--blue);
+}
+
+@media (max-width: 600px) {
+    .release {
+        padding: 16px 16px;
+    }
+
+    .release ul {
+        font-size: 15px;
+    }
+}
+
+/* Private discord: a small nav icon opens this popover, no public invite link */
+.discord-btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 0;
+    border: 0;
+    background: none;
+    color: var(--on-bg-muted);
+    cursor: pointer;
+}
+
+.discord-btn:hover {
+    color: var(--on-bg);
+}
+
+.discord-btn svg {
+    width: 21px;
+    height: 15px;
+    fill: currentColor;
+    shape-rendering: crispEdges;
+}
+
+/* Social links in the nav: pixel icons in the same style */
+nav .social {
+    display: inline-flex;
+    align-items: center;
+}
+
+nav .social svg {
+    fill: currentColor;
+    shape-rendering: crispEdges;
+}
+
+.discord-pop {
+    width: min(440px, calc(100% - 32px));
+    margin: auto;
+    padding: 28px 24px 24px;
+    border: 3px solid var(--white);
+    border-radius: 14px;
+    background: var(--dark);
+    color: var(--on-bg);
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.discord-pop::backdrop {
+    background: rgba(0, 0, 0, 0.55);
+}
+
+.discord-pop img {
+    width: 44px;
+    height: 44px;
+    image-rendering: pixelated;
+    margin-bottom: 10px;
+}
+
+.discord-pop h2 {
+    font-size: 25px;
+    font-weight: normal;
+    margin-bottom: 12px;
+}
+
+.discord-pop p {
+    font-size: 20px;
+    line-height: 1.45;
+}
+
+.discord-pop p + p {
+    margin-top: 8px;
+    color: var(--on-bg-muted);
+}
+
+.discord-pop button {
+    margin-top: 20px;
+    padding: 8px 18px;
+    border: 3px solid var(--white);
+    border-radius: 10px;
+    background: var(--blue);
+    color: var(--white);
+    font: inherit;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* FAQ: questions people ask in reviews, plus what search asks */
+.faq {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 24px 16px 64px;
+    text-align: center;
+}
+
+.faq details {
+    text-align: left;
+    margin-bottom: 12px;
+    border: 3px solid var(--white);
+    border-radius: 14px;
+    background: rgba(33, 43, 44, 0.75);
+    box-shadow: 0 4px 0 rgba(0, 0, 0, 0.35);
+}
+
+.faq summary {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 16px 20px;
+    font-size: 20px;
+    cursor: pointer;
+    list-style: none;
+}
+
+.faq summary::-webkit-details-marker {
+    display: none;
+}
+
+.faq summary::after {
+    content: '+';
+    flex-shrink: 0;
+    color: var(--on-bg-muted);
+}
+
+.faq details[open] summary::after {
+    content: '−';
+}
+
+.faq details p {
+    padding: 0 20px 18px;
+    font-size: 15px;
+    line-height: 1.5;
+    color: var(--on-bg-muted);
+}
+
+/* Closing call to action, same device switch as the hero */
+.outro {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 24px 16px 72px;
+    text-align: center;
+}
+
+footer {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 32px 16px;
+    border-top: 2px solid rgba(255, 255, 255, 0.2);
+    font-size: 15px;
+    color: var(--on-bg-muted);
+}
+
+.footer-cols {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+
+.footer-cols h2 {
+    font-size: 20px;
+    font-weight: normal;
+    color: var(--on-bg);
+    margin-bottom: 10px;
+}
+
+.footer-cols a,
+.footer-cols button {
+    display: block;
+    padding: 3px 0;
+    text-decoration: none;
+}
+
+.footer-cols button {
+    border: 0;
+    background: none;
+    color: inherit;
+    font: inherit;
+    cursor: pointer;
+}
+
+/* Long words in other languages break (with a hyphen where the browser knows the language) instead of pushing narrow columns off the screen */
+.tool,
+.footer-cols h2,
+.footer-cols a:not([href^="mailto:"]) {
+    -webkit-hyphens: auto;
+    hyphens: auto;
+    overflow-wrap: anywhere;
+}
+
+footer a:hover,
+.footer-cols button:hover {
+    color: var(--on-bg);
+    text-decoration: underline;
+}
+
+.footer-langs {
+    margin-top: 28px;
+    line-height: 1.8;
+}
+
+.footer-langs a {
+    display: inline-block;
+    margin-right: 14px;
+    text-decoration: none;
+}
+
+.footer-langs a[aria-current] {
+    color: var(--on-bg);
+}
+
+.copyright {
+    margin-top: 20px;
+    font-size: 15px;
+}
+
+/* Language picker: the globe in the nav opens every version of this page */
+.lang-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 0;
+    border: 0;
+    background: none;
+    color: var(--on-bg-muted);
+    font: inherit;
+    text-shadow: inherit;
+    cursor: pointer;
+}
+
+.lang-btn:hover {
+    color: var(--on-bg);
+}
+
+.lang-btn svg {
+    width: 15px;
+    height: 15px;
+    fill: currentColor;
+    shape-rendering: crispEdges;
+}
+
+.lang-pop {
+    width: min(320px, calc(100% - 32px));
+    margin: auto;
+    padding: 20px;
+    border: 3px solid var(--white);
+    border-radius: 14px;
+    background: var(--dark);
+    color: var(--on-bg);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.lang-pop::backdrop {
+    background: rgba(0, 0, 0, 0.55);
+}
+
+.lang-pop h2 {
+    font-size: 20px;
+    font-weight: normal;
+    text-align: center;
+    margin-bottom: 12px;
+}
+
+.lang-pop a {
+    display: block;
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.lang-pop a:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.lang-pop a[aria-current] {
+    background: var(--blue);
+}
+
+/* Offer the visitor's own language when the browser asks for one we have; never redirect */
+.lang-suggest {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 16px;
+    background: var(--blue);
+    font-size: 15px;
+    text-align: center;
+}
+
+.lang-suggest[hidden] {
+    display: none;
+}
+
+.lang-suggest button {
+    padding: 0 4px;
+    border: 0;
+    background: none;
+    color: var(--white);
+    font: inherit;
+    font-size: 20px;
+    line-height: 1;
+    cursor: pointer;
+}
+
+@media (max-width: 600px) {
+    .faq summary {
+        font-size: 15px;
+        padding: 14px 16px;
+    }
+
+    .faq details p {
+        padding: 0 16px 16px;
+        font-size: 15px;
+    }
+
+    .footer-cols {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    nav {
+        justify-content: center;
+    }
+
+    .wordmark {
+        font-size: 35px;
+    }
+
+    .tagline {
+        font-size: 20px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .slide {
+        transition: none;
+    }
+
+    .online-dot {
+        animation: none;
+    }
+}

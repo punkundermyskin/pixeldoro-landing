@@ -1,0 +1,12 @@
+# The mobile page, English.
+text:
+  title: "Pixeldoro on Mobile"
+  headline: "study on your phone too now"
+  shot_alt: "Pixeldoro on a phone: the countryside full of people studying, with the start timer button up top"
+  reasons:
+    - title: "study anywhere"
+      text: "bus, cafe, library, bed"
+    - title: "everything syncs"
+      text: "same account, same coins, same world"
+    - title: "100 coins on your first pomo"
+      text: "just for trying it"

@@ -1,0 +1,323 @@
+# Ana sayfa metni, Türkçe. Diğer tüm diller bu anahtarların aynısını kullanır; burada eksik olan bir anahtar en.yml'deki metne döner.
+# {n}, {mon}, {d}, {y} şablon tarafından doldurulur.
+
+meta:
+  title: "Pixeldoro: Ders Çalışma için Cozy Pomodoro Zamanlayıcı"
+  description: "Cozy piksel dünyada ücretsiz pomodoro zamanlayıcı. Gerçek insanlarla ders çalış, lofi dinle. DEHB dostu odaklanma. iPhone, Mac, Android, PC, web."
+  share: "Pixeldoro, cozy bir piksel art dünyanın içinde gerçek insanların yanında ders çalıştığın ücretsiz bir pomodoro zamanlayıcı."
+
+nav:
+  online: "{n} kişi çevrimiçi"
+  discord: "Özel discord"
+  language: "Dil"
+  suggest: "bu sayfayı türkçe görüntüle"
+  suggest_close: "Kapat"
+
+hero:
+  slider: "Pixeldoro ekran görüntüleri"
+  prev: "Önceki ekran görüntüsü"
+  next: "Sonraki ekran görüntüsü"
+  dot: "{n}. ekran görüntüsünü göster"
+  slides:
+    countryside:
+      caption: "burada gördüğün herkes şu an ders çalışan gerçek bir insan"
+      alt: "Ahşap bir tapınak kapısı ve altın geyik heykelleriyle piksel art bir kırsal alan; diğer Pixeldoro kullanıcıları oturmuş ders çalışıyor, her birinin pomodoro sayısı, zamanlayıcısı ve görevi görünüyor"
+    rooms:
+      caption: "bir oda seç. her birinde bir kalabalık var"
+      alt: "Ortak alanlar ve arkadaş evleriyle odak odası seçimi: canlı oyuncu sayılarıyla Bar, Şehir merkezi, Kırsal, Mağaza ve HQ, özel bir Ev ve yakında gelecek iki oda"
+    start-timer:
+      caption: "ne üzerinde çalışacağını seç ve bir pomodoro başlat"
+      alt: "Odak zamanlayıcısı ekranı: 25/5, 45/15, 15/3, kronometre ve özel süre seçenekleri, 25:00'da bekleyen bir zamanlayıcı ve matematik sınavları, ingilizce, fizik gibi renkli odak etiketleri"
+    focus-night:
+      caption: "herkesle yan yana odaklan. yağmur açık, lofi açık"
+      alt: "Yağmurlu bir gecede çalışan bir pomodoro; yanında sıcak lambaların altında ders çalışan bir grup kullanıcı, ekranda haftalık topluluk meydan okuması"
+    coins:
+      caption: "her pomodoro jeton kazandırır"
+      alt: "Biten bir odak seansının ardından ödül ekranı: odağın biraz ganimet getirdi, 30 jeton, al"
+    shop:
+      caption: "jetonları mağazada harca: mobilya, odalar, kıyafetler, evcil hayvanlar"
+      alt: "Oyun içi mağaza kataloğu: mobilya, mutfak, banyo, elektronik, dekor, geleneksel ve tören eşyaları, ayrıca odalar, karakterler, arka planlar ve evcil hayvanlar"
+    home-pets:
+      caption: "arkadaşlarını evine çağır. kediler burada yaşıyor"
+      alt: "Üç evcil kedi ve ziyarete gelen iki arkadaşla dekore edilmiş bir ev; her birinin pomodoro sayısı ve ne çalıştığı görünüyor"
+    stats:
+      caption: "odak saatlerinin nasıl biriktiğini izle"
+      alt: "Profil ve istatistik ekranı: 511 günde 1.526 domates, bir ayda 107 saat odak, toplam 1.691 saat ve odak etiketlerine göre zaman dağılımı"
+    friends:
+      caption: "arkadaşlarının neye ve nerede odaklandığını gör"
+      alt: "Topluluk panelindeki arkadaş listesi: her arkadaşın avatarı, neye odaklandığı, hangi odada olduğu ve pomodoro sayısı; yanında ders çalışan insanlarla dolu bir kafe"
+  tagline: "gerçek insanlarla ders çalıştığın, odaklandığın ve takıldığın sıcacık bir piksel dünya."
+  play: "hemen oyna"
+  browser_note: "ücretsiz · tarayıcında çalışır"
+  or_get: "ya da uygulamayı indir"
+  ios_note: "ücretsiz · iphone + ipad"
+  android_note: "google play'de ücretsiz"
+  also_on: "ayrıca"
+  laptop: "dizüstü"
+  app_store_alt: "App Store'dan İndirin"
+  google_play_alt: "Google Play'den Alın"
+  ratings:
+    google_play: "5,0 google play"
+    app_store: "4,9 app store"
+    mac_app_store: "4,9 mac app store"
+
+platforms:
+  mac: "mac"
+  iphone: "iphone"
+  android: "android"
+  windows: "windows"
+  linux: "linux"
+  discord: "discord"
+
+tools:
+  title: "derin odak için araçlar"
+  timer:
+    title: "sana göre bir zaman\u00ADla\u00ADyıcı"
+    text: "25/5, 45/15, 15/3 ya da kendi süren. uzun ve derin çalışmalar için kronometre. süre bitince gerçek bir alarm."
+  radio:
+    title: "lofi radyo"
+    text: "içinde altı lofi + chill istasyon var. dünyada nereye gidersen seninle gelir. sen odaklanırken yağmur yağar, sis çöker."
+  tags:
+    title: "odak etiketleri"
+    text: "ne üzerinde çalıştığını etiketle: sınavlar, kodlama, okuma. yakındaki herkes neyle uğraştığını görür."
+  stats:
+    title: "bakması keyifli istatis\u00ADtik\u00ADler"
+    text: "saatlerinin nereye gittiğini etiket etiket gör. domatesler hafta hafta birikir."
+
+cozy:
+  title: "üstelik cozy bir oyun"
+  tabs: "Oyun özellikleri"
+  friends:
+    tab: "arkadaşlar"
+    title: "arkadaşlar + ev ziyaretleri"
+    text: "arkadaş ekle, neye ve nerede odaklandıklarını gör. birlikte çalışmak için odalarına uğra ya da onları kendi evine çağır."
+    alt: "Topluluk panelindeki arkadaş listesi: her arkadaşın neye odaklandığı ve hangi odada olduğu görünüyor; yanında ders çalışan insanlarla dolu bir kafe"
+  pets:
+    tab: "evcil hayvanlar"
+    title: "evcil hayvanlar"
+    text: "mağazadan evcil hayvan sahiplen. sen çalışırken yanında takılır, sana arkadaşlık ederler."
+    alt: "Şehir merkezinde bir sokakta, mama kapları ve bir yün yumağıyla sahibinin yanında kıvrılmış bir evcil hayvan; yakında başka oyuncular ders çalışıyor"
+  decorate:
+    tab: "dekorasyon"
+    title: "odanı tamamen senin yap"
+    text: "her pomodoro jeton kazandırır. bunları mobilyaya, dekora ve yepyeni odalara harca, sonra düzenleme modunda her şeyi istediğin yere taşı."
+    alt: "Düzenleme modunda ev: kitaplıklar, koltuklar, bitkiler ve bilgisayar masalarıyla dolu bir odada mobilyalar yer değiştiriyor"
+  story:
+    tab: "hikâye"
+    title: "oynanacak bir hikâye"
+    text: "şehirdekiler sana hikâye, günlük ve haftalık görevler verir. onları tamamlamak için pomodoro bitir, yeni yerlerin ve arka planların kilidini aç."
+    alt: "Hikâye, günlük ve haftalık görevlerin yer aldığı görev kitabı: Lt. Michiko'dan yeni bir arka planın kilidini açan beş günlük seri görevi"
+
+map:
+  title: "dünyayı keşfet"
+  lead: "ders çalışmak için beş yer, her birinin kendi kalabalığı var. dahası yolda."
+  tabs: "Mekânlar"
+  countryside:
+    tab: "kırsal"
+    caption: "tapınaklar, geyikler ve küçük bir dere. şehrin en sakin köşesi."
+    alt: "Gece vakti kırsal: bir tapınak, dere üzerinde ahşap bir köprü ve altın geyik heykelleri; sıcak lambaların altında ders çalışan oyuncular"
+  downtown:
+    tab: "şehir merkezi"
+    caption: "ana cadde. bar, mağaza ve evin birbirine birkaç adım uzakta."
+    alt: "Bar, mağaza ve ev tabelalarının olduğu şehir merkezi sokakları; etrafta dolaşan ve kaldırımlarda ders çalışan oyuncular"
+  bar:
+    tab: "bar"
+    caption: "kendini işine vermiş insanlarla dolu sıcacık bir bar."
+    alt: "Masalarda ve kilimlerin üstünde oyuncularla dolu kalabalık bir bar; her birinin pomodoro sayısı, zamanlayıcısı ve görevi görünüyor"
+  shop:
+    tab: "mağaza"
+    caption: "köşedeki mağaza. kanepelerde bir yer kap ve işine gömül."
+    alt: "Mağazanın içi: bir tezgâh, raflar ve kanepeler; seanslar arasında takılan oyuncular"
+  hq:
+    tab: "hq"
+    caption: "pixeldoro hq. tam ofis moduna geçmek istediğin zamanlar için sıra sıra masalar."
+    alt: "Pixeldoro HQ: sıra sıra masaları, bir yazıcısı ve bir kahve arabası olan bir ofis; masalarda çalışan oyuncular"
+
+reviews:
+  title: "insanlar ne diyor"
+  lead: "app store ve google play'den gerçek yorumlar."
+  stars: "5 yıldız"
+  app_store: "app store"
+  mac_app_store: "mac app store"
+  google_play: "google play"
+
+updates:
+  title: "sürüm notları"
+  lead: "birkaç haftada bir yeni güncelleme geliyor. hepsi burada."
+  older: "eski güncellemeler ({n})"
+  date: "{d} {mon} {y}"
+  months: ["oca", "şub", "mar", "nis", "may", "haz", "tem", "ağu", "eyl", "eki", "kas", "ara"]
+
+faq:
+  title: "sıkça sorulan sorular"
+  items:
+    - q: "pixeldoro nedir?"
+      a: "pixeldoro, sıcacık bir piksel art dünyanın içinde ücretsiz bir pomodoro zamanlayıcı. bir yer seçiyor, bir odak seansı başlatıyor ve aynısını yapan gerçek insanların yanında çalışıyorsun. her seans odan için jeton kazandırır, hikâyeyi ilerletir ve istatistiklerine eklenir. içinde lofi radyo var; iphone, ipad, mac, android, windows, linux, tarayıcı ve discord'da çalışır."
+    - q: "pixeldoro ücretsiz mi?"
+      a: "evet. zamanlayıcı, dünya, diğer oyuncular, arkadaşlar, görevler, evcil hayvanlar ve radyo tamamen ücretsiz; reklam yok, abonelik yok. istersen tek seferlik bir destekçi paketi de var: her seansta %25 daha fazla jeton, profil rozeti, premium görünümler, mobilyalar, arka planlar ve odalar, bir de bonus görev."
+    - q: "bu bir oyun mu, verimlilik uygulaması mı?"
+      a: "ikisi de, ama önce zamanlayıcı gelir. oyun sadece sen odaklandığında ilerler: pomodoro bitirdikçe jeton kazanır, görevleri tamamlar ve yeni yerlerin kilidini açarsın. seanslar arasında da seni işinden koparmadan tatmin edecek kadar yapacak şey var."
+    - q: "diğer insanlar gerçek mi?"
+      a: "evet. etrafta dolaşan ya da bir masada oturan her karakter, şu an odaklanan gerçek bir oyuncu. zamanlayıcısını, kaç pomodoro yaptığını ve ne üzerinde çalıştığını görebilirsin."
+    - q: "body doubling nedir?"
+      a: "body doubling, başlamayı ve devam etmeyi kolaylaştırmak için başka birinin yanında çalışmak demek. kütüphanede ya da kafede ders çalışmanın işe yaramasının sebebi de bu. pixeldoro sana bu hissi kamerasız ve randevusuz verir: istediğin an aç, etrafında işine gömülmüş insanlar var."
+    - q: "arkadaşlarımla ders çalışabilir miyim?"
+      a: "evet. arkadaş ekle, kimin çevrimiçi olduğunu ve ne üzerinde çalıştığını gör, yan yana odaklanmak için birbirinizin evine uğrayın. lobilerle sunucu değiştirip farklı bir kalabalık bulabilirsin."
+    - q: "dehb için iyi mi?"
+      a: "sıradan bir zamanlayıcıdan hemen kopan beyinler için yapıldı. sırf geldiğin için seni ödüllendirir, etrafında odaklanan diğer insanlar başlamana yardım eder, hikâye de geri dönmen için bir sebep verir. tıbbi bir araç değil, sadece işe koyulmanın daha sıcacık bir yolu."
+    - q: "yapılacaklar listesi ya da uygulama engelleme var mı?"
+      a: "henüz yok. odak etiketleriyle her seansı etiketleyebilirsin (sınavlar, kodlama, okuma), istatistiklerin de zamanını etikete göre ayırır. ikisi de yapılacaklar listemizde."
+    - q: "hangi cihazlarda oynayabilirim, ilerlemem senkronize oluyor mu?"
+      a: "app store'dan iphone, ipad ve mac'te, google play'den android'de, pixeldoro.io'dan windows ve linux'ta, play.pixeldoro.io adresinden her tarayıcıda ve discord içinde bir etkinlik olarak. e-postanla giriş yap; ilerlemen, odan ve jetonların her cihazda seninle gelir. 9 dil konuşuyor."
+
+outro:
+  title: "odaklanmaya hazır mısın?"
+  lead: "her cihazda ücretsiz. insanlar şu an odaklanıyor."
+
+# The guide and download pages (_layouts/guide.html)
+guide:
+  questions: "sorular"
+
+discord:
+  title: "özel bir discord"
+  text: "herkese açık bir davet yok. 30 pomodoro tamamla, davet uygulamada karşına çıksın."
+  note: "en aktif oyuncular için küçük bir sunucu. orada görüşürüz."
+  close: "anladım"
+
+footer:
+  play: "oyna"
+  browser: "tarayıcında"
+  iphone_ipad: "iphone + ipad"
+  mac: "mac"
+  android: "android"
+  discord_activity: "discord etkinliği"
+  mini: "pixeldoro mini"
+  community: "topluluk"
+  discord: "discord"
+  guides: "rehberler"
+  study_with_me: "study with me"
+  pomodoro_timer: "pomodoro zamanlayıcı"
+  adhd_focus_app: "dehb odak uygulaması"
+  legal: "yasal"
+  privacy: "gizlilik politikası"
+  terms: "kullanım koşulları"
+  languages: "diller"
+
+# Sürüme göre sürüm notları; tarihler ve sıralama _data/changelog.yml'de
+changelog:
+  "2.7.1":
+    - "pixeldoro artık 8 dil daha konuşuyor"
+  "2.6.9":
+    - "topluluk paneli: kimin çevrimiçi olduğunu gör, diğer oyuncularla tanış"
+    - "arkadaşlar: istek gönder, kabul et ve çalışma arkadaşlarını takip et"
+    - "arkadaşlarının evinde yan yana ders çalışın"
+    - "lobiler: birlikte çalışacak farklı bir kalabalık bulmak için sunucu değiştir"
+  "2.6.8":
+    - "gerçek zamanlı çok oyunculu mod: odaklanan insanların etrafta dolaştığını gör"
+    - "karakterin artık odak seanslarında oturuyor"
+    - "ilerleme ve istatistiklerle herkese açık oyuncu profilleri"
+    - "aksesuarlar: kozmetik eşyaları topla ve kullan"
+    - "diğer oyunculara yaklaştıkça isim etiketleri belirginleşiyor"
+    - "diğer oyuncuların evlerini ziyaret et, nasıl dekore ettiklerini gör"
+  "2.6.5":
+    - "mağaza ilerlemesi: her ödüle kaç seans kaldığını gör"
+    - "pomoyu bitirmesen bile kısmi jeton"
+    - "seansı erken bitirmeden önce \"devam et\" hatırlatmaları"
+    - "seni yeniden rayına sokan \"mola bitti\" hatırlatmaları"
+    - "50+ yeni avatar"
+    - "daha iyi bir başlangıç rehberi ve arayüz cilası"
+  "2.6.4":
+    - "gerçek bir alarm: odak seansın bitince pixeldoro çalıyor"
+  "2.6.3":
+    - "küçük iyileştirmeler ve rötuşlar"
+  "2.6.2":
+    - "başlangıç rehberi v2: animasyonlu bir giriş, 15 sn'lik demo pomo ve hediye mobilya"
+    - "parlayan ipuçları nereye dokunacağını gösteriyor"
+    - "birkaç yeri keşfettikten sonra hızlı seyahat açılıyor"
+    - "daha sakin bir ilk açılış: öğrenirken alarm ya da bildirim yok"
+    - "daha hızlı senkronizasyon ve daha hafif depolama"
+  "2.6.0":
+    - "pixeldoro destekçisi: tek seferlik satın alım, sonsuza dek senin"
+    - "her seansta %25 daha fazla jeton"
+    - "profilinde destekçi rozeti"
+    - "premium görünümler, mobilyalar, arka planlar ve odalar, hepsi açık"
+    - "başka hiçbir yolla alamayacağın ödüller veren bir bonus görev"
+  "2.5.7":
+    - "tarayıcı tarzında yepyeni bir görev kitabı"
+    - "günlük ve haftalık görevler"
+    - "grup görevleri düzeltildi"
+    - "sahne düzenleri toparlandı"
+  "2.5.6":
+    - "daha akıcı kayıt ve giriş"
+    - "bulut senkronu optimizasyonları"
+    - "görevlerde ve istatistiklerde saat dilimi düzeltmeleri"
+    - "piksel art görüntü iyileştirmeleri"
+  "2.5.5":
+    - "zamanlayıcıyı her yerde çalıştır"
+    - "kırsalda artık her yere yürüyebilirsin (oraya scooter'la gidiliyor)"
+    - "diğer oyuncular gerçekte bulundukları yerde görünüyor"
+    - "hızlı seyahat, her yer için oyuncu sayısıyla"
+    - "canlı \"şu an çalışan kişi\" sayacı"
+    - "afk oyuncular kompakt görünüme geçiyor"
+    - "2 saati geçen seanslarda \"odak modunda\" durumu"
+    - "daha akıcı kamera, biraz daha yavaş yürüyüş"
+  "2.5.4":
+    - "eşyalarını gizleyip göstermek için envanter paneli"
+    - "mağaza: sahip olunanlar sekmesi, alt kategoriler, jeton bakiyesi hep görünür"
+    - "istediğin kadar mobilya al, aynısından birkaç tane bile"
+    - "mobilya alınca eve gidiyorsun ve düzenleme modu açılıyor"
+    - "~10 yeni mağaza eşyası"
+    - "uygulama son bulunduğun yeri hatırlıyor"
+  "2.5.3":
+    - "oda özelleştirme: mobilyalarının yerini değiştir"
+    - "seçmek için dokun, taşımak için sürükle, beğenince kaydet"
+    - "bir şeyleri bozarsan diye sıfırlama düğmesi"
+    - "yerleşimin cihazların arasında senkronize olur"
+  "2.5.0":
+    - "10+ yeni piksel art arka plan"
+    - "manuel pomo girişi"
+  "2.4.9":
+    - "25 yeni karakter"
+    - "haftalık ödüller"
+  "2.4.8":
+    - "açıklamalar, istatistikler ve küçük hikâye parçaları için karakterlere ve eşyalara dokun"
+  "2.4.7":
+    - "mağaza yenilendi: yeni kategoriler ve daha sade bir düzen"
+    - "nadirlik seviyeleriyle satın alınabilen karakterler"
+    - "haftalık karakter rotasyonu"
+    - "mağaza ilk pomodorondan hemen sonra açılıyor"
+    - "daha net, daha hızlı kayıt"
+  "2.4.6":
+    - "mobil kontroller için acil düzeltme"
+  "2.4.5":
+    - "haftalık meydan okumalar: toplulukla birlikte ortak pomodoro hedeflerine ulaş"
+  "2.4.4":
+    - "zen modu: tam ekran, zamanlayıcı yok, sadece huzur"
+    - "yeni odak etiketi renkleri"
+    - "uygulama içi bildirimler"
+  "2.4.2":
+    - "şehrin dört bir yanına saklanmış günlük jetonlar"
+    - "evcil hayvan ödülü geri döndü"
+  "2.4.1":
+    - "bulut senkronu: ilerlemen her yerde seninle"
+    - "hesaplar: her cihazdan giriş yap"
+    - "performans artışları ve arayüz düzeltmeleri"
+  "2.3.5":
+    - "arka plan müzik modu düzeltmesi"
+  "2.3.4":
+    - "ilk seansın artık 15/5"
+    - "yenilenmiş çalışma ambiyansı"
+    - "uçan jeton animasyonu"
+    - "evcil hayvan iyileştirmeleri"
+    - "uygulama artık diğer medyanın sesini kapatmıyor, kendi müziğini çalabilirsin"
+  "2.3.2":
+    - "kronometre ve odak süresi görevleriyle yeni bir görev sezonu"
+    - "yeni karakterler, hikâyeler ve grup görevleri"
+    - "çok oyunculu önizleme: başkalarının ne üzerinde çalıştığını gör"
+    - "yeni mekânlar ve daha fazla npc ile daha büyük bir şehir"
+    - "ev yükseltmeleri: odaların kilidini aç, dekorasyon topla"
+    - "ambiyans müziği"
+    - "baştan tasarlanmış arayüz"
+    - "zamanlayıcı ön ayarları: 25/5, 45/15, 15/3"
+    - "8 saate kadar kronometre modu"
+    - "düzenleyip renklendirebileceğin odak etiketleri"

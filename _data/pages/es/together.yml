@@ -1,0 +1,20 @@
+# Página together, español de Latinoamérica.
+text:
+  title: "te invitaron a pixeldoro"
+  title_from: "{name} te invitó a pixeldoro"
+  description: "alguien quiere entrar en modo enfoque contigo. el mismo mundo pixel, el mismo temporizador, concentración en tiempo real con gente real."
+  share: "el mismo mundo pixel. el mismo temporizador. lofi. ven a ponerte en modo enfoque en compañía."
+  pill: "te llegó una invitación"
+  friend: "tu amigo"
+  headline: "{name} quiere entrar en modo enfoque contigo"
+  subline: "está ahí ahora mismo, dándole duro por su cuenta. ve a hacerle compañía."
+  shot_alt: "Lista de amigos en la comunidad: el avatar de cada amigo, en qué se está enfocando, en qué sala está y su número de pomodoros, junto a un café lleno de gente estudiando"
+  reasons:
+    - title: "se van a ver de verdad"
+      text: "su personajito caminando por ahí, dándole duro. justo al lado del tuyo."
+    - title: "concéntrense al mismo tiempo"
+      text: "empieza un pomodoro y ponte en modo enfoque. sin llamadas, sin presión. un empujoncito para cumplir, pero cozy."
+    - title: "100 monedas en tu primer pomo"
+      text: "solo por aparecer"
+  cta_label: "descárgalo en lo que estés usando 👇"
+  what: "espera, ¿qué es esto? <a href=\"{home}\">pixeldoro, explicado →</a>"

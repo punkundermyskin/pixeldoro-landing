@@ -1,0 +1,20 @@
+# Die together-Seite, Deutsch. Spiegelt die Schlüssel unter "text" aus en/together.yml.
+text:
+  title: "du wurdest zu pixeldoro eingeladen"
+  title_from: "{name} hat dich zu pixeldoro eingeladen"
+  description: "jemand will mit dir zusammen grinden. gleiche pixel-welt, gleicher timer, fokus in echtzeit mit echten leuten."
+  share: "gleiche pixel-welt. gleicher timer. lofi. komm dazu und grind mit."
+  pill: "du hast eine einladung"
+  friend: "dein buddy"
+  headline: "{name} will mit dir zusammen grinden"
+  subline: "da drin wird gerade ganz allein gegrindet. komm dazu und leiste gesellschaft."
+  shot_alt: "Freundesliste im Treffpunkt: der Avatar jedes Freundes, worauf er sich gerade fokussiert, in welchem Raum er ist und seine Pomodoro-Zahl, daneben ein Café voller lernender Leute"
+  reasons:
+    - title: "ihr seht euch wirklich"
+      text: "eine kleine figur, die rumläuft und grindet. direkt neben deiner."
+    - title: "fokus im gleichtakt"
+      text: "pomodoro starten, reinhängen. keine calls, kein druck. jemand hält dich bei der stange, nur gemütlich."
+    - title: "100 münzen für deinen ersten pomo"
+      text: "einfach fürs vorbeikommen"
+  cta_label: "hol's dir, egal auf welchem gerät 👇"
+  what: "moment, was ist das hier? <a href=\"{home}\">pixeldoro, kurz erklärt →</a>"

@@ -1,0 +1,12 @@
+# Die mobile-Seite, Deutsch. Spiegelt die Schlüssel unter "text" aus en/mobile.yml.
+text:
+  title: "Pixeldoro auf dem Handy"
+  headline: "lern jetzt auch auf dem handy"
+  shot_alt: "Pixeldoro auf einem Handy: das Land voller lernender Leute, oben der Button zum Starten des Timers"
+  reasons:
+    - title: "lern, wo du willst"
+      text: "bus, café, bibliothek, bett"
+    - title: "alles wird synchronisiert"
+      text: "gleiches konto, gleiche münzen, gleiche welt"
+    - title: "100 münzen für deinen ersten pomo"
+      text: "einfach fürs ausprobieren"

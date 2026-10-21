@@ -1,0 +1,10 @@
+# The mini page, English.
+text:
+  title: "Pixeldoro Mini - Focus, simplified"
+  description: "Pixeldoro Mini is a simplified focus app with a pomodoro timer, pixel art backgrounds, lofi music, and stats. Available on iOS, macOS, and Android."
+  keywords: "pixeldoro mini, pomodoro, focus app, timer, pixel art, lofi, productivity, minimal, simple timer"
+  share: "Just a timer. Pixel art backgrounds. Lofi music. Stats. That's it."
+  main: "just a timer. pixel art backgrounds. lofi music. stats. that’s it."
+  sub: "focus, simplified 👇"
+  shot_alt: "Pixeldoro Mini: a pomodoro timer over a pixel art street at dusk, with a lofi radio station playing"
+  back: "want the whole pixel world? <a href=\"{home}\">meet pixeldoro →</a>"

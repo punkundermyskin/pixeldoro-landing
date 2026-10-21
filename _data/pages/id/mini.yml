@@ -1,0 +1,10 @@
+# Halaman mini, bahasa Indonesia. Key mengikuti text di en/mini.yml.
+text:
+  title: "Pixeldoro Mini - Fokus, jadi simpel"
+  description: "Pixeldoro Mini adalah aplikasi fokus simpel dengan timer pomodoro, latar pixel art, musik lofi, dan statistik. Tersedia di iOS, macOS, dan Android."
+  keywords: "pixeldoro mini, pomodoro, timer pomodoro, aplikasi fokus, timer, pixel art, lofi, produktivitas, minimalis, timer simpel"
+  share: "Cuma timer. Latar pixel art. Musik lofi. Statistik. Udah, itu aja."
+  main: "cuma timer. latar pixel art. musik lofi. statistik. udah, itu aja."
+  sub: "fokus, jadi simpel 👇"
+  shot_alt: "Pixeldoro Mini: timer pomodoro di atas jalanan pixel art saat senja, dengan stasiun radio lofi yang sedang diputar"
+  back: "mau dunia pixel yang lengkap? <a href=\"{home}\">kenalan sama pixeldoro →</a>"

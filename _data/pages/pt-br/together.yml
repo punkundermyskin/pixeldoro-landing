@@ -1,0 +1,20 @@
+# A página together, português do Brasil.
+text:
+  title: "seu amigo te convidou pro pixeldoro"
+  title_from: "{name} te convidou pro pixeldoro"
+  description: "alguém quer entrar no modo foco com você. mesmo mundo em pixel art, mesmo timer, foco em tempo real com gente de verdade."
+  share: "mesmo mundo em pixel art. mesmo timer. lofi. vem entrar no modo foco junto."
+  pill: "chegou um convite pra você"
+  friend: "seu amigo"
+  headline: "{name} te chamou pra entrar no modo foco junto"
+  subline: "tá lá dentro agora, ralando solo. vai lá fazer companhia."
+  shot_alt: "Lista de amigos na comunidade: o avatar de cada amigo, no que está focando, em qual sala está e seu número de pomodoros, ao lado de um café cheio de gente estudando"
+  reasons:
+    - title: "você vê a pessoa ali mesmo"
+      text: "o personagenzinho dela andando por aí, ralando. bem do lado do seu."
+    - title: "foco sincronizado"
+      text: "comece um pomodoro e entre no modo foco. sem chamada, sem pressão. compromisso, só que cozy."
+    - title: "100 moedas no seu primeiro pomo"
+      text: "só por aparecer"
+  cta_label: "baixa no que você tá usando aí 👇"
+  what: "pera, o que é isso? <a href=\"{home}\">o pixeldoro, explicado →</a>"

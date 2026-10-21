@@ -1,0 +1,28 @@
+{%- comment -%}
+Language tags for a page that exists in every language (include.file, e.g. "mini.html").
+indexed: hreflang alternates for search engines. redirect: the English version, which the apps link to, sends the
+visitor to their browser's language when there's a page for it, keeping ?query and #hash (together.html?from=).
+{%- endcomment -%}
+{%- assign lang = site.data.languages | where: "code", page.lang | first -%}
+{%- if include.indexed %}
+{%- for l in site.data.languages %}
+    <link rel="alternate" hreflang="{{ l.hreflang }}" href="https://pixeldoro.io{{ l.path }}{{ include.file }}">
+{%- endfor %}
+    <link rel="alternate" hreflang="x-default" href="https://pixeldoro.io/{{ include.file }}">
+{%- endif %}
+    <meta property="og:locale" content="{{ lang.og }}">
+{%- if include.redirect and lang.code == "en" %}
+    <script>
+        (function () {
+            var pages = { {% for l in site.data.languages %}{{ l.code | jsonify }}: {{ l.path | jsonify }}{% unless forloop.last %}, {% endunless %}{% endfor %} };
+            var wanted = navigator.languages && navigator.languages.length ? navigator.languages : [navigator.language || ''];
+            for (var i = 0; i < wanted.length; i++) {
+                var w = String(wanted[i]).toLowerCase();
+                var code = /^pt\b/.test(w) ? 'pt-br' : /^in\b/.test(w) ? 'id' : w.split('-')[0];
+                if (!pages[code]) continue;
+                if (code !== 'en') location.replace(pages[code] + {{ include.file | jsonify }} + location.search + location.hash);
+                return;
+            }
+        })();
+    </script>
+{%- endif %}

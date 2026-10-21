@@ -1,0 +1,13 @@
+# La pagina desktop, italiano. Rispecchia le chiavi "text" di en/desktop.yml.
+text:
+  title: "Pixeldoro su desktop"
+  headline: "ora studia anche dal computer"
+  shot_alt: "Pixeldoro su un portatile"
+  reasons:
+    - title: "schermo più grande, focus più profondo"
+      text: "mondo in pixel a schermo intero, senza le distrazioni del telefono"
+    - title: "si sincronizza tutto"
+      text: "monete, progressi, personaggio: c'è tutto"
+    - title: "100 monete al tuo primo pomo"
+      text: "solo per provarlo"
+  browser: "Browser"

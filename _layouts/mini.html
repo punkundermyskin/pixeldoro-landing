@@ -1,0 +1,314 @@
+{%- comment -%}
+The mini page, once per language. Text comes from _data/pages/<lang>/mini.yml, shared strings from _data/i18n/<lang>.yml.
+{%- endcomment -%}
+{%- assign lang = site.data.languages | where: "code", page.lang | first -%}
+{%- assign t = site.data.i18n[page.lang] -%}
+{%- assign d = site.data.pages[page.lang].mini.text -%}
+{%- if lang.code == "en" %}{% assign hl = "" %}{% else %}{% assign hl = "?hl=" | append: lang.hl %}{% endif -%}
+<!DOCTYPE html>
+<html lang="{{ lang.html }}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ d.title }}</title>
+    <meta name="description" content="{{ d.description | escape }}">
+    <meta name="keywords" content="{{ d.keywords | escape }}">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://pixeldoro.io{{ lang.path }}mini.html">
+{% include page-lang.html file="mini.html" indexed=true %}
+    <link rel="icon" href="/images/favicon.ico" sizes="any">
+    <link rel="icon" type="image/png" sizes="192x192" href="/images/favicon-192.png">
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+    <link rel="preload" href="/fonts/pixeldoro.woff2" as="font" type="font/woff2" crossorigin>
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://pixeldoro.io{{ lang.path }}mini.html">
+    <meta property="og:title" content="{{ d.title }}">
+    <meta property="og:description" content="{{ d.share | escape }}">
+    <meta property="og:image" content="https://pixeldoro.io/images/pixel-mini.png">
+    <meta property="og:site_name" content="Pixeldoro">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://pixeldoro.io{{ lang.path }}mini.html">
+    <meta name="twitter:title" content="{{ d.title }}">
+    <meta name="twitter:description" content="{{ d.share | escape }}">
+    <meta name="twitter:image" content="https://pixeldoro.io/images/pixel-mini.png">
+    <meta name="twitter:site" content="@pixeldoro">
+
+    <script>
+        // Pick the download button before first paint: ios / android / desktop.
+        // ?device=ios|android|desktop overrides it for previewing.
+        (function () {
+            var forced = new URLSearchParams(location.search).get('device');
+            var ua = navigator.userAgent;
+            var device = 'desktop';
+            if (/android/i.test(ua)) device = 'android';
+            else if (/iphone|ipad|ipod/i.test(ua) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1)) device = 'ios';
+            if (/^(ios|android|desktop)$/.test(forced)) device = forced;
+            document.documentElement.setAttribute('data-device', device);
+        })();
+    </script>
+
+    <style>
+        @font-face {
+            font-family: 'Pixeldoro';
+            src: url('/fonts/pixeldoro.woff2') format('woff2');
+            font-display: swap;
+        }
+
+        :root {
+            --white: #ffffff;
+            --dark: #212b2c;
+            --on-bg: #ffffff;
+            --on-bg-muted: rgba(255, 255, 255, 0.82);
+            --pixel: 'Pixeldoro', 'Courier New', monospace;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--pixel);
+            background-color: #060f1a;
+            color: var(--on-bg);
+            text-shadow: 0 2px 0 rgba(0, 0, 0, 0.35);
+            line-height: 1.5;
+            -webkit-font-smoothing: none;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 40px 16px;
+            text-align: center;
+        }
+
+        a {
+            color: inherit;
+        }
+
+        /* The game's Urban_Night1 scene behind the page, same as the home page */
+        .backdrop {
+            position: fixed;
+            z-index: -1;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            height: 100lvh;
+            background: #060f1a url('/images/bg-urban-night.webp') center / cover no-repeat;
+            image-rendering: pixelated;
+        }
+
+        .backdrop::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(rgba(33, 43, 44, 0.35), rgba(33, 43, 44, 0.6));
+        }
+
+        /* No rubber-band bounce: it pulls the page off the fixed backdrop */
+        html {
+            overscroll-behavior: none;
+        }
+
+        .wordmark {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            font-size: 50px;
+            font-weight: normal;
+            line-height: 1;
+            margin-bottom: 20px;
+        }
+
+        .wordmark img {
+            width: 48px;
+            height: 48px;
+            image-rendering: pixelated;
+        }
+
+        .main-text {
+            max-width: 520px;
+            font-size: 20px;
+            margin-bottom: 8px;
+        }
+
+        .sub-text {
+            font-size: 15px;
+            color: var(--on-bg-muted);
+            margin-bottom: 24px;
+        }
+
+        .app-preview {
+            width: min(100%, 520px);
+            aspect-ratio: 16 / 10;
+            border: 4px solid var(--white);
+            border-radius: 14px;
+            overflow: hidden;
+            background: var(--dark);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+            margin-bottom: 28px;
+        }
+
+        .app-preview img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        /* Store badges: both on desktop, just the matching store on a phone */
+        .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 14px;
+            flex-wrap: wrap;
+        }
+
+        .app-button img {
+            width: 200px;
+            height: auto;
+            display: block;
+            transition: transform 0.1s ease;
+        }
+
+        .app-button:hover img {
+            transform: translateY(-2px);
+        }
+
+        [data-device="ios"] .app-button.android,
+        [data-device="android"] .app-button.ios {
+            display: none;
+        }
+
+        [data-device="ios"] .app-button img,
+        [data-device="android"] .app-button img {
+            width: 220px;
+        }
+
+        .cta-note {
+            font-size: 15px;
+            color: var(--on-bg-muted);
+            margin-top: 12px;
+        }
+
+        .back {
+            margin-top: 40px;
+            font-size: 15px;
+            color: var(--on-bg-muted);
+        }
+
+        .back a:hover {
+            color: var(--on-bg);
+        }
+
+        /* Every language of this page, and an offer of the visitor's own one (never a redirect) */
+        .footer-langs {
+            max-width: 520px;
+            margin-top: 20px;
+            font-size: 15px;
+            line-height: 1.8;
+            color: var(--on-bg-muted);
+        }
+
+        .footer-langs a {
+            display: inline-block;
+            margin: 0 7px;
+            text-decoration: none;
+        }
+
+        .footer-langs a:hover,
+        .footer-langs a[aria-current] {
+            color: var(--on-bg);
+        }
+
+        /* Pinned to the top of the page; the rest stays centered below it */
+        .lang-suggest {
+            align-self: stretch;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 12px;
+            margin: -40px -16px auto;
+            padding: 10px 16px;
+            background: #228bdc;
+            font-size: 15px;
+        }
+
+        body:has(> .lang-suggest:not([hidden]))::after {
+            content: "";
+            margin-top: auto;
+        }
+
+        .lang-suggest[hidden] {
+            display: none;
+        }
+
+        .lang-suggest button {
+            padding: 0 4px;
+            border: 0;
+            background: none;
+            color: var(--white);
+            font: inherit;
+            font-size: 20px;
+            line-height: 1;
+            cursor: pointer;
+        }
+
+        @media (max-width: 600px) {
+            .wordmark {
+                font-size: 30px;
+                gap: 10px;
+            }
+
+            .wordmark img {
+                width: 32px;
+                height: 32px;
+            }
+
+            .main-text {
+                font-size: 20px;
+            }
+
+            .app-button img {
+                width: 160px;
+            }
+        }
+    </style>
+    <script src="/analytics.js" async></script>
+</head>
+<body>
+{% include page-lang-bar.html %}
+    <div class="backdrop" aria-hidden="true"></div>
+
+    <h1 class="wordmark"><img src="/images/tomato-48.png" width="48" height="48" alt="">pixeldoro mini</h1>
+
+    <p class="main-text">{{ d.main }}</p>
+
+    <p class="sub-text">{{ d.sub }}</p>
+
+    <div class="app-preview">
+        <img src="/images/pixel-mini.png" width="800" height="500" alt="{{ d.shot_alt | escape }}">
+    </div>
+
+    <div class="buttons">
+        <a href="https://play.pixeldoro.io/pixel-mini-apple" class="app-button ios">
+            <img src="{{ lang.app_store_badge }}" width="{{ lang.app_store_size[0] }}" height="{{ lang.app_store_size[1] }}" alt="{{ t.hero.app_store_alt | escape }}">
+        </a>
+        <a href="https://play.pixeldoro.io/pixel-mini-android{{ hl }}" class="app-button android">
+            <img src="{{ lang.google_play_badge }}" width="{% if lang.code == 'en' %}558{% else %}555{% endif %}" height="165" alt="{{ t.hero.google_play_alt | escape }}">
+        </a>
+    </div>
+
+    <p class="back">{% assign back = d.back | replace: "{home}", lang.path %}{{ back }}</p>
+
+{% include page-lang-links.html file="mini.html" %}
+</body>
+</html>

@@ -1,0 +1,323 @@
+# Home page text, English. Every other language mirrors these keys; a key missing there falls back to this file.
+# {n}, {mon}, {d}, {y} are filled in by the template.
+
+meta:
+  title: "Pixeldoro: a cozy pixel pomodoro timer to study with friends"
+  description: "Free pomodoro timer in a cozy pixel art world. Study next to real people, play lofi radio, earn coins, decorate your room. iPhone, Mac, Android, PC, web."
+  share: "Pixeldoro is a free pomodoro timer inside a cozy pixel art world where you study next to real people."
+
+nav:
+  online: "{n} people online"
+  discord: "Private discord"
+  language: "Language"
+  suggest: "view this page in english"
+  suggest_close: "Close"
+
+hero:
+  slider: "Pixeldoro screenshots"
+  prev: "Previous screenshot"
+  next: "Next screenshot"
+  dot: "Show screenshot {n}"
+  slides:
+    countryside:
+      caption: "everyone you see here is a real person studying right now"
+      alt: "Pixel art countryside with a wooden shrine gate and golden deer statues, where other Pixeldoro users sit studying, each showing their pomodoro count, timer and task"
+    rooms:
+      caption: "pick a room. there's a crowd in every one"
+      alt: "Focus room picker with public areas and friends' houses: Bar, Downtown, Countryside, Shop and HQ with live player counts, a private Home, and two rooms coming soon"
+    start-timer:
+      caption: "pick what you're working on and start a pomodoro"
+      alt: "Focus timer screen: 25/5, 45/15, 15/3, stopwatch and custom presets, a 25:00 timer and colored focus tags like math exams, english and physics"
+    focus-night:
+      caption: "focus next to everyone else. rain on, lofi on"
+      alt: "A pomodoro running at night in the rain, next to a group of users studying under warm lamps, with the weekly community challenge on screen"
+    coins:
+      caption: "every pomodoro earns coins"
+      alt: "Reward screen after a finished focus session: focus unlocked some loot, 30 coins, claim"
+    shop:
+      caption: "spend them in the shop: furniture, rooms, outfits, pets"
+      alt: "The in-game shop catalog with furniture, kitchen, bathroom, electronics, decor, traditional and ceremonial items, plus rooms, characters, backgrounds and pets"
+    home-pets:
+      caption: "have friends over. the cats live here"
+      alt: "A decorated home with three pet cats and two friends visiting, each showing their pomodoro count and what they're studying"
+    stats:
+      caption: "watch your focus hours add up"
+      alt: "Profile and stats screen: 1,526 tomatoes over 511 days, 107 hours of focus in a month, 1,691 hours total, and time split by focus tag"
+    friends:
+      caption: "see what your friends are focusing on, and where"
+      alt: "Social hub friends list: each friend's avatar, what they're focusing on, which room they're in and their pomodoro count, next to a cafe full of people studying"
+  tagline: "a cozy pixel world where you study, focus and hang out with real people."
+  play: "play now"
+  browser_note: "free · runs in your browser"
+  or_get: "or get it for"
+  ios_note: "free · iphone + ipad"
+  android_note: "free on google play"
+  also_on: "also on"
+  laptop: "laptop"
+  app_store_alt: "Download on the App Store"
+  google_play_alt: "Get it on Google Play"
+  ratings:
+    google_play: "5.0 google play"
+    app_store: "4.9 app store"
+    mac_app_store: "4.9 mac app store"
+
+platforms:
+  mac: "mac"
+  iphone: "iphone"
+  android: "android"
+  windows: "windows"
+  linux: "linux"
+  discord: "discord"
+
+tools:
+  title: "tools for deep focus"
+  timer:
+    title: "a timer your way"
+    text: "25/5, 45/15, 15/3 or your own. stopwatch for long deep work. a real alarm when it's done."
+  radio:
+    title: "lofi radio"
+    text: "six lofi + chill stations built in. they follow you around the world. rain and fog roll in while you focus."
+  tags:
+    title: "focus tags"
+    text: "tag what you're working on: exams, coding, reading. everyone nearby sees what you're on."
+  stats:
+    title: "stats that add up"
+    text: "see where your hours go, split by tag. tomatoes stacking up week after week."
+
+cozy:
+  title: "a cozy game, too"
+  tabs: "Game features"
+  friends:
+    tab: "friends"
+    title: "friends + house visits"
+    text: "add friends and see what they're focusing on and where. drop into their room to study together, or have them over at yours."
+    alt: "Social hub friends list showing what each friend is focusing on and which room they're in, next to a cafe full of people studying"
+  pets:
+    tab: "pets"
+    title: "pets"
+    text: "adopt pets from the shop. they hang out with you and keep you company while you work."
+    alt: "A pet curled up next to its owner on a downtown street, with its food bowls and a ball of yarn, while other players study nearby"
+  decorate:
+    tab: "decorate"
+    title: "make your room yours"
+    text: "every pomodoro earns coins. spend them on furniture, decor and whole new rooms, then move it all around in edit mode."
+    alt: "Home in edit mode, moving furniture around a room with bookshelves, armchairs, plants and computer desks"
+  story:
+    tab: "story"
+    title: "a story to play"
+    text: "the folks around town hand out story, daily and weekly quests. finish pomodoros to clear them and unlock new places and backgrounds."
+    alt: "Quest book with story, daily and weekly quests: a five-day streak quest from Lt. Michiko that unlocks a new background"
+
+map:
+  title: "explore the world"
+  lead: "five places to study, each with its own crowd. more on the way."
+  tabs: "Locations"
+  countryside:
+    tab: "countryside"
+    caption: "shrines, deer and a little river. the calmest spot in town."
+    alt: "Countryside at night: a shrine, a wooden bridge over a river and golden deer statues, with players studying under warm lamps"
+  downtown:
+    tab: "downtown"
+    caption: "the main street. the bar, the shop and your home are a short walk apart."
+    alt: "Downtown streets with the bar, the shop and home signposted, players walking around and studying on the sidewalks"
+  bar:
+    tab: "bar"
+    caption: "a cozy bar full of people locked in on their work."
+    alt: "A busy bar with players at tables and on rugs, each showing their pomodoro count, timer and task"
+  shop:
+    tab: "shop"
+    caption: "the corner shop. grab a spot on the couches and lock in."
+    alt: "Inside the shop: a counter, shelves and couches, with players hanging out between sessions"
+  hq:
+    tab: "hq"
+    caption: "pixeldoro hq. rows of desks for when you want proper office mode."
+    alt: "Pixeldoro HQ: an office with rows of desks, a printer and a coffee cart, players working at the desks"
+
+reviews:
+  title: "what people say"
+  lead: "real reviews from the app store and google play."
+  stars: "5 stars"
+  app_store: "app store"
+  mac_app_store: "mac app store"
+  google_play: "google play"
+
+updates:
+  title: "changelog"
+  lead: "a new update every few weeks. here's all of them."
+  older: "older updates ({n})"
+  date: "{mon} {d}, {y}"
+  months: ["jan", "feb", "mar", "apr", "may", "jun", "jul", "aug", "sep", "oct", "nov", "dec"]
+
+faq:
+  title: "frequently asked questions"
+  items:
+    - q: "what is pixeldoro?"
+      a: "pixeldoro is a free pomodoro timer inside a cozy pixel art world. you pick a spot, start a focus session and work next to real people doing the same. every session earns coins for your room, moves the story forward and adds to your stats. it has lofi radio built in and runs on iphone, ipad, mac, android, windows, linux, the browser and discord."
+    - q: "is pixeldoro free?"
+      a: "yes. the timer, the world, other players, friends, quests, pets and radio are all free, with no ads and no subscription. there's an optional one-time supporter pack: 25% more coins every session, a profile badge, premium skins, furniture, backgrounds and rooms, and a bonus quest."
+    - q: "is it a game or a productivity app?"
+      a: "both, but the timer comes first. the game only moves when you focus: finishing pomodoros earns coins, clears quests and unlocks new places. between sessions there's just enough to do to feel rewarding without pulling you off task."
+    - q: "are the other people real?"
+      a: "yes. every character walking around or sitting at a desk is a real player focusing right now. you can see their timer, how many pomodoros they've done and what they're working on."
+    - q: "what is body doubling?"
+      a: "body doubling means working next to someone else so it's easier to start and keep going. it's why studying in a library or a coffee shop works. pixeldoro gives you that feeling without a camera or a schedule: open it any time and there are people locked in around you."
+    - q: "can i study with friends?"
+      a: "yes. add friends, see who's online and what they're working on, and visit each other's houses to focus side by side. lobbies let you switch servers and find a different crowd."
+    - q: "is it good for adhd?"
+      a: "it's built for brains that tune out a plain timer. it rewards you just for showing up, other people focusing around you help you start, and the story gives you a reason to come back. it isn't a medical tool, just a cozier way to get going."
+    - q: "is there a to-do list or app blocking?"
+      a: "not yet. focus tags let you label each session (exams, coding, reading) and your stats split your time by tag. both are on the list."
+    - q: "what can i play it on, and does my progress sync?"
+      a: "iphone, ipad and mac on the app store, android on google play, windows and linux on pixeldoro.io, any browser at play.pixeldoro.io, and as an activity inside discord. sign in with your email and your progress, room and coins follow you to every device. it speaks 9 languages."
+
+outro:
+  title: "ready to lock in?"
+  lead: "free on every device. people are focusing right now."
+
+# The guide and download pages (_layouts/guide.html)
+guide:
+  questions: "questions"
+
+discord:
+  title: "a private discord"
+  text: "there's no public invite. finish 30 pomodoros and an invite shows up in the app."
+  note: "it's a small server for the most active folks. see you there."
+  close: "got it"
+
+footer:
+  play: "play"
+  browser: "in your browser"
+  iphone_ipad: "iphone + ipad"
+  mac: "mac"
+  android: "android"
+  discord_activity: "discord activity"
+  mini: "pixeldoro mini"
+  community: "community"
+  discord: "discord"
+  guides: "guides"
+  study_with_me: "study with me"
+  pomodoro_timer: "pomodoro timer"
+  adhd_focus_app: "adhd focus app"
+  legal: "legal"
+  privacy: "privacy policy"
+  terms: "terms of use"
+  languages: "languages"
+
+# Release notes by version; dates and order live in _data/changelog.yml
+changelog:
+  "2.7.1":
+    - "pixeldoro now speaks 8 more languages"
+  "2.6.9":
+    - "social hub: see who's online and connect with other players"
+    - "friends: send and accept requests and keep track of your study buddies"
+    - "study together at friends' houses, side by side"
+    - "lobbies: switch servers to find a different crowd to study with"
+  "2.6.8":
+    - "realtime multiplayer: see people moving around while they focus"
+    - "your character now sits down during focus sessions"
+    - "public player profiles with progress and stats"
+    - "personal items: collect and equip cosmetics"
+    - "name tags fade in as you get closer to other players"
+    - "visit other players' houses and see how they've decorated"
+  "2.6.5":
+    - "shop progression: see how many sessions until each reward"
+    - "partial coins even if you don't finish a pomo"
+    - "\"keep going\" reminders before you end a session early"
+    - "\"break is over\" reminders to get you back on track"
+    - "50+ new avatars"
+    - "improved onboarding and ui polish"
+  "2.6.4":
+    - "a real alarm: pixeldoro rings when your focus session ends"
+  "2.6.3":
+    - "minor improvements and polish"
+  "2.6.2":
+    - "onboarding v2: an animated intro, a 15s demo pomo and a free furniture gift"
+    - "glowing hints show you where to tap"
+    - "fast travel unlocks once you've explored a couple of spots"
+    - "a quieter first run, with no alarms or notifications while you learn"
+    - "faster sync and lighter storage"
+  "2.6.0":
+    - "pixeldoro supporter: a one-time purchase, yours forever"
+    - "25% more coins on every session"
+    - "a supporter badge on your profile"
+    - "premium skins, furniture, backgrounds and rooms, all unlocked"
+    - "a bonus quest with rewards you can't get any other way"
+  "2.5.7":
+    - "a new browser-style quest book"
+    - "daily and weekly quests"
+    - "fixed group quests"
+    - "cleaned up scene layouts"
+  "2.5.6":
+    - "smoother sign-up and login"
+    - "cloud sync optimizations"
+    - "timezone fixes in quests and stats"
+    - "pixel art rendering improvements"
+  "2.5.5":
+    - "run timers anywhere"
+    - "the countryside is fully walkable (get there by scooter)"
+    - "other players show up where they really are"
+    - "fast travel, with a player count for each spot"
+    - "a live \"people studying\" counter"
+    - "afk players collapse into a compact view"
+    - "sessions over 2h show a \"locked in\" state"
+    - "smoother camera, slightly slower walking"
+  "2.5.4":
+    - "an inventory panel to hide or show your items"
+    - "shop: owned tab, sub-categories, coin balance always visible"
+    - "buy as much furniture as you want, duplicates too"
+    - "buying furniture takes you home and opens edit mode"
+    - "~10 new shop items"
+    - "the app remembers your last location"
+  "2.5.3":
+    - "room customization: move your furniture around"
+    - "tap to select, drag to move, save when you're happy"
+    - "a reset button if you mess up"
+    - "your layout syncs across devices"
+  "2.5.0":
+    - "10+ new pixel art backgrounds"
+    - "manual pomo entry"
+  "2.4.9":
+    - "25 new characters"
+    - "weekly rewards"
+  "2.4.8":
+    - "tap into characters and items for descriptions, stats and little lore bits"
+  "2.4.7":
+    - "shop refresh: new categories and a cleaner layout"
+    - "characters to buy, with rarities"
+    - "a weekly character rotation"
+    - "the shop unlocks right after your first pomo"
+    - "a clearer, faster sign-up"
+  "2.4.6":
+    - "hotfix for mobile controls"
+  "2.4.5":
+    - "weekly challenges: hit shared pomodoro goals with the community"
+  "2.4.4":
+    - "zen mode: full screen, no timer, just vibes"
+    - "new focus tag colors"
+    - "in-app notifications"
+  "2.4.2":
+    - "daily coins hidden around the city"
+    - "the pet reward is back"
+  "2.4.1":
+    - "cloud sync: your progress follows you everywhere"
+    - "accounts: log in from any device"
+    - "perf boosts and ui fixes"
+  "2.3.5":
+    - "fix for background music mode"
+  "2.3.4":
+    - "your first session is now 15/5"
+    - "refreshed work ambience"
+    - "a flying coin animation"
+    - "pet improvements"
+    - "the app no longer mutes other media, so you can play your own music"
+  "2.3.2":
+    - "a new quest season with stopwatch and focus-time challenges"
+    - "new characters, storylines and group quests"
+    - "multiplayer preview: see what others are working on"
+    - "a bigger city with new locations and more npcs"
+    - "apartment upgrades: unlock rooms, collect decorations"
+    - "ambient music"
+    - "a redesigned ui"
+    - "timer presets: 25/5, 45/15, 15/3"
+    - "stopwatch mode, up to 8 hours"
+    - "focus tags you can edit and color-code"

@@ -1,0 +1,13 @@
+# The desktop page, English.
+text:
+  title: "Pixeldoro on Desktop"
+  headline: "study on your laptop too now"
+  shot_alt: "Pixeldoro on a laptop"
+  reasons:
+    - title: "bigger screen, deeper focus"
+      text: "fullscreen pixel world, no phone distractions"
+    - title: "everything syncs"
+      text: "coins, progress, character, all there"
+    - title: "100 coins on your first pomo"
+      text: "just for trying it"
+  browser: "Browser"

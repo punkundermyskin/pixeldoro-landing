@@ -1,0 +1,114 @@
+{%- comment -%}
+The feedback page, once per language. Text comes from _data/pages/<lang>/feedback.yml, shared strings from _data/i18n/<lang>.yml.
+{%- endcomment -%}
+{%- assign lang = site.data.languages | where: "code", page.lang | first -%}
+{%- assign t = site.data.i18n[page.lang] -%}
+{%- assign d = site.data.pages[page.lang].feedback.text -%}
+{%- if lang.code == "en" %}{% assign hl = "" %}{% else %}{% assign hl = "?hl=" | append: lang.hl %}{% endif -%}
+<!DOCTYPE html>
+<html lang="{{ lang.html }}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ d.title }}</title>
+    <meta name="robots" content="noindex, follow">
+{% include page-lang.html file="feedback.html" redirect=true %}
+    <link rel="icon" href="/images/favicon.ico" sizes="any">
+    <link rel="icon" type="image/png" sizes="192x192" href="/images/favicon-192.png">
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            background-color: #000000;
+            color: #ffffff;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            padding: 80px 24px;
+        }
+
+        .note {
+            max-width: 480px;
+            width: 100%;
+        }
+
+        .note p {
+            font-size: 16px;
+            line-height: 1.7;
+            margin-bottom: 24px;
+            opacity: 0.9;
+        }
+
+        .note .sig {
+            margin-top: 40px;
+            margin-bottom: 0;
+            opacity: 0.6;
+        }
+
+        .sorry-gif {
+            display: block;
+            width: 240px;
+            max-width: 100%;
+            margin: 0 0 24px;
+            transform: rotate(-1.5deg);
+        }
+
+        .actions {
+            margin: 36px 0;
+        }
+
+        .actions a {
+            display: block;
+            color: #ffffff;
+            font-size: 16px;
+            text-decoration: underline;
+            text-underline-offset: 4px;
+            margin-bottom: 16px;
+            width: fit-content;
+        }
+
+        .actions a:hover {
+            background: #ffffff;
+            color: #000000;
+            text-decoration: none;
+        }
+
+        @media (max-width: 480px) {
+            body {
+                padding: 48px 20px;
+            }
+        }
+    </style>
+    <script src="/analytics.js" async></script>
+</head>
+<body>
+    <div class="note">
+        <p>{{ d.hello }}</p>
+
+        <p>{{ d.intro }}</p>
+
+        <p>{{ d.sorry }}</p>
+
+        <img src="/images/sorry.gif" alt="" class="sorry-gif">
+
+        <p>{{ d.offer }}</p>
+
+        <p>{{ d.reads }}</p>
+
+        <div class="actions">
+            <a href="https://play.pixeldoro.io/chat-about-pixeldoro">{{ d.call }}</a>
+            <a href="mailto:punk@pixeldoro.io?subject=pixeldoro%20feedback">{{ d.email }}</a>
+        </div>
+
+        <p>{{ d.thanks }}</p>
+
+        <p class="sig">— punk</p>
+    </div>
+</body>
+</html>

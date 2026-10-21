@@ -1,0 +1,323 @@
+# Testi della home page, italiano. Rispecchia le chiavi di en.yml; una chiave che manca qui usa il testo di quel file.
+# {n}, {mon}, {d}, {y} vengono inseriti dal template.
+
+meta:
+  title: "Pixeldoro: timer pomodoro cozy per studiare con gli amici"
+  description: "Timer pomodoro gratis in un mondo cozy in pixel art. Studia accanto a persone vere, ascolta la radio lofi e ritrova la concentrazione, anche con l'ADHD."
+  share: "Pixeldoro è un timer pomodoro gratuito dentro un mondo cozy in pixel art, dove studi accanto a persone vere."
+
+nav:
+  online: "{n} persone online"
+  discord: "Discord privato"
+  language: "Lingua"
+  suggest: "vedi questa pagina in italiano"
+  suggest_close: "Chiudi"
+
+hero:
+  slider: "Screenshot di Pixeldoro"
+  prev: "Screenshot precedente"
+  next: "Screenshot successivo"
+  dot: "Mostra lo screenshot {n}"
+  slides:
+    countryside:
+      caption: "tutti quelli che vedi qui sono persone vere che stanno studiando adesso"
+      alt: "Campagna in pixel art con un torii di legno e statue di cervi dorati, dove altri utenti di Pixeldoro studiano seduti, ognuno con il proprio numero di pomodori, il timer e l'attività"
+    rooms:
+      caption: "scegli una stanza. in ognuna c'è un sacco di gente"
+      alt: "Scelta della sala focus con zone pubbliche e case degli amici: Bar, Centro, Campagna, Negozio e QG con il numero di giocatori in tempo reale, una Casa privata e due stanze in arrivo"
+    start-timer:
+      caption: "scegli su cosa lavori e avvia un pomodoro"
+      alt: "Schermata del timer: preset 25/5, 45/15, 15/3, cronometro e personalizzato, un timer da 25:00 e tag di focus colorati come esami di matematica, inglese e fisica"
+    focus-night:
+      caption: "concentrati insieme a tutti gli altri. pioggia e lofi in sottofondo"
+      alt: "Un pomodoro in corso di notte sotto la pioggia, accanto a un gruppo di utenti che studiano sotto lampade calde, con la sfida settimanale della community sullo schermo"
+    coins:
+      caption: "ogni pomodoro ti fa guadagnare monete"
+      alt: "Schermata dei premi dopo una sessione di focus completata: il focus ha sbloccato un bottino, 30 monete e il pulsante per riscuoterle"
+    shop:
+      caption: "spendile nel negozio: mobili, stanze, outfit, animali"
+      alt: "Il catalogo del negozio nel gioco con mobili, cucina, bagno, elettronica, decorazioni, oggetti tradizionali e cerimoniali, più stanze, personaggi, sfondi e animali"
+    home-pets:
+      caption: "invita gli amici da te. i gatti abitano qui"
+      alt: "Una casa arredata con tre gatti e due amici in visita, ognuno con il proprio numero di pomodori e quello che sta studiando"
+    stats:
+      caption: "guarda crescere le tue ore di focus"
+      alt: "Schermata del profilo e delle statistiche: 1.526 pomodori in 511 giorni, 107 ore di focus in un mese, 1.691 ore in totale e il tempo diviso per tag di focus"
+    friends:
+      caption: "guarda su cosa si concentrano i tuoi amici, e dove"
+      alt: "Lista degli amici nella community: l'avatar di ogni amico, su cosa si sta concentrando, in quale stanza si trova e quanti pomodori ha fatto, accanto a un caffè pieno di gente che studia"
+  tagline: "un mondo cozy in pixel art dove studi, ti concentri e passi il tempo con persone vere."
+  play: "gioca ora"
+  browser_note: "gratis · funziona nel browser"
+  or_get: "oppure scaricalo per"
+  ios_note: "gratis · iphone + ipad"
+  android_note: "gratis su google play"
+  also_on: "anche su"
+  laptop: "computer"
+  app_store_alt: "Scarica su App Store"
+  google_play_alt: "Disponibile su Google Play"
+  ratings:
+    google_play: "5,0 google play"
+    app_store: "4,9 app store"
+    mac_app_store: "4,9 mac app store"
+
+platforms:
+  mac: "mac"
+  iphone: "iphone"
+  android: "android"
+  windows: "windows"
+  linux: "linux"
+  discord: "discord"
+
+tools:
+  title: "strumenti per la concentrazione profonda"
+  timer:
+    title: "un timer come piace a te"
+    text: "25/5, 45/15, 15/3 o come vuoi tu. cronometro per le sessioni lunghe di lavoro profondo. una vera sveglia quando hai finito."
+  radio:
+    title: "radio lofi"
+    text: "sei stazioni lofi e chill già integrate. ti seguono ovunque nel mondo. mentre ti concentri arrivano pioggia e nebbia."
+  tags:
+    title: "tag di focus"
+    text: "segna su cosa stai lavorando: esami, coding, lettura. chi ti sta vicino vede cosa stai facendo."
+  stats:
+    title: "statistiche che crescono"
+    text: "scopri dove vanno le tue ore, divise per tag. pomodori che si accumulano settimana dopo settimana."
+
+cozy:
+  title: "e anche un gioco cozy"
+  tabs: "Funzioni di gioco"
+  friends:
+    tab: "amici"
+    title: "amici + visite a casa"
+    text: "aggiungi amici e guarda su cosa si stanno concentrando e dove. passa nella loro stanza per studiare insieme, o invitali da te."
+    alt: "Lista degli amici nella community che mostra su cosa si sta concentrando ogni amico e in quale stanza si trova, accanto a un caffè pieno di gente che studia"
+  pets:
+    tab: "animali"
+    title: "animali"
+    text: "adotta animali dal negozio. stanno con te e ti fanno compagnia mentre lavori."
+    alt: "Un animaletto acciambellato accanto al suo padrone in una strada del centro, con le sue ciotole e un gomitolo di lana, mentre altri giocatori studiano lì vicino"
+  decorate:
+    tab: "arreda"
+    title: "una stanza tutta tua"
+    text: "ogni pomodoro ti fa guadagnare monete. spendile in mobili, decorazioni e stanze nuove, poi sistema tutto come vuoi in modalità modifica."
+    alt: "Casa in modalità modifica, con i mobili che si spostano in una stanza piena di librerie, poltrone, piante e scrivanie con computer"
+  story:
+    tab: "storia"
+    title: "una storia da giocare"
+    text: "la gente in città ti affida missioni della storia, giornaliere e settimanali. completa pomodori per portarle a termine e sbloccare nuovi posti e sfondi."
+    alt: "Libro delle missioni con missioni della storia, giornaliere e settimanali: una missione di Lt. Michiko per cinque giorni di fila che sblocca un nuovo sfondo"
+
+map:
+  title: "esplora il mondo"
+  lead: "cinque posti dove studiare, ognuno con la sua gente. e altri in arrivo."
+  tabs: "Luoghi"
+  countryside:
+    tab: "campagna"
+    caption: "santuari, cervi e un fiumiciattolo. il posto più tranquillo della città."
+    alt: "La campagna di notte: un santuario, un ponte di legno su un fiume e statue di cervi dorati, con giocatori che studiano sotto lampade calde"
+  downtown:
+    tab: "centro"
+    caption: "la via principale. il bar, il negozio e casa tua sono a due passi l'uno dall'altro."
+    alt: "Le strade del centro con le indicazioni per il bar, il negozio e casa, e giocatori che passeggiano e studiano sui marciapiedi"
+  bar:
+    tab: "bar"
+    caption: "un bar cozy pieno di gente concentrata sul proprio lavoro."
+    alt: "Un bar affollato con giocatori ai tavoli e sui tappeti, ognuno con il proprio numero di pomodori, il timer e l'attività"
+  shop:
+    tab: "negozio"
+    caption: "il negozio all'angolo. prenditi un posto sui divani e mettiti sotto."
+    alt: "Dentro il negozio: un bancone, scaffali e divani, con giocatori che passano il tempo tra una sessione e l'altra"
+  hq:
+    tab: "qg"
+    caption: "il qg di pixeldoro. file di scrivanie per quando vuoi la vera modalità ufficio."
+    alt: "Il QG di Pixeldoro: un ufficio con file di scrivanie, una stampante e un carrello del caffè, con giocatori al lavoro alle scrivanie"
+
+reviews:
+  title: "cosa dice la gente"
+  lead: "recensioni vere da app store e google play."
+  stars: "5 stelle"
+  app_store: "app store"
+  mac_app_store: "mac app store"
+  google_play: "google play"
+
+updates:
+  title: "novità"
+  lead: "un nuovo aggiornamento ogni poche settimane. eccoli tutti."
+  older: "aggiornamenti precedenti ({n})"
+  date: "{d} {mon} {y}"
+  months: ["gen", "feb", "mar", "apr", "mag", "giu", "lug", "ago", "set", "ott", "nov", "dic"]
+
+faq:
+  title: "domande frequenti"
+  items:
+    - q: "cos'è pixeldoro?"
+      a: "pixeldoro è un timer pomodoro gratuito dentro un mondo cozy in pixel art. scegli un posto, avvii una sessione di focus e lavori accanto a persone vere che fanno lo stesso. ogni sessione ti fa guadagnare monete per la tua stanza, manda avanti la storia e si somma alle tue statistiche. ha una radio lofi integrata e funziona su iphone, ipad, mac, android, windows, linux, nel browser e su discord."
+    - q: "pixeldoro è gratis?"
+      a: "sì. il timer, il mondo, gli altri giocatori, gli amici, le missioni, gli animali e la radio sono tutti gratis, senza pubblicità e senza abbonamento. c'è un pacchetto supporter facoltativo, a pagamento unico: il 25% di monete in più a ogni sessione, un badge sul profilo, skin, mobili, sfondi e stanze premium, e una missione bonus."
+    - q: "è un gioco o un'app di produttività?"
+      a: "tutti e due, ma prima viene il timer. il gioco va avanti solo quando ti concentri: completando pomodori guadagni monete, porti a termine missioni e sblocchi nuovi posti. tra una sessione e l'altra c'è quanto basta da fare per sentirti gratificato, senza distrarti da quello che devi fare."
+    - q: "le altre persone sono vere?"
+      a: "sì. ogni personaggio che va in giro o è seduto a una scrivania è un giocatore vero che si sta concentrando in questo momento. puoi vedere il suo timer, quanti pomodori ha fatto e su cosa sta lavorando."
+    - q: "cos'è il body doubling?"
+      a: "body doubling vuol dire lavorare accanto a qualcun altro, così è più facile iniziare e andare avanti. è il motivo per cui studiare in biblioteca o al bar funziona. pixeldoro ti dà questa sensazione senza telecamera e senza orari: aprilo quando vuoi e intorno a te c'è gente concentrata."
+    - q: "posso studiare con gli amici?"
+      a: "sì. aggiungi amici, guarda chi è online e su cosa sta lavorando, e venitevi a trovare a casa per concentrarvi fianco a fianco. con le lobby puoi cambiare server e trovare altra gente."
+    - q: "è adatto a chi ha l'adhd?"
+      a: "è pensato per i cervelli che ignorano un timer normale. ti premia anche solo per esserci, le altre persone concentrate intorno a te ti aiutano a iniziare e la storia ti dà un motivo per tornare. non è uno strumento medico, solo un modo più cozy per partire."
+    - q: "c'è una lista delle cose da fare o il blocco delle app?"
+      a: "non ancora. con i tag di focus puoi etichettare ogni sessione (esami, coding, lettura) e le statistiche dividono il tuo tempo per tag. tutte e due le cose sono in programma."
+    - q: "su cosa posso usarlo, e i progressi si sincronizzano?"
+      a: "iphone, ipad e mac sull'app store, android su google play, windows e linux su pixeldoro.io, qualsiasi browser su play.pixeldoro.io, e come attività dentro discord. accedi con la tua email e progressi, stanza e monete ti seguono su ogni dispositivo. parla 9 lingue."
+
+outro:
+  title: "pronto a darci dentro?"
+  lead: "gratis su ogni dispositivo. c'è gente che si sta concentrando proprio ora."
+
+# The guide and download pages (_layouts/guide.html)
+guide:
+  questions: "domande"
+
+discord:
+  title: "un discord privato"
+  text: "non c'è un invito pubblico. completa 30 pomodori e l'invito comparirà nell'app."
+  note: "è un piccolo server per chi è più attivo. ci vediamo lì."
+  close: "capito"
+
+footer:
+  play: "gioca"
+  browser: "nel browser"
+  iphone_ipad: "iphone + ipad"
+  mac: "mac"
+  android: "android"
+  discord_activity: "attività discord"
+  mini: "pixeldoro mini"
+  community: "community"
+  discord: "discord"
+  guides: "guide"
+  study_with_me: "study with me"
+  pomodoro_timer: "timer pomodoro"
+  adhd_focus_app: "app per l'adhd"
+  legal: "note legali"
+  privacy: "informativa sulla privacy"
+  terms: "termini d'uso"
+  languages: "lingue"
+
+# Note di rilascio per versione; date e ordine sono in _data/changelog.yml
+changelog:
+  "2.7.1":
+    - "pixeldoro ora parla 8 lingue in più"
+  "2.6.9":
+    - "community: guarda chi è online e fai amicizia con altri giocatori"
+    - "amici: invia e accetta richieste e tieni d'occhio i tuoi compagni di studio"
+    - "studiate insieme a casa degli amici, fianco a fianco"
+    - "lobby: cambia server per trovare altra gente con cui studiare"
+  "2.6.8":
+    - "multiplayer in tempo reale: vedi le persone muoversi mentre si concentrano"
+    - "il tuo personaggio ora si siede durante le sessioni di focus"
+    - "profili pubblici dei giocatori con progressi e statistiche"
+    - "accessori: collezionali e indossali"
+    - "i nomi compaiono man mano che ti avvicini agli altri giocatori"
+    - "visita le case degli altri giocatori e guarda come le hanno arredate"
+  "2.6.5":
+    - "progressi nel negozio: vedi quante sessioni mancano a ogni premio"
+    - "monete parziali anche se non finisci un pomo"
+    - "promemoria \"continua a studiare\" prima di chiudere una sessione in anticipo"
+    - "promemoria \"la pausa è finita\" per rimetterti in carreggiata"
+    - "50+ nuovi avatar"
+    - "onboarding migliorato e ritocchi all'interfaccia"
+  "2.6.4":
+    - "una vera sveglia: pixeldoro suona quando finisce la tua sessione di focus"
+  "2.6.3":
+    - "piccoli miglioramenti e ritocchi"
+  "2.6.2":
+    - "onboarding v2: un'intro animata, un pomo di prova da 15s e un mobile in regalo"
+    - "suggerimenti luminosi ti mostrano dove toccare"
+    - "il viaggio rapido si sblocca dopo che hai esplorato un paio di posti"
+    - "un primo avvio più tranquillo, senza sveglie né notifiche mentre impari"
+    - "sincronizzazione più veloce e meno spazio occupato"
+  "2.6.0":
+    - "pixeldoro supporter: un acquisto unico, tuo per sempre"
+    - "25% di monete in più a ogni sessione"
+    - "un badge supporter sul tuo profilo"
+    - "skin, mobili, sfondi e stanze premium, tutti sbloccati"
+    - "una missione bonus con premi che non trovi da nessun'altra parte"
+  "2.5.7":
+    - "un nuovo libro delle missioni in stile browser"
+    - "missioni giornaliere e settimanali"
+    - "missioni di gruppo sistemate"
+    - "layout delle scene ripuliti"
+  "2.5.6":
+    - "registrazione e accesso più fluidi"
+    - "ottimizzazioni alla sincronizzazione cloud"
+    - "fusi orari corretti in missioni e statistiche"
+    - "miglioramenti al rendering della pixel art"
+  "2.5.5":
+    - "avvia i timer ovunque"
+    - "la campagna si può esplorare tutta a piedi (ci arrivi in scooter)"
+    - "gli altri giocatori compaiono dove si trovano davvero"
+    - "viaggio rapido, con il numero di giocatori per ogni posto"
+    - "un contatore in tempo reale delle \"persone che studiano\""
+    - "i giocatori afk si riducono a una vista compatta"
+    - "le sessioni oltre le 2h mostrano lo stato \"modalità focus\""
+    - "telecamera più fluida, camminata un po' più lenta"
+  "2.5.4":
+    - "un pannello inventario per nascondere o mostrare i tuoi oggetti"
+    - "negozio: scheda \"i tuoi oggetti\", sottocategorie e saldo monete sempre visibile"
+    - "compra tutti i mobili che vuoi, anche doppi"
+    - "quando compri un mobile vai a casa e si apre la modalità modifica"
+    - "~10 nuovi oggetti nel negozio"
+    - "l'app si ricorda l'ultimo posto in cui eri"
+  "2.5.3":
+    - "personalizza la stanza: sposta i mobili come vuoi"
+    - "tocca per selezionare, trascina per spostare, salva quando ti piace"
+    - "un pulsante di reset se combini un pasticcio"
+    - "la disposizione si sincronizza su tutti i dispositivi"
+  "2.5.0":
+    - "10+ nuovi sfondi in pixel art"
+    - "inserimento manuale dei pomo"
+  "2.4.9":
+    - "25 nuovi personaggi"
+    - "premi settimanali"
+  "2.4.8":
+    - "tocca personaggi e oggetti per vedere descrizioni, statistiche e un po' di lore"
+  "2.4.7":
+    - "negozio rinnovato: nuove categorie e un layout più pulito"
+    - "personaggi da comprare, con diverse rarità"
+    - "personaggi a rotazione ogni settimana"
+    - "il negozio si sblocca subito dopo il tuo primo pomo"
+    - "una registrazione più chiara e veloce"
+  "2.4.6":
+    - "correzione rapida per i comandi su mobile"
+  "2.4.5":
+    - "sfide settimanali: raggiungete obiettivi di pomodori insieme alla community"
+  "2.4.4":
+    - "modalità zen: schermo intero, niente timer, solo vibe"
+    - "nuovi colori per i tag di focus"
+    - "notifiche in-app"
+  "2.4.2":
+    - "monete giornaliere nascoste in giro per la città"
+    - "torna il premio animaletto"
+  "2.4.1":
+    - "sincronizzazione cloud: i tuoi progressi ti seguono ovunque"
+    - "account: accedi da qualsiasi dispositivo"
+    - "prestazioni migliorate e correzioni all'interfaccia"
+  "2.3.5":
+    - "correzione per la modalità musica in sottofondo"
+  "2.3.4":
+    - "la tua prima sessione ora è 15/5"
+    - "atmosfera di lavoro rinnovata"
+    - "un'animazione di monete che volano"
+    - "miglioramenti agli animali"
+    - "l'app non silenzia più gli altri contenuti, così puoi ascoltare la tua musica"
+  "2.3.2":
+    - "una nuova stagione di missioni con sfide a cronometro e sul tempo di focus"
+    - "nuovi personaggi, trame e missioni di gruppo"
+    - "anteprima multiplayer: guarda su cosa lavorano gli altri"
+    - "una città più grande con nuovi luoghi e più png"
+    - "upgrade dell'appartamento: sblocca stanze, colleziona decorazioni"
+    - "musica ambient"
+    - "un'interfaccia ridisegnata"
+    - "preset del timer: 25/5, 45/15, 15/3"
+    - "modalità cronometro, fino a 8 ore"
+    - "tag di focus da modificare e colorare come vuoi"

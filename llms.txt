@@ -1,0 +1,47 @@
+# Pixeldoro
+
+> Pixeldoro is a free pomodoro timer inside a cozy pixel art world where you study next to real people.
+
+Pixeldoro is made by Pixeldoro Labs (Sergei Andrei Postnov, IE). It's free, with no ads and no subscription. An optional one-time Supporter pack adds 25% more coins every session, a profile badge, premium skins, furniture, backgrounds, rooms and a bonus quest.
+
+It runs on iPhone, iPad, Mac, Android, Windows, Linux, in the browser and as a Discord Activity. It's available in English, German, Spanish, French, Italian, Brazilian Portuguese, Russian, Turkish and Indonesian. Ratings: 5.0 on Google Play, 4.9 on the App Store, 4.9 on the Mac App Store.
+
+## What it does
+
+- Pomodoro timer: 25/5, 45/15 and 15/3 presets, custom lengths, a stopwatch of up to 8 hours, a real alarm when a session ends and a reminder when the break is over.
+- Study with real people: every character in the world is a real person in a focus session, showing their timer, pomodoro count and what they're working on. There's no camera and no microphone. It works as online body doubling or a live "study with me".
+- Rooms: the countryside, downtown, a bar, the shop and HQ, each with its own crowd, plus servers (lobbies) to switch between.
+- Friends: see which friends are online, where they are and what they're focusing on, and visit each other's houses.
+- Lofi radio: six built-in lofi and chill stations, with rain and fog.
+- Focus tags and stats: label each session (exams, coding, reading) and see focus hours split by tag.
+- Rewards: every session earns coins to spend in the shop on furniture, rooms, outfits and pets.
+- Quests: story, daily and weekly quests, a streak quest and a weekly community challenge.
+- Sync: progress syncs across devices when signed in with an email code or Discord.
+
+Not included yet: app or website blocking, and a to-do list.
+
+Pixeldoro Mini is a separate, minimal app for iPhone and Android: just a timer, pixel art backgrounds, lofi music and stats.
+
+## Pages
+
+- [Home](https://pixeldoro.io/): overview, screenshots, reviews and FAQ
+- [Study with me](https://pixeldoro.io/study-with-me.html): studying live next to real people, body doubling with no camera
+- [Pomodoro timer](https://pixeldoro.io/pomodoro-timer.html): the timer, presets, lofi radio, stats and the pomodoro technique
+- [ADHD focus app](https://pixeldoro.io/adhd-focus-app.html): body doubling, instant rewards and short sessions
+- [Pixeldoro Mini](https://pixeldoro.io/mini.html): the minimal timer app
+
+## Get it
+
+- [Play in the browser](https://play.pixeldoro.io/web-beta)
+- [App Store (iPhone, iPad, Mac)](https://apps.apple.com/app/id6501988413)
+- [Google Play](https://play.google.com/store/apps/details?id=com.pixeldorolabs.pixeldoro)
+- [Windows](https://pixeldoro.io/windows.html): free download, the installer and how to get past SmartScreen
+- [Linux](https://pixeldoro.io/linux.html): free download, x86_64 tarball
+- [Discord Activity](https://play.pixeldoro.io/discord-activity)
+
+## Optional
+
+- [Privacy policy](https://pixeldoro.io/privacy.html)
+- [Terms of use](https://pixeldoro.io/terms.html)
+- Contact: hello@pixeldoro.io
+- Community: [YouTube](https://www.youtube.com/@pixeldoro), [TikTok](https://www.tiktok.com/@pixeldoro), [Instagram](https://www.instagram.com/pixeldoro/), [X](https://x.com/pixeldoro), [Twitch](https://www.twitch.tv/pixeldoro). The Discord server is private: an invite appears in the app after 50 pomodoros.

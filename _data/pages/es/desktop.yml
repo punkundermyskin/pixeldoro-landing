@@ -1,0 +1,13 @@
+# Página desktop, español de Latinoamérica.
+text:
+  title: "Pixeldoro en la computadora"
+  headline: "ahora también estudia en tu laptop"
+  shot_alt: "Pixeldoro en una laptop"
+  reasons:
+    - title: "pantalla más grande, más enfoque"
+      text: "el mundo pixel en pantalla completa, sin las distracciones del celular"
+    - title: "todo se sincroniza"
+      text: "monedas, progreso, personaje, todo está ahí"
+    - title: "100 monedas en tu primer pomo"
+      text: "solo por probarlo"
+  browser: "Navegador"

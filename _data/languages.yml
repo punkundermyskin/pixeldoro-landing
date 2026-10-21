@@ -1,0 +1,93 @@
+# Home page languages, in the app's order. Each one has a page at `path` built from _layouts/home.html.
+# hreflang: what Google accepts (no "es-419", so Spanish is plain "es"); html: the page's lang attribute.
+# hl: Google Play's listing language. Badges: English keeps its PNGs, the rest use Apple's and Google's own artwork.
+- code: en
+  name: english
+  path: /
+  hreflang: en
+  html: en
+  og: en_US
+  hl: en
+  app_store_badge: /images/app_store_badge.png
+  app_store_size: [558, 165]
+  google_play_badge: /images/google_play_badge.png
+- code: es
+  name: español
+  path: /es/
+  hreflang: es
+  html: es-419
+  og: es_LA
+  hl: es-419
+  app_store_badge: /images/badges/app-store-es.svg
+  app_store_size: [120, 40]
+  google_play_badge: /images/badges/google-play-es.png
+- code: pt-br
+  name: português
+  path: /pt-br/
+  hreflang: pt-BR
+  html: pt-BR
+  og: pt_BR
+  hl: pt-BR
+  app_store_badge: /images/badges/app-store-pt-br.svg
+  app_store_size: [120, 40]
+  google_play_badge: /images/badges/google-play-pt-br.png
+- code: de
+  name: deutsch
+  path: /de/
+  hreflang: de
+  html: de
+  og: de_DE
+  hl: de
+  app_store_badge: /images/badges/app-store-de.svg
+  app_store_size: [120, 40]
+  google_play_badge: /images/badges/google-play-de.png
+- code: fr
+  name: français
+  path: /fr/
+  hreflang: fr
+  html: fr
+  og: fr_FR
+  hl: fr
+  app_store_badge: /images/badges/app-store-fr.svg
+  app_store_size: [127, 40]
+  google_play_badge: /images/badges/google-play-fr.png
+- code: it
+  name: italiano
+  path: /it/
+  hreflang: it
+  html: it
+  og: it_IT
+  hl: it
+  app_store_badge: /images/badges/app-store-it.svg
+  app_store_size: [120, 40]
+  google_play_badge: /images/badges/google-play-it.png
+- code: id
+  name: bahasa indonesia
+  path: /id/
+  hreflang: id
+  html: id
+  og: id_ID
+  hl: id
+  app_store_badge: /images/badges/app-store-id.svg
+  app_store_size: [120, 40]
+  google_play_badge: /images/badges/google-play-id.png
+- code: tr
+  name: türkçe
+  path: /tr/
+  hreflang: tr
+  html: tr
+  og: tr_TR
+  hl: tr
+  app_store_badge: /images/badges/app-store-tr.svg
+  app_store_size: [151, 40]
+  google_play_badge: /images/badges/google-play-tr.png
+- code: ru
+  name: русский
+  path: /ru/
+  hreflang: ru
+  html: ru
+  og: ru_RU
+  hl: ru
+  app_store_badge: /images/badges/app-store-ru.svg
+  app_store_size: [120, 40]
+  google_play_badge: /images/badges/google-play-ru.png

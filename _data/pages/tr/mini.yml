@@ -1,0 +1,10 @@
+# mini sayfası, Türkçe.
+text:
+  title: "Pixeldoro Mini - Odaklanmanın sade hali"
+  description: "Pixeldoro Mini; pomodoro sayacı, piksel art arka planlar, lofi müzik ve istatistikler sunan sade bir odaklanma uygulaması. iOS, macOS ve Android'de."
+  keywords: "pixeldoro mini, pomodoro, pomodoro sayacı, odaklanma uygulaması, zamanlayıcı, piksel art, lofi, verimlilik, minimal, sade zamanlayıcı"
+  share: "Sadece bir zamanlayıcı. Piksel art arka planlar. Lofi müzik. İstatistikler. Hepsi bu."
+  main: "sadece bir zamanlayıcı. piksel art arka planlar. lofi müzik. istatistikler. hepsi bu."
+  sub: "odaklanmanın sade hali 👇"
+  shot_alt: "Pixeldoro Mini: alacakaranlıkta piksel art bir sokağın üzerinde bir pomodoro zamanlayıcı, arkada bir lofi radyo istasyonu çalıyor"
+  back: "piksel dünyanın tamamını mı istiyorsun? <a href=\"{home}\">pixeldoro'yla tanış →</a>"

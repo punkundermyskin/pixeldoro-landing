@@ -1,0 +1,57 @@
+# The study-with-me page, English. Other languages mirror the text keys under "text"; "layout" is read from this file only.
+# {windows}, {linux}, {home} and the other {page} placeholders become links to the same language's pages.
+layout:
+  kind: "guide"
+  shot: "focus-night"
+  icons:
+    - "tomato"
+    - "radio"
+    - "folder"
+    - "stats"
+text:
+  title: "Study with me online, live with real people | Pixeldoro"
+  description: "A live virtual study room: study next to real people who are focusing right now. Body doubling with no camera or mic, plus a pomodoro timer and lofi radio."
+  crumb: "study with me"
+  eyebrow: "pixeldoro guide"
+  h1: "study with me, live, with real people"
+  lead: "pixeldoro is a free virtual study room shaped like a cozy pixel town. open it and you're studying next to real people who are focusing right now, each with a timer and what they're working on above their head. no camera, no mic, no schedule."
+  facts:
+    - "free · no ads"
+    - "no camera or mic"
+    - "iphone · mac · android · windows · linux · browser · discord"
+  shot_alt: "A pomodoro running at night in the rain, next to a group of users studying under warm lamps, each showing their timer and task"
+  shot_caption: "everyone here is studying right now. rain on, lofi on."
+  cards_title: "a study room that never closes"
+  cards:
+    - title: "real people, right now"
+      text: "every character you see is a real person in a focus session. you see their timer, their pomodoro count and what they're on."
+    - title: "no camera, no call"
+      text: "nobody watches you through a webcam. it's the quiet company of a library, without leaving your desk."
+    - title: "study with friends"
+      text: "add friends, see who's online and what they're working on, and visit each other's houses to focus side by side."
+    - title: "a room for every mood"
+      text: "the countryside, downtown, a bar, the shop and hq, each with its own crowd. switch servers to find a different one."
+  steps_title: "how to study with others in pixeldoro"
+  steps:
+    - title: "pick a room"
+      text: "open pixeldoro in your browser or the app and walk into any room. there are people focusing in every one."
+    - title: "say what you're working on"
+      text: "tag your session (exams, coding, reading) and start a pomodoro. everyone nearby can see it, and you can see theirs."
+    - title: "focus with the crowd"
+      text: "when the timer rings, take your break together: walk around, check on friends, spend the coins you earned."
+  prose_title: "why studying with other people works"
+  prose:
+    - "study with me videos took off for a simple reason: it's easier to start and keep going when someone else is working too. it's the same reason a library or a coffee shop helps. psychologists call it social facilitation; people with adhd often call it <a href=\"{adhd-focus-app}\">body doubling</a>."
+    - "a video is one-way and pre-recorded. in pixeldoro the people around you are focusing right now, and they can see you too. that small bit of accountability is often enough to stop scrolling and start the next <a href=\"{pomodoro-timer}\">pomodoro</a>."
+  faq:
+    - q: "what is a study with me?"
+      a: "a study with me is a video or stream of someone studying, so you can study along with them. pixeldoro makes it live and two-way: the people around you are studying right now, and they see you as well."
+    - q: "do i need a camera or a microphone?"
+      a: "no. you're a pixel character with a timer and a task over your head. nobody sees or hears you."
+    - q: "can i study with my friends?"
+      a: "yes. add friends, see where they are and what they're focusing on, and visit each other's houses to study together. lobbies let you switch servers too."
+    - q: "is there always someone online?"
+      a: "people from all over the world focus in pixeldoro around the clock, so the rooms are rarely empty."
+    - q: "is it free?"
+      a: "yes. the timer, the world, other players, friends and radio are all free, with no ads and no subscription. an optional one-time supporter pack adds bonus coins and premium items."
+  more: "more guides: <a href=\"{pomodoro-timer}\">pomodoro timer</a> · <a href=\"{adhd-focus-app}\">adhd focus app</a> · <a href=\"{home}\">pixeldoro home</a>"

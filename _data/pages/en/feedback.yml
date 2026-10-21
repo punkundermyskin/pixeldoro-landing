@@ -1,0 +1,11 @@
+# The feedback page, English.
+text:
+  title: "a note from the dev — pixeldoro"
+  hello: "yo 👋"
+  intro: "it's punk — the person building pixeldoro."
+  sorry: "so. i ran out of gift cards lol. my bad."
+  offer: "but i got something better — <b>lifetime premium</b> in pixeldoro. forever. all yours if you hop on a quick call with me, or just email me your honest thoughts. either works."
+  reads: "your feedback literally decides what i build next. i read everything."
+  thanks: "thank you 🙏"
+  call: "→ book a call"
+  email: "→ send feedback"

@@ -1,0 +1,11 @@
+# La pagina feedback, italiano. Rispecchia le chiavi "text" di en/feedback.yml.
+text:
+  title: "due parole dallo sviluppatore — pixeldoro"
+  hello: "ehi 👋"
+  intro: "sono punk — quello che sta costruendo pixeldoro."
+  sorry: "allora. ho finito le gift card, ahah. colpa mia."
+  offer: "ma ho qualcosa di meglio — <b>premium a vita</b> su pixeldoro. per sempre. è tuo se fai una breve call con me, o se mi scrivi per email cosa ne pensi davvero. va bene in tutti e due i modi."
+  reads: "il tuo feedback decide letteralmente cosa farò dopo. leggo tutto."
+  thanks: "grazie 🙏"
+  call: "→ prenota una call"
+  email: "→ manda un feedback"

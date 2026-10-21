@@ -1,0 +1,12 @@
+# mobile sayfası, Türkçe.
+text:
+  title: "Mobilde Pixeldoro"
+  headline: "artık telefonunda da ders çalış"
+  shot_alt: "Telefonda Pixeldoro: ders çalışan insanlarla dolu kırsal alan, üstte zamanlayıcıyı başlatma düğmesi"
+  reasons:
+    - title: "her yerde ders çalış"
+      text: "otobüs, kafe, kütüphane, yatak"
+    - title: "her şey senkronize"
+      text: "aynı hesap, aynı jetonlar, aynı dünya"
+    - title: "ilk pomona 100 jeton"
+      text: "sırf denediğin için"

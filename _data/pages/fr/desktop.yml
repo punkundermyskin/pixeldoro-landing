@@ -1,0 +1,13 @@
+# La page desktop, en français. Mêmes clés que le "text" de en/desktop.yml.
+text:
+  title: "Pixeldoro sur ordinateur"
+  headline: "et maintenant, étudie aussi sur ton ordi"
+  shot_alt: "Pixeldoro sur un ordinateur portable"
+  reasons:
+    - title: "plus grand écran, focus plus profond"
+      text: "le monde pixel en plein écran, sans les distractions du téléphone"
+    - title: "tout se synchronise"
+      text: "pièces, progression, personnage, tout est là"
+    - title: "100 pièces pour ton premier pomo"
+      text: "juste pour essayer"
+  browser: "Navigateur"

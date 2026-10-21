@@ -1,0 +1,12 @@
+# La page mobile, en français. Mêmes clés que le "text" de en/mobile.yml.
+text:
+  title: "Pixeldoro sur mobile"
+  headline: "et maintenant, étudie aussi sur ton téléphone"
+  shot_alt: "Pixeldoro sur un téléphone: la campagne pleine de gens qui étudient, avec le bouton pour lancer le minuteur en haut"
+  reasons:
+    - title: "étudie partout"
+      text: "dans le bus, au café, à la bibli, au lit"
+    - title: "tout se synchronise"
+      text: "même compte, mêmes pièces, même monde"
+    - title: "100 pièces pour ton premier pomo"
+      text: "juste pour essayer"

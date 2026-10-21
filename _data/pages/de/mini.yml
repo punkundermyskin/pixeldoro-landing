@@ -1,0 +1,10 @@
+# Die mini-Seite, Deutsch. Spiegelt die Schlüssel unter "text" aus en/mini.yml.
+text:
+  title: "Pixeldoro Mini - Fokus, ganz einfach"
+  description: "Pixeldoro Mini ist eine schlichte Fokus App mit Pomodoro Timer, Pixel-Art-Hintergründen, Lofi-Musik und Statistik. Für iOS, macOS und Android."
+  keywords: "pixeldoro mini, pomodoro timer, fokus app, lerntimer, timer, pixel art, lofi, produktivität, minimalistisch, einfacher timer"
+  share: "Nur ein Timer. Pixel-Art-Hintergründe. Lofi-Musik. Statistik. Mehr nicht."
+  main: "nur ein timer. pixel-art-hintergründe. lofi-musik. statistik. mehr nicht."
+  sub: "fokus, ganz einfach 👇"
+  shot_alt: "Pixeldoro Mini: ein Pomodoro-Timer über einer Pixel-Art-Straße in der Abenddämmerung, dazu läuft ein Lofi-Radiosender"
+  back: "du willst die ganze pixel-welt? <a href=\"{home}\">lern pixeldoro kennen →</a>"

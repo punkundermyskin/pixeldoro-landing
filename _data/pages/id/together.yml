@@ -1,0 +1,20 @@
+# Halaman together, bahasa Indonesia. Key mengikuti text di en/together.yml. {name} diisi nama teman.
+text:
+  title: "temanmu ngajak kamu ke pixeldoro"
+  title_from: "{name} ngajak kamu ke pixeldoro"
+  description: "ada yang mau fokus bareng kamu. dunia pixel yang sama, timer yang sama, fokus real-time bareng orang beneran."
+  share: "dunia pixel yang sama. timer yang sama. lofi. yuk fokus bareng dia."
+  pill: "kamu dapat undangan"
+  friend: "temanmu"
+  headline: "{name} ngajak kamu fokus bareng"
+  subline: "dia lagi di sana sekarang, grinding sendirian. yuk temenin."
+  shot_alt: "Daftar teman di hub sosial: avatar tiap teman, apa yang sedang mereka fokuskan, ruangan tempat mereka berada, dan jumlah pomodoronya, di samping kafe yang penuh orang belajar"
+  reasons:
+    - title: "kamu bakal beneran lihat dia"
+      text: "karakter kecilnya, jalan-jalan, lagi grinding. tepat di sebelah karaktermu."
+    - title: "fokus barengan"
+      text: "mulai pomodoro, langsung fokus. tanpa call, tanpa tekanan. saling jaga semangat, tapi cozy."
+    - title: "100 koin di pomo pertamamu"
+      text: "cukup dengan muncul"
+  cta_label: "ambil di perangkat apa aja yang kamu pakai 👇"
+  what: "bentar, ini apaan sih? <a href=\"{home}\">pixeldoro, dijelasin →</a>"

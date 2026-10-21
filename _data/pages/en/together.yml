@@ -1,0 +1,20 @@
+# The together page, English.
+text:
+  title: "your friend invited you to pixeldoro"
+  title_from: "{name} invited you to pixeldoro"
+  description: "someone wants you to lock in with them. same pixel world, same timer, real-time focus with real ppl."
+  share: "same pixel world. same timer. lofi. come lock in with them."
+  pill: "you got an invite"
+  friend: "your friend"
+  headline: "{name} wants you to lock in with them"
+  subline: "they're in there rn, grinding solo. go keep them company."
+  shot_alt: "Social hub friends list: each friend's avatar, what they're focusing on, which room they're in and their pomodoro count, next to a cafe full of people studying"
+  reasons:
+    - title: "you'll actually see them"
+      text: "their lil character, walking around, grinding. right there next to yours."
+    - title: "focus in sync"
+      text: "start a pomodoro, lock in. no calls, no pressure. accountability, but cozy."
+    - title: "100 coins on your first pomo"
+      text: "just for showing up"
+  cta_label: "grab it on whatever you're on 👇"
+  what: "wait, what is this? <a href=\"{home}\">pixeldoro, explained →</a>"

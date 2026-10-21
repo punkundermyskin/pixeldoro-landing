@@ -1,0 +1,13 @@
+# A página desktop, português do Brasil.
+text:
+  title: "Pixeldoro no computador"
+  headline: "agora dá pra estudar no notebook também"
+  shot_alt: "Pixeldoro num notebook"
+  reasons:
+    - title: "tela maior, foco mais profundo"
+      text: "mundo em pixel art em tela cheia, sem as distrações do celular"
+    - title: "tudo sincroniza"
+      text: "moedas, progresso, personagem, tá tudo lá"
+    - title: "100 moedas no seu primeiro pomo"
+      text: "só por testar"
+  browser: "Navegador"

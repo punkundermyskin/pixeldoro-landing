@@ -1,0 +1,323 @@
+# Text der Startseite, Deutsch. Spiegelt die Schlüssel aus en.yml; fehlt hier ein Schlüssel, wird en.yml verwendet.
+# {n}, {mon}, {d}, {y} werden vom Template ausgefüllt.
+
+meta:
+  title: "Pixeldoro: cozy Pomodoro Timer & Lerntimer mit Freunden"
+  description: "Kostenloser Pomodoro Timer in einer cozy Pixel-Welt: Lernen neben echten Menschen, konzentrieren mit Lofi-Radio, Münzen sammeln. Auch für ADHS-Köpfe."
+  share: "Pixeldoro ist ein kostenloser Pomodoro-Timer in einer gemütlichen Pixel-Art-Welt, in der du neben echten Menschen lernst."
+
+nav:
+  online: "{n} leute online"
+  discord: "Privater discord"
+  language: "Sprache"
+  suggest: "diese seite auf deutsch ansehen"
+  suggest_close: "Schließen"
+
+hero:
+  slider: "Pixeldoro-Screenshots"
+  prev: "Vorheriger Screenshot"
+  next: "Nächster Screenshot"
+  dot: "Screenshot {n} anzeigen"
+  slides:
+    countryside:
+      caption: "alle, die du hier siehst, sind echte menschen, die gerade lernen"
+      alt: "Pixel-Art-Landschaft mit einem hölzernen Schreintor und goldenen Hirschstatuen, wo andere Pixeldoro-Nutzer sitzen und lernen, jeweils mit ihrer Pomodoro-Zahl, ihrem Timer und ihrer Aufgabe"
+    rooms:
+      caption: "such dir einen raum aus. überall ist was los"
+      alt: "Auswahl der Fokusräume mit öffentlichen Orten und Häusern von Freunden: Bar, Zentrum, Land, Shop und HQ mit Live-Spielerzahlen, ein privates Zuhause und zwei Räume, die bald kommen"
+    start-timer:
+      caption: "wähl, woran du arbeitest, und starte einen pomodoro"
+      alt: "Fokus-Timer-Bildschirm: Vorlagen für 25/5, 45/15, 15/3, Stoppuhr und eigene Zeiten, ein Timer auf 25:00 und farbige Fokus-Tags wie Matheprüfungen, Englisch und Physik"
+    focus-night:
+      caption: "fokussier dich neben allen anderen. regen an, lofi an"
+      alt: "Ein Pomodoro läuft nachts im Regen, neben einer Gruppe von Nutzern, die unter warmen Lampen lernen, mit der wöchentlichen Community-Challenge auf dem Bildschirm"
+    coins:
+      caption: "jeder pomodoro bringt münzen"
+      alt: "Belohnungsbildschirm nach einer abgeschlossenen Fokus-Session: dein Fokus bringt Beute, 30 Münzen, Abholen"
+    shop:
+      caption: "gib sie im shop aus: möbel, räume, outfits, haustiere"
+      alt: "Der Katalog im Shop des Spiels mit Möbeln, Küche, Bad, Elektronik, Deko, traditionellen und zeremoniellen Items, dazu Räume, Figuren, Hintergründe und Haustiere"
+    home-pets:
+      caption: "lad freunde zu dir ein. die katzen wohnen hier"
+      alt: "Ein eingerichtetes Zuhause mit drei Hauskatzen und zwei Freunden zu Besuch, jeweils mit ihrer Pomodoro-Zahl und dem, was sie gerade lernen"
+    stats:
+      caption: "sieh zu, wie sich deine fokusstunden summieren"
+      alt: "Profil- und Statistikbildschirm: 1.526 Tomaten in 511 Tagen, 107 Stunden Fokus in einem Monat, 1.691 Stunden insgesamt und die Zeit aufgeteilt nach Fokus-Tag"
+    friends:
+      caption: "sieh, worauf sich deine freunde gerade fokussieren und wo"
+      alt: "Freundesliste im Treffpunkt: der Avatar jedes Freundes, worauf er sich gerade fokussiert, in welchem Raum er ist und seine Pomodoro-Zahl, daneben ein Café voller lernender Leute"
+  tagline: "eine gemütliche pixel-welt, in der du mit echten menschen lernst, dich fokussierst und abhängst."
+  play: "jetzt spielen"
+  browser_note: "kostenlos · läuft im browser"
+  or_get: "oder hol es dir für"
+  ios_note: "kostenlos · iphone + ipad"
+  android_note: "kostenlos bei google play"
+  also_on: "auch auf"
+  laptop: "laptop"
+  app_store_alt: "Laden im App Store"
+  google_play_alt: "Jetzt bei Google Play"
+  ratings:
+    google_play: "5,0 google play"
+    app_store: "4,9 app store"
+    mac_app_store: "4,9 mac app store"
+
+platforms:
+  mac: "mac"
+  iphone: "iphone"
+  android: "android"
+  windows: "windows"
+  linux: "linux"
+  discord: "discord"
+
+tools:
+  title: "tools für tiefen fokus"
+  timer:
+    title: "ein timer, wie du ihn willst"
+    text: "25/5, 45/15, 15/3 oder deine eigene einstellung. stoppuhr für lange, tiefe arbeitsphasen. ein richtiger wecker, wenn die zeit um ist."
+  radio:
+    title: "lofi-radio"
+    text: "sechs lofi- und chill-sender sind schon dabei. sie begleiten dich durch die ganze welt. regen und nebel ziehen auf, während du dich fokussierst."
+  tags:
+    title: "fokus-tags"
+    text: "markier, woran du gerade arbeitest: prüfungen, coding, lesen. alle um dich herum sehen, womit du beschäftigt bist."
+  stats:
+    title: "statistiken, die sich sehen lassen"
+    text: "sieh, wohin deine stunden fließen, aufgeteilt nach tag. woche für woche stapeln sich die tomaten."
+
+cozy:
+  title: "und dazu ein gemütliches spiel"
+  tabs: "Spielfeatures"
+  friends:
+    tab: "freunde"
+    title: "freunde + hausbesuche"
+    text: "füg freunde hinzu und sieh, worauf sie sich gerade fokussieren und wo. schau in ihrem raum vorbei und lernt zusammen, oder lad sie zu dir ein."
+    alt: "Freundesliste im Treffpunkt, die zeigt, worauf sich jeder Freund gerade fokussiert und in welchem Raum er ist, daneben ein Café voller lernender Leute"
+  pets:
+    tab: "haustiere"
+    title: "haustiere"
+    text: "adoptier haustiere im shop. sie hängen mit dir ab und leisten dir gesellschaft, während du arbeitest."
+    alt: "Ein Haustier liegt eingerollt neben seinem Besitzer auf einer Straße im Zentrum, mit Futternäpfen und einem Wollknäuel, während andere Spieler in der Nähe lernen"
+  decorate:
+    tab: "einrichten"
+    title: "mach dein zimmer zu deinem"
+    text: "jeder pomodoro bringt münzen. gib sie für möbel, deko und ganze neue räume aus und schieb dann im bearbeitungsmodus alles hin und her."
+    alt: "Zuhause im Bearbeitungsmodus: Möbel werden in einem Raum mit Bücherregalen, Sesseln, Pflanzen und Computertischen verschoben"
+  story:
+    tab: "geschichte"
+    title: "eine geschichte zum mitspielen"
+    text: "die leute in der stadt verteilen story-, tages- und wochenquests. schließ pomodoros ab, um sie zu erledigen und neue orte und hintergründe freizuschalten."
+    alt: "Questbuch mit Story-, Tages- und Wochenquests: eine Quest von Lt. Michiko für eine fünftägige Serie, die einen neuen Hintergrund freischaltet"
+
+map:
+  title: "erkunde die welt"
+  lead: "fünf orte zum lernen, jeder mit seinen eigenen leuten. weitere sind schon unterwegs."
+  tabs: "Orte"
+  countryside:
+    tab: "land"
+    caption: "schreine, hirsche und ein kleiner fluss. der ruhigste ort der stadt."
+    alt: "Das Land bei Nacht: ein Schrein, eine Holzbrücke über einen Fluss und goldene Hirschstatuen, Spieler lernen unter warmen Lampen"
+  downtown:
+    tab: "zentrum"
+    caption: "die hauptstraße. bar, shop und dein zuhause liegen nur ein paar schritte auseinander."
+    alt: "Straßen im Zentrum mit Schildern zur Bar, zum Shop und nach Hause, Spieler laufen herum und lernen auf den Gehwegen"
+  bar:
+    tab: "bar"
+    caption: "eine gemütliche bar voller leute, die voll im fokus sind."
+    alt: "Eine volle Bar mit Spielern an Tischen und auf Teppichen, jeweils mit ihrer Pomodoro-Zahl, ihrem Timer und ihrer Aufgabe"
+  shop:
+    tab: "shop"
+    caption: "der laden an der ecke. schnapp dir einen platz auf dem sofa und leg los."
+    alt: "Im Shop: eine Theke, Regale und Sofas, Spieler hängen zwischen den Sessions ab"
+  hq:
+    tab: "hq"
+    caption: "das pixeldoro hq. reihenweise schreibtische, wenn du so richtig im büromodus sein willst."
+    alt: "Pixeldoro HQ: ein Büro mit Schreibtischreihen, einem Drucker und einem Kaffeewagen, Spieler arbeiten an den Schreibtischen"
+
+reviews:
+  title: "was die leute sagen"
+  lead: "echte bewertungen aus dem app store und von google play."
+  stars: "5 sterne"
+  app_store: "app store"
+  mac_app_store: "mac app store"
+  google_play: "google play"
+
+updates:
+  title: "was ist neu"
+  lead: "alle paar wochen gibt's ein neues update. hier sind sie alle."
+  older: "ältere updates ({n})"
+  date: "{d}. {mon} {y}"
+  months: ["jan", "feb", "mär", "apr", "mai", "jun", "jul", "aug", "sep", "okt", "nov", "dez"]
+
+faq:
+  title: "häufige fragen"
+  items:
+    - q: "was ist pixeldoro?"
+      a: "pixeldoro ist ein kostenloser pomodoro-timer in einer gemütlichen pixel-art-welt. du suchst dir einen platz, startest eine fokus-session und arbeitest neben echten menschen, die dasselbe tun. jede session bringt münzen für dein zimmer, bringt die geschichte voran und landet in deiner statistik. lofi-radio ist eingebaut, und es läuft auf iphone, ipad, mac, android, windows, linux, im browser und in discord."
+    - q: "ist pixeldoro kostenlos?"
+      a: "ja. timer, welt, andere spieler, freunde, quests, haustiere und radio sind komplett kostenlos, ohne werbung und ohne abo. es gibt ein optionales supporter-paket als einmalkauf: 25% mehr münzen bei jeder session, ein abzeichen im profil, premium-skins, möbel, hintergründe und räume und dazu eine bonusquest."
+    - q: "ist das ein spiel oder eine produktivitäts-app?"
+      a: "beides, aber der timer kommt zuerst. das spiel geht nur weiter, wenn du dich fokussierst: abgeschlossene pomodoros bringen münzen, erledigen quests und schalten neue orte frei. zwischen den sessions gibt's gerade genug zu tun, damit es sich lohnt, ohne dich von deiner aufgabe abzulenken."
+    - q: "sind die anderen leute echt?"
+      a: "ja. jede figur, die herumläuft oder am schreibtisch sitzt, ist ein echter spieler, der sich gerade fokussiert. du siehst seinen timer, wie viele pomodoros er schon geschafft hat und woran er arbeitet."
+    - q: "was ist body doubling?"
+      a: "body doubling heißt, neben jemand anderem zu arbeiten, damit es leichter fällt, anzufangen und dranzubleiben. deshalb klappt lernen in der bibliothek oder im café so gut. pixeldoro gibt dir dieses gefühl ohne kamera und ohne termin: mach es auf, wann du willst, und um dich herum sind leute voll im fokus."
+    - q: "kann ich mit freunden lernen?"
+      a: "ja. füg freunde hinzu, sieh, wer online ist und woran sie arbeiten, und besucht euch gegenseitig zu hause, um seite an seite zu lernen. über lobbys kannst du den server wechseln und andere leute finden."
+    - q: "hilft es bei adhs?"
+      a: "es ist für köpfe gemacht, die bei einem normalen timer abschalten. es belohnt dich schon fürs dabeisein, andere leute, die sich um dich herum fokussieren, helfen dir beim anfangen, und die geschichte gibt dir einen grund wiederzukommen. es ist kein medizinisches hilfsmittel, nur ein gemütlicherer weg, in die gänge zu kommen."
+    - q: "gibt es eine to-do-liste oder einen app-blocker?"
+      a: "noch nicht. mit fokus-tags kannst du jede session benennen (prüfungen, coding, lesen), und deine statistik teilt deine zeit nach tag auf. beides steht auf der liste."
+    - q: "worauf kann ich es spielen, und wird mein fortschritt synchronisiert?"
+      a: "iphone, ipad und mac über den app store, android über google play, windows und linux über pixeldoro.io, jeder browser unter play.pixeldoro.io und als aktivität in discord. melde dich mit deiner e-mail an, und dein fortschritt, dein zimmer und deine münzen begleiten dich auf jedes gerät. es spricht 9 sprachen."
+
+outro:
+  title: "bereit, loszulegen?"
+  lead: "kostenlos auf jedem gerät. genau jetzt sind leute im fokus."
+
+# The guide and download pages (_layouts/guide.html)
+guide:
+  questions: "fragen"
+
+discord:
+  title: "ein privater discord"
+  text: "es gibt keinen öffentlichen einladungslink. schließ 30 pomodoros ab, dann taucht eine einladung in der app auf."
+  note: "es ist ein kleiner server für die aktivsten leute. wir sehen uns dort."
+  close: "alles klar"
+
+footer:
+  play: "spielen"
+  browser: "im browser"
+  iphone_ipad: "iphone + ipad"
+  mac: "mac"
+  android: "android"
+  discord_activity: "discord-aktivität"
+  mini: "pixeldoro mini"
+  community: "community"
+  discord: "discord"
+  guides: "ratgeber"
+  study_with_me: "study with me"
+  pomodoro_timer: "pomodoro-timer"
+  adhd_focus_app: "adhs-fokus-app"
+  legal: "rechtliches"
+  privacy: "datenschutzerklärung"
+  terms: "nutzungsbedingungen"
+  languages: "sprachen"
+
+# Versionshinweise nach Version; Daten und Reihenfolge stehen in _data/changelog.yml
+changelog:
+  "2.7.1":
+    - "pixeldoro spricht jetzt 8 weitere sprachen"
+  "2.6.9":
+    - "treffpunkt: sieh, wer online ist, und vernetz dich mit anderen spielern"
+    - "freunde: schick anfragen, nimm welche an und behalte deine lernbuddys im blick"
+    - "lernt zusammen bei freunden zu hause, seite an seite"
+    - "lobbys: wechsle den server, um andere leute zum lernen zu finden"
+  "2.6.8":
+    - "echtzeit-multiplayer: sieh, wie sich leute bewegen, während sie sich fokussieren"
+    - "deine figur setzt sich jetzt während fokus-sessions hin"
+    - "öffentliche spielerprofile mit fortschritt und statistik"
+    - "persönliche items: sammle accessoires und leg sie an"
+    - "namensschilder blenden sich ein, wenn du anderen spielern näherkommst"
+    - "besuch andere spieler bei ihnen zu hause und sieh, wie sie eingerichtet haben"
+  "2.6.5":
+    - "shop-fortschritt: sieh, wie viele sessions es noch bis zu jeder belohnung sind"
+    - "anteilige münzen, auch wenn du einen pomo nicht zu ende bringst"
+    - "\"bleib dran\"-erinnerungen, bevor du eine session früher beendest"
+    - "\"pause vorbei\"-erinnerungen, die dich wieder in die spur bringen"
+    - "50+ neue avatare"
+    - "besseres onboarding und feinschliff an der ui"
+  "2.6.4":
+    - "ein richtiger wecker: pixeldoro klingelt, wenn deine fokus-session endet"
+  "2.6.3":
+    - "kleine verbesserungen und feinschliff"
+  "2.6.2":
+    - "onboarding v2: ein animiertes intro, ein 15-sekunden-demo-pomo und ein möbelstück geschenkt"
+    - "leuchtende hinweise zeigen dir, wo du tippen musst"
+    - "schnellreisen wird freigeschaltet, sobald du ein paar orte erkundet hast"
+    - "ein ruhigerer erster start, ohne wecker oder benachrichtigungen, während du dich zurechtfindest"
+    - "schnellerer sync und weniger speicherbedarf"
+  "2.6.0":
+    - "pixeldoro supporter: ein einmalkauf, für immer deins"
+    - "25% mehr münzen bei jeder session"
+    - "ein supporter-abzeichen in deinem profil"
+    - "premium-skins, möbel, hintergründe und räume, alles freigeschaltet"
+    - "eine bonusquest mit belohnungen, die du sonst nirgends bekommst"
+  "2.5.7":
+    - "ein neues questbuch im browser-stil"
+    - "tages- und wochenquests"
+    - "gruppenquests repariert"
+    - "aufgeräumte szenen-layouts"
+  "2.5.6":
+    - "flüssigere registrierung und anmeldung"
+    - "optimierungen beim cloud-sync"
+    - "zeitzonen-fixes bei quests und statistik"
+    - "bessere darstellung der pixel art"
+  "2.5.5":
+    - "timer laufen jetzt überall"
+    - "das land ist komplett begehbar (hin kommst du mit dem roller)"
+    - "andere spieler tauchen da auf, wo sie wirklich sind"
+    - "schnellreisen, mit spielerzahl für jeden ort"
+    - "ein live-zähler für \"leute lernen gerade\""
+    - "afk-spieler werden kompakt angezeigt"
+    - "sessions über 2h zeigen den status \"im fokus\""
+    - "flüssigere kamera, etwas langsameres gehen"
+  "2.5.4":
+    - "ein inventar-panel, um deine items ein- oder auszublenden"
+    - "shop: tab für gekaufte items, unterkategorien, münzstand immer sichtbar"
+    - "kauf so viele möbel, wie du willst, auch doppelt"
+    - "nach dem möbelkauf geht's nach hause in den bearbeitungsmodus"
+    - "~10 neue items im shop"
+    - "die app merkt sich deinen letzten ort"
+  "2.5.3":
+    - "zimmer einrichten: schieb deine möbel herum"
+    - "tippen zum auswählen, ziehen zum verschieben, speichern, wenn's passt"
+    - "ein reset-button, falls was schiefgeht"
+    - "dein layout wird auf allen geräten synchronisiert"
+  "2.5.0":
+    - "10+ neue pixel-art-hintergründe"
+    - "pomos manuell eintragen"
+  "2.4.9":
+    - "25 neue figuren"
+    - "wöchentliche belohnungen"
+  "2.4.8":
+    - "tipp auf figuren und items für beschreibungen, werte und kleine lore-häppchen"
+  "2.4.7":
+    - "shop-update: neue kategorien und ein aufgeräumteres layout"
+    - "figuren zum kaufen, mit seltenheitsstufen"
+    - "jede woche wechselnde figuren"
+    - "der shop öffnet direkt nach deinem ersten pomo"
+    - "eine klarere, schnellere registrierung"
+  "2.4.6":
+    - "hotfix für die mobile steuerung"
+  "2.4.5":
+    - "wochen-challenges: erreicht zusammen mit der community gemeinsame pomodoro-ziele"
+  "2.4.4":
+    - "zen-modus: vollbild, kein timer, nur vibes"
+    - "neue farben für fokus-tags"
+    - "benachrichtigungen in der app"
+  "2.4.2":
+    - "tägliche münzen, versteckt in der ganzen stadt"
+    - "die haustier-belohnung ist zurück"
+  "2.4.1":
+    - "cloud-sync: dein fortschritt begleitet dich überallhin"
+    - "konten: melde dich auf jedem gerät an"
+    - "mehr performance und ui-fixes"
+  "2.3.5":
+    - "fix für den hintergrundmusik-modus"
+  "2.3.4":
+    - "deine erste session ist jetzt 15/5"
+    - "überarbeitete arbeitsatmosphäre"
+    - "eine animation mit fliegenden münzen"
+    - "verbesserungen bei haustieren"
+    - "die app schaltet andere medien nicht mehr stumm, du kannst also deine eigene musik hören"
+  "2.3.2":
+    - "eine neue quest-saison mit stoppuhr- und fokuszeit-challenges"
+    - "neue figuren, storylines und gruppenquests"
+    - "multiplayer-vorschau: sieh, woran andere arbeiten"
+    - "eine größere stadt mit neuen orten und mehr npcs"
+    - "wohnungs-upgrades: schalte räume frei, sammle deko"
+    - "ambient-musik"
+    - "eine neu gestaltete ui"
+    - "timer-vorlagen: 25/5, 45/15, 15/3"
+    - "stoppuhr-modus, bis zu 8 stunden"
+    - "fokus-tags, die du bearbeiten und farblich markieren kannst"

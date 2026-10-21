@@ -1,0 +1,12 @@
+# Halaman mobile, bahasa Indonesia. Key mengikuti text di en/mobile.yml.
+text:
+  title: "Pixeldoro di HP"
+  headline: "sekarang bisa belajar di hp juga"
+  shot_alt: "Pixeldoro di ponsel: pedesaan yang penuh orang belajar, dengan tombol mulai timer di bagian atas"
+  reasons:
+    - title: "belajar di mana saja"
+      text: "di bus, kafe, perpustakaan, kasur"
+    - title: "semuanya tersinkron"
+      text: "akun yang sama, koin yang sama, dunia yang sama"
+    - title: "100 koin di pomo pertamamu"
+      text: "cukup dengan nyobain"

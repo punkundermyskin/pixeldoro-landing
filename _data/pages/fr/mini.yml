@@ -1,0 +1,10 @@
+# La page mini, en français. Mêmes clés que le "text" de en/mini.yml.
+text:
+  title: "Pixeldoro Mini - La concentration, simplifiée"
+  description: "Pixeldoro Mini, l'appli de concentration simplifiée: un minuteur pomodoro, des fonds en pixel art, de la musique lofi et des stats. Sur iOS, macOS et Android."
+  keywords: "pixeldoro mini, pomodoro, appli de concentration, minuteur, pixel art, lofi, productivité, minimaliste, minuteur simple"
+  share: "Juste un minuteur. Des fonds en pixel art. De la musique lofi. Des stats. C'est tout."
+  main: "juste un minuteur. des fonds en pixel art. de la musique lofi. des stats. c'est tout."
+  sub: "la concentration, simplifiée 👇"
+  shot_alt: "Pixeldoro Mini: un minuteur pomodoro sur une rue en pixel art au crépuscule, avec une station de radio lofi en fond"
+  back: "envie de l'univers pixel au complet? <a href=\"{home}\">découvre pixeldoro →</a>"

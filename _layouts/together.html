@@ -1,0 +1,452 @@
+{%- comment -%}
+The together page, once per language. Text comes from _data/pages/<lang>/together.yml, shared strings from _data/i18n/<lang>.yml.
+{%- endcomment -%}
+{%- assign lang = site.data.languages | where: "code", page.lang | first -%}
+{%- assign t = site.data.i18n[page.lang] -%}
+{%- assign d = site.data.pages[page.lang].together.text -%}
+{%- if lang.code == "en" %}{% assign hl = "" %}{% else %}{% assign hl = "?hl=" | append: lang.hl %}{% endif -%}
+<!DOCTYPE html>
+<html lang="{{ lang.html }}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ d.title }}</title>
+    <meta name="description" content="{{ d.description | escape }}">
+    <meta name="robots" content="noindex, follow">
+{% include page-lang.html file="together.html" redirect=true %}
+    <link rel="icon" href="/images/favicon.ico" sizes="any">
+    <link rel="icon" type="image/png" sizes="192x192" href="/images/favicon-192.png">
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+    <link rel="preload" href="/fonts/pixeldoro.woff2" as="font" type="font/woff2" crossorigin>
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://pixeldoro.io{{ lang.path }}together.html">
+    <meta property="og:title" content="{{ d.title }}">
+    <meta property="og:description" content="{{ d.share | escape }}">
+    <meta property="og:image" content="https://pixeldoro.io/images/social-preview.png">
+    <meta property="og:site_name" content="Pixeldoro">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://pixeldoro.io{{ lang.path }}together.html">
+    <meta name="twitter:title" content="{{ d.title }}">
+    <meta name="twitter:description" content="{{ d.share | escape }}">
+    <meta name="twitter:image" content="https://pixeldoro.io/images/social-preview.png">
+    <meta name="twitter:site" content="@pixeldoro">
+
+    <script>
+        // Pick the download button before first paint: ios / android / desktop.
+        // ?device=ios|android|desktop overrides it for previewing.
+        (function () {
+            var forced = new URLSearchParams(location.search).get('device');
+            var ua = navigator.userAgent;
+            var device = 'desktop';
+            if (/android/i.test(ua)) device = 'android';
+            else if (/iphone|ipad|ipod/i.test(ua) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1)) device = 'ios';
+            if (/^(ios|android|desktop)$/.test(forced)) device = forced;
+            document.documentElement.setAttribute('data-device', device);
+        })();
+    </script>
+
+    <style>
+        @font-face {
+            font-family: 'Pixeldoro';
+            src: url('/fonts/pixeldoro.woff2') format('woff2');
+            font-display: swap;
+        }
+
+        :root {
+            --orange: #edb83f;
+            --red: #bf1d1d;
+            --red-dark: #8a1414;
+            --white: #ffffff;
+            --dark: #212b2c;
+            --on-bg: #ffffff;
+            --on-bg-muted: rgba(255, 255, 255, 0.82);
+            --pixel: 'Pixeldoro', 'Courier New', monospace;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--pixel);
+            background-color: #060f1a;
+            color: var(--on-bg);
+            text-shadow: 0 2px 0 rgba(0, 0, 0, 0.35);
+            line-height: 1.5;
+            -webkit-font-smoothing: none;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 40px 16px;
+            text-align: center;
+        }
+
+        a {
+            color: inherit;
+        }
+
+        /* The game's Urban_Night1 scene behind the page, same as the home page */
+        .backdrop {
+            position: fixed;
+            z-index: -1;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            height: 100lvh;
+            background: #060f1a url('/images/bg-urban-night.webp') center / cover no-repeat;
+            image-rendering: pixelated;
+        }
+
+        .backdrop::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(rgba(33, 43, 44, 0.35), rgba(33, 43, 44, 0.6));
+        }
+
+        /* No rubber-band bounce: it pulls the page off the fixed backdrop */
+        html {
+            overscroll-behavior: none;
+        }
+
+        .backdrop-video {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            image-rendering: pixelated;
+            opacity: 0;
+        }
+
+        .backdrop-video.is-playing {
+            opacity: 1;
+        }
+
+        /* invite pill */
+        .invite-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 4px 14px;
+            border: 3px solid var(--orange);
+            border-radius: 999px;
+            background: rgba(33, 43, 44, 0.75);
+            color: var(--orange);
+            font-size: 15px;
+            margin-bottom: 18px;
+        }
+
+        .invite-pill .dot {
+            width: 8px;
+            height: 8px;
+            background: var(--orange);
+            animation: blink 1.6s steps(1) infinite;
+        }
+
+        @keyframes blink {
+            50% { opacity: 0; }
+        }
+
+        .headline {
+            max-width: 960px;
+            font-size: 35px;
+            font-weight: normal;
+            line-height: 1.2;
+            margin-bottom: 12px;
+        }
+
+        .headline .nowrap {
+            white-space: nowrap;
+        }
+
+        .headline .inviter {
+            color: var(--orange);
+        }
+
+        .headline-icon {
+            width: 40px;
+            height: 40px;
+            vertical-align: -6px;
+            margin-left: 10px;
+            image-rendering: pixelated;
+        }
+
+        .subline {
+            max-width: 560px;
+            font-size: 20px;
+            color: var(--on-bg-muted);
+            margin-bottom: 24px;
+        }
+
+        .screenshot {
+            width: min(100%, 600px);
+            aspect-ratio: 16 / 9;
+            border: 4px solid var(--white);
+            border-radius: 14px;
+            overflow: hidden;
+            background: var(--dark);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+            margin-bottom: 28px;
+        }
+
+        .screenshot img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .reasons {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+            width: min(100%, 760px);
+            margin-top: 40px;
+        }
+
+        .reason {
+            padding: 14px 16px;
+            border: 3px solid var(--white);
+            border-radius: 14px;
+            background: rgba(33, 43, 44, 0.75);
+            box-shadow: 0 4px 0 rgba(0, 0, 0, 0.35);
+        }
+
+        .reason-title {
+            font-size: 20px;
+            margin-bottom: 6px;
+        }
+
+        .reason-desc {
+            font-size: 15px;
+            color: var(--on-bg-muted);
+        }
+
+        .reason.highlight {
+            border-color: var(--orange);
+        }
+
+        .reason.highlight .reason-title {
+            color: var(--orange);
+        }
+
+        .cta-label {
+            font-size: 15px;
+            color: var(--on-bg-muted);
+            margin-bottom: 16px;
+        }
+
+        /* Call to action: one variant per device, desktop is the no-JS default */
+        .cta-ios,
+        .cta-android,
+        [data-device="ios"] .cta-desktop,
+        [data-device="android"] .cta-desktop {
+            display: none;
+        }
+
+        [data-device="ios"] .cta-ios,
+        [data-device="android"] .cta-android {
+            display: block;
+        }
+
+        .btn-play {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 16px 40px;
+            background: var(--red);
+            color: var(--white);
+            font-size: 25px;
+            text-decoration: none;
+            border-radius: 12px;
+            box-shadow: 0 5px 0 var(--red-dark);
+            transition: transform 0.1s ease, box-shadow 0.1s ease;
+        }
+
+        /* The play arrow is its own icon, nudged a touch below the middle of the lowercase letters */
+        .play-icon {
+            position: relative;
+            top: 4px;
+            width: 9px;
+            height: 15px;
+            fill: currentColor;
+            shape-rendering: crispEdges;
+        }
+
+        .btn-play:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 7px 0 var(--red-dark);
+        }
+
+        .btn-play:active {
+            transform: translateY(4px);
+            box-shadow: 0 1px 0 var(--red-dark);
+        }
+
+        .store-badge img {
+            width: 220px;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .cta-note {
+            font-size: 15px;
+            color: var(--on-bg-muted);
+            margin-top: 12px;
+        }
+
+        .other-platforms {
+            font-size: 15px;
+            color: var(--on-bg-muted);
+            margin-top: 6px;
+        }
+
+        .what-is-this {
+            margin-top: 40px;
+            font-size: 15px;
+            color: var(--on-bg-muted);
+        }
+
+        .what-is-this a:hover,
+        .other-platforms a:hover {
+            color: var(--on-bg);
+        }
+
+        @media (max-width: 700px) {
+            body {
+                justify-content: flex-start;
+            }
+
+            .headline {
+                font-size: 30px;
+            }
+
+            .headline-icon {
+                width: 32px;
+                height: 32px;
+                vertical-align: -5px;
+            }
+
+            .subline {
+                font-size: 20px;
+                margin-bottom: 22px;
+            }
+
+            .screenshot {
+                margin-bottom: 22px;
+            }
+
+            .reasons {
+                grid-template-columns: 1fr;
+                gap: 12px;
+                margin-bottom: 28px;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .invite-pill .dot {
+                animation: none;
+            }
+        }
+    </style>
+    <script src="/analytics.js" async></script>
+</head>
+<body>
+    <div class="backdrop" aria-hidden="true"><video class="backdrop-video" muted loop playsinline></video></div>
+
+    <div class="invite-pill"><span class="dot"></span>{{ d.pill }}</div>
+
+    {%- assign parts = d.headline | split: "{name}" %}
+    {%- assign words = parts[1] | strip | split: " " %}
+    {%- assign rest = words.size | minus: 1 %}
+    {%- assign tail = parts[1] | lstrip %}
+    <h1 class="headline">{{ parts[0] }}<span class="inviter" id="inviter">{{ d.friend }}</span>{% if tail != parts[1] %}{{ " " }}{% endif %}{% for w in words limit: rest %}{{ w }} {% endfor %}<span class="nowrap">{{ words | last }}<img src="/images/tomato-48.png" width="48" height="48" alt="" class="headline-icon"></span></h1>
+
+    <p class="subline">{{ d.subline }}</p>
+
+    <div class="screenshot">
+        <img src="/images/shots/friends.webp" srcset="/images/shots/friends-960.webp 960w, /images/shots/friends.webp 1600w" sizes="min(92vw, 600px)" width="1600" height="900" alt="{{ d.shot_alt | escape }}">
+    </div>
+
+    <div class="cta-label">{{ d.cta_label }}</div>
+
+    <!-- invite-page-only short links (together- prefix) so clicks from here are tracked separately -->
+    <div class="cta-desktop">
+        <a class="btn-play" href="https://play.pixeldoro.io/together-web">{% include play-icon.html %}{{ t.hero.play }}</a>
+        <p class="cta-note">{{ t.hero.browser_note }}</p>
+        <p class="other-platforms">{{ t.hero.or_get }}
+            <a href="https://play.pixeldoro.io/together-ios">{{ t.platforms.mac }}</a> ·
+            <a href="https://play.pixeldoro.io/together-ios">{{ t.platforms.iphone }}</a> ·
+            <a href="https://play.pixeldoro.io/together-android{{ hl }}">{{ t.platforms.android }}</a> ·
+            <a href="https://github.com/pixeldoro/desktop/releases/latest/download/pixeldoro-setup.exe">{{ t.platforms.windows }}</a> ·
+            <a href="https://github.com/pixeldoro/desktop/releases/latest/download/pixeldoro-linux.tar.gz">{{ t.platforms.linux }}</a>
+        </p>
+    </div>
+
+    <div class="cta-ios">
+        <a class="store-badge" href="https://play.pixeldoro.io/together-ios"><img src="{{ lang.app_store_badge }}" width="{{ lang.app_store_size[0] }}" height="{{ lang.app_store_size[1] }}" alt="{{ t.hero.app_store_alt | escape }}"></a>
+        <p class="cta-note">{{ t.hero.ios_note }}</p>
+        <p class="other-platforms">{{ t.hero.also_on }} <a href="https://play.pixeldoro.io/together-android{{ hl }}">{{ t.platforms.android }}</a> · <a href="https://play.pixeldoro.io/together-web">{{ t.hero.laptop }}</a></p>
+    </div>
+
+    <div class="cta-android">
+        <a class="store-badge" href="https://play.pixeldoro.io/together-android{{ hl }}"><img src="{{ lang.google_play_badge }}" width="{% if lang.code == 'en' %}558{% else %}555{% endif %}" height="165" alt="{{ t.hero.google_play_alt | escape }}"></a>
+        <p class="cta-note">{{ t.hero.android_note }}</p>
+        <p class="other-platforms">{{ t.hero.also_on }} <a href="https://play.pixeldoro.io/together-ios">{{ t.platforms.iphone }}</a> · <a href="https://play.pixeldoro.io/together-web">{{ t.hero.laptop }}</a></p>
+    </div>
+
+    <div class="reasons">
+        <div class="reason">
+            <div class="reason-title">{{ d.reasons[0].title }}</div>
+            <div class="reason-desc">{{ d.reasons[0].text }}</div>
+        </div>
+        <div class="reason">
+            <div class="reason-title">{{ d.reasons[1].title }}</div>
+            <div class="reason-desc">{{ d.reasons[1].text }}</div>
+        </div>
+        <div class="reason highlight">
+            <div class="reason-title">{{ d.reasons[2].title }}</div>
+            <div class="reason-desc">{{ d.reasons[2].text }}</div>
+        </div>
+    </div>
+
+    <div class="what-is-this">{% assign what = d.what | replace: "{home}", lang.path %}{{ what }}</div>
+
+    <script>
+        // optional personalization: /together?from=zeynep  ->  "zeynep wants you to lock in with them"
+        (function () {
+            try {
+                var name = new URLSearchParams(window.location.search).get('from') || '';
+                name = name.replace(/[\u0000-\u001f<>]/g, '').replace(/\s+/g, ' ').trim().slice(0, 24);
+                if (name) {
+                    document.getElementById('inviter').textContent = name;
+                    document.title = {{ d.title_from | jsonify }}.replace('{name}', function () { return name; });
+                }
+            } catch (e) { /* no-op */ }
+        })();
+
+        // Background video: loads after the page, skipped for reduced motion and data saver
+        (function () {
+            var video = document.querySelector('.backdrop-video');
+            if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+            if (navigator.connection && navigator.connection.saveData) return;
+            window.addEventListener('load', function () {
+                video.addEventListener('playing', function () { video.classList.add('is-playing'); }, { once: true });
+                video.src = '/images/bg-urban-night.mp4';
+                video.play().catch(function () {});
+            });
+        })();
+    </script>
+</body>
+</html>

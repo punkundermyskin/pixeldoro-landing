@@ -1,0 +1,11 @@
+# Halaman feedback, bahasa Indonesia. Key mengikuti text di en/feedback.yml.
+text:
+  title: "catatan dari dev — pixeldoro"
+  hello: "hai 👋"
+  intro: "ini punk — orang yang bikin pixeldoro."
+  sorry: "jadi gini. gift card-ku udah habis wkwk. maaf ya."
+  offer: "tapi aku punya yang lebih seru — <b>premium seumur hidup</b> di pixeldoro. selamanya. semuanya buat kamu kalau kamu mau ngobrol bentar sama aku lewat call, atau cukup kirim email berisi pendapat jujurmu. yang mana aja boleh."
+  reads: "feedback-mu beneran menentukan apa yang aku bikin selanjutnya. aku baca semuanya."
+  thanks: "makasih banyak 🙏"
+  call: "→ jadwalkan call"
+  email: "→ kirim feedback"

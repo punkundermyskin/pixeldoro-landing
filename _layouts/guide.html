@@ -1,0 +1,352 @@
+{%- comment -%}
+The guide pages (study-with-me, pomodoro-timer, adhd-focus-app) and the windows and linux pages, once per language.
+A page sets `lang` and `doc`. Text comes from _data/pages/<lang>/<doc>.yml, the shape (shot, icons, download) from the English file,
+shared strings (nav, CTAs, footer) from _data/i18n/<lang>.yml.
+{%- endcomment -%}
+{%- assign lang = site.data.languages | where: "code", page.lang | first -%}
+{%- assign t = site.data.i18n[page.lang] -%}
+{%- assign s = site.data.pages.en[page.doc].layout -%}
+{%- assign d = site.data.pages[page.lang][page.doc].text -%}
+{%- assign file = page.doc | append: ".html" -%}
+{%- assign url = "https://pixeldoro.io" | append: lang.path | append: file -%}
+{%- if lang.code == "en" -%}
+{%- assign android = "https://play.pixeldoro.io/android" -%}
+{%- assign legal = "" -%}
+{%- else -%}
+{%- assign android = "https://play.pixeldoro.io/android?hl=" | append: lang.hl -%}
+{%- assign legal = ' hreflang="en"' -%}
+{%- endif -%}
+{%- if s.kind == "download" -%}
+{%- assign cta = s.download -%}
+{%- assign cta_text = d.button -%}
+{%- assign cta_icon = false -%}
+{%- assign cta_note = d.note -%}
+{%- else -%}
+{%- assign cta = "https://play.pixeldoro.io/web-beta" -%}
+{%- assign cta_text = t.hero.play -%}
+{%- assign cta_icon = true -%}
+{%- assign cta_note = t.hero.browser_note -%}
+{%- endif -%}
+{%- capture body -%}
+    <main>
+    <section class="guide-hero">
+        <p class="eyebrow">{{ d.eyebrow }}</p>
+        <h1>{{ d.h1 }}</h1>
+        <p class="lead">{{ d.lead }}</p>
+        <div class="cta-desktop">
+            <a class="btn-play" href="{{ cta }}">{% if cta_icon %}{% include play-icon.html %}{% endif %}{{ cta_text }}</a>
+            <p class="cta-note">{{ cta_note }}</p>
+            {%- if s.kind == "download" %}
+            <p class="other-platforms">{{ d.others }}</p>
+            {%- else %}
+            <p class="other-platforms">{{ t.hero.or_get }}
+                <a href="https://play.pixeldoro.io/macos">{{ t.platforms.mac }}</a> ·
+                <a href="https://play.pixeldoro.io/ios">{{ t.platforms.iphone }}</a> ·
+                <a href="{android}">{{ t.platforms.android }}</a> ·
+                <a href="{windows}">{{ t.platforms.windows }}</a> ·
+                <a href="{linux}">{{ t.platforms.linux }}</a> ·
+                <a href="https://play.pixeldoro.io/discord-activity">{{ t.platforms.discord }}</a>
+            </p>
+            {%- endif %}
+        </div>
+
+        <div class="cta-ios">
+            <a class="store-badge" href="https://play.pixeldoro.io/ios"><img src="{{ lang.app_store_badge }}" width="{{ lang.app_store_size[0] }}" height="{{ lang.app_store_size[1] }}" alt="{{ t.hero.app_store_alt | escape }}"></a>
+            <p class="cta-note">{{ t.hero.ios_note }}</p>
+            {%- if s.kind == "download" %}
+            <p class="other-platforms">{{ d.on_computer }}</p>
+            {%- else %}
+            <p class="other-platforms">{{ t.hero.also_on }} <a href="{android}">{{ t.platforms.android }}</a> · <a href="https://play.pixeldoro.io/web-beta">{{ t.hero.laptop }}</a></p>
+            {%- endif %}
+        </div>
+
+        <div class="cta-android">
+            <a class="store-badge" href="{android}"><img src="{{ lang.google_play_badge }}" width="{% if lang.code == 'en' %}558{% else %}555{% endif %}" height="165" alt="{{ t.hero.google_play_alt | escape }}"></a>
+            <p class="cta-note">{{ t.hero.android_note }}</p>
+            {%- if s.kind == "download" %}
+            <p class="other-platforms">{{ d.on_computer }}</p>
+            {%- else %}
+            <p class="other-platforms">{{ t.hero.also_on }} <a href="https://play.pixeldoro.io/ios">{{ t.platforms.iphone }}</a> · <a href="https://play.pixeldoro.io/web-beta">{{ t.hero.laptop }}</a></p>
+            {%- endif %}
+        </div>
+        <ul class="facts">
+            {%- for f in d.facts %}
+            <li>{{ f }}</li>
+            {%- endfor %}
+        </ul>
+        <p class="ratings"><b><span>★</span> {{ t.hero.ratings.google_play }}</b> · <b><span>★</span> {{ t.hero.ratings.app_store }}</b> · <b><span>★</span> {{ t.hero.ratings.mac_app_store }}</b></p>
+    </section>
+
+    <figure class="shot">
+        <img src="/images/shots/{{ s.shot }}.webp" srcset="/images/shots/{{ s.shot }}-960.webp 960w, /images/shots/{{ s.shot }}.webp 1600w" sizes="min(92vw, 928px)" width="1600" height="900" alt="{{ d.shot_alt | escape }}">
+        <figcaption>{{ d.shot_caption }}</figcaption>
+    </figure>
+
+    <section aria-labelledby="cards-title">
+        <h2 class="section-title" id="cards-title">{{ d.cards_title }}</h2>
+        <div class="tool-grid">
+            {%- for c in d.cards %}
+            <div class="tool">
+                <img src="/images/icons/{{ s.icons[forloop.index0] }}.png" width="11" height="11" alt="">
+                <h3>{{ c.title }}</h3>
+                <p>{{ c.text }}</p>
+            </div>
+            {%- endfor %}
+        </div>
+    </section>
+
+    <section class="narrow" aria-labelledby="steps-title">
+        <h2 class="section-title" id="steps-title">{{ d.steps_title }}</h2>
+        <div class="card">
+            <ol class="steps">
+                {%- for step in d.steps %}
+                <li><strong>{{ step.title }}</strong>{{ step.text }}</li>
+                {%- endfor %}
+            </ol>
+        </div>
+    </section>
+
+    <section class="narrow" aria-labelledby="prose-title">
+        <h2 class="section-title" id="prose-title">{{ d.prose_title }}</h2>
+        <div class="card">
+            {%- for p in d.prose %}
+            <p>{{ p }}</p>
+            {%- endfor %}
+        </div>
+    </section>
+    {%- if s.quotes %}
+
+    <section class="narrow" aria-labelledby="quotes-title">
+        <h2 class="section-title" id="quotes-title">{{ d.quotes_title }}</h2>
+        <div class="review-grid">
+            {%- for q in s.quotes %}
+            <figure class="review">
+                <blockquote{% if lang.code != "en" %} lang="en"{% endif %}>{{ q.text }}</blockquote>
+                <figcaption><span aria-label="{{ t.reviews.stars | escape }}">★★★★★</span> {{ t.reviews[q.store] }}</figcaption>
+            </figure>
+            {%- endfor %}
+        </div>
+    </section>
+    {%- endif %}
+
+    <section class="faq narrow" aria-labelledby="faq-title">
+        <h2 class="section-title" id="faq-title">{{ t.guide.questions }}</h2>
+        {%- for f in d.faq %}
+        <details>
+            <summary>{{ f.q }}</summary>
+            <p>{{ f.a }}</p>
+        </details>
+        {%- endfor %}
+    </section>
+
+    <section class="narrow" aria-labelledby="outro-title">
+        <h2 class="section-title" id="outro-title">{{ t.outro.title }}</h2>
+        <div class="cta-desktop">
+            <a class="btn-play" href="{{ cta }}">{% if cta_icon %}{% include play-icon.html %}{% endif %}{{ cta_text }}</a>
+            <p class="cta-note">{{ cta_note }}</p>
+        </div>
+        <div class="cta-ios">
+            <a class="store-badge" href="https://play.pixeldoro.io/ios"><img src="{{ lang.app_store_badge }}" width="{{ lang.app_store_size[0] }}" height="{{ lang.app_store_size[1] }}" loading="lazy" alt="{{ t.hero.app_store_alt | escape }}"></a>
+            <p class="cta-note">{{ t.hero.ios_note }}</p>
+        </div>
+        <div class="cta-android">
+            <a class="store-badge" href="{android}"><img src="{{ lang.google_play_badge }}" width="{% if lang.code == 'en' %}558{% else %}555{% endif %}" height="165" loading="lazy" alt="{{ t.hero.google_play_alt | escape }}"></a>
+            <p class="cta-note">{{ t.hero.android_note }}</p>
+        </div>
+        <p class="more">{{ d.more }}</p>
+    </section>
+    </main>
+{%- endcapture -%}
+{%- comment -%} Placeholders in the text become links to this language's pages {%- endcomment -%}
+{%- assign body = body | replace: "{android}", android | replace: "{home}", lang.path -%}
+{%- assign docs = "windows,linux,mini,study-with-me,pomodoro-timer,adhd-focus-app" | split: "," -%}
+{%- for n in docs -%}
+{%- assign key = "{" | append: n | append: "}" -%}
+{%- assign href = lang.path | append: n | append: ".html" -%}
+{%- assign body = body | replace: key, href -%}
+{%- endfor -%}
+<!DOCTYPE html>
+<html lang="{{ lang.html }}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ d.title }}</title>
+    <meta name="description" content="{{ d.description | escape }}">
+    <meta name="robots" content="index, follow">
+    <meta name="apple-itunes-app" content="app-id=6501988413">
+    <link rel="canonical" href="{{ url }}">
+{%- for l in site.data.languages %}
+    <link rel="alternate" hreflang="{{ l.hreflang }}" href="https://pixeldoro.io{{ l.path }}{{ file }}">
+{%- endfor %}
+    <link rel="alternate" hreflang="x-default" href="https://pixeldoro.io/{{ file }}">
+    <link rel="icon" href="/images/favicon.ico" sizes="any">
+    <link rel="icon" type="image/png" sizes="192x192" href="/images/favicon-192.png">
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+    <link rel="preload" href="/fonts/pixeldoro.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="/guide.css">
+    <script src="/analytics.js" async></script>
+
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="{{ url }}">
+    <meta property="og:title" content="{{ d.title | escape }}">
+    <meta property="og:description" content="{{ d.description | escape }}">
+    <meta property="og:image" content="https://pixeldoro.io/images/social-preview.png">
+    <meta property="og:site_name" content="Pixeldoro">
+    <meta property="og:locale" content="{{ lang.og }}">
+{%- for l in site.data.languages %}{% if l.code != lang.code %}
+    <meta property="og:locale:alternate" content="{{ l.og }}">
+{%- endif %}{% endfor %}
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{{ d.title | escape }}">
+    <meta name="twitter:description" content="{{ d.description | escape }}">
+    <meta name="twitter:image" content="https://pixeldoro.io/images/social-preview.png">
+    <meta name="twitter:site" content="@pixeldoro">
+
+    <script type="application/ld+json">
+    {
+     "@context": "https://schema.org",
+     "@graph": [
+      {
+       "@type": "WebPage",
+       "@id": {{ url | jsonify }},
+       "url": {{ url | jsonify }},
+       "name": {{ d.title | jsonify }},
+       "description": {{ d.description | jsonify }},
+       "inLanguage": {{ lang.hreflang | jsonify }},
+       "isPartOf": {
+        "@id": "https://pixeldoro.io/#website"
+       },
+       "about": {
+        "@id": "https://pixeldoro.io/#app"
+       },
+       "primaryImageOfPage": "https://pixeldoro.io/images/shots/{{ s.shot }}.webp"
+      },
+      {
+       "@type": "BreadcrumbList",
+       "itemListElement": [
+        {
+         "@type": "ListItem",
+         "position": 1,
+         "name": "Pixeldoro",
+         "item": "https://pixeldoro.io{{ lang.path }}"
+        },
+        {
+         "@type": "ListItem",
+         "position": 2,
+         "name": {{ d.crumb | jsonify }},
+         "item": {{ url | jsonify }}
+        }
+       ]
+      },
+      {
+       "@type": "FAQPage",
+       "mainEntity": [
+        {%- for f in d.faq %}
+        {
+         "@type": "Question",
+         "name": {{ f.q | strip_html | jsonify }},
+         "acceptedAnswer": {
+          "@type": "Answer",
+          "text": {{ f.a | strip_html | jsonify }}
+         }
+        }{% unless forloop.last %},{% endunless %}
+        {%- endfor %}
+       ]
+      }
+     ]
+    }
+    </script>
+
+    <script>
+        // Same device switch as the home page: ios / android / desktop, ?device= to preview.
+        (function () {
+            var forced = new URLSearchParams(location.search).get('device');
+            var ua = navigator.userAgent;
+            var device = 'desktop';
+            if (/android/i.test(ua)) device = 'android';
+            else if (/iphone|ipad|ipod/i.test(ua) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1)) device = 'ios';
+            if (/^(ios|android|desktop)$/.test(forced)) device = forced;
+            document.documentElement.setAttribute('data-device', device);
+        })();
+    </script>
+</head>
+<body>
+    <div class="backdrop" aria-hidden="true"></div>
+
+    <p class="lang-suggest" hidden><a href="/"></a><button type="button" aria-label="{{ t.nav.suggest_close | escape }}">×</button></p>
+
+    <header>
+        <a class="home" href="{{ lang.path }}"><img src="/images/tomato-48.png" width="48" height="48" alt="">pixeldoro</a>
+        <nav aria-label="Main navigation">
+            <a class="social" href="https://play.pixeldoro.io/youtube" aria-label="youtube"><svg viewBox="0 0 14 10" width="21" height="15" aria-hidden="true"><rect x="1" y="0" width="12" height="1"/><rect x="0" y="1" width="14" height="1"/><rect x="0" y="2" width="5" height="1"/><rect x="6" y="2" width="8" height="1"/><rect x="0" y="3" width="5" height="1"/><rect x="7" y="3" width="7" height="1"/><rect x="0" y="4" width="5" height="1"/><rect x="8" y="4" width="6" height="1"/><rect x="0" y="5" width="5" height="1"/><rect x="8" y="5" width="6" height="1"/><rect x="0" y="6" width="5" height="1"/><rect x="7" y="6" width="7" height="1"/><rect x="0" y="7" width="5" height="1"/><rect x="6" y="7" width="8" height="1"/><rect x="0" y="8" width="14" height="1"/><rect x="1" y="9" width="12" height="1"/></svg></a>
+            <a class="social" href="https://play.pixeldoro.io/tiktok" aria-label="tiktok"><svg viewBox="0 0 10 10" width="15" height="15" aria-hidden="true"><rect x="5" y="0" width="1" height="1"/><rect x="5" y="1" width="2" height="1"/><rect x="5" y="2" width="4" height="1"/><rect x="5" y="3" width="1" height="1"/><rect x="8" y="3" width="2" height="1"/><rect x="5" y="4" width="1" height="1"/><rect x="2" y="5" width="4" height="1"/><rect x="1" y="6" width="5" height="1"/><rect x="0" y="7" width="6" height="1"/><rect x="0" y="8" width="5" height="1"/><rect x="1" y="9" width="3" height="1"/></svg></a>
+            <a class="social" href="https://play.pixeldoro.io/ig" aria-label="instagram"><svg viewBox="0 0 10 10" width="15" height="15" aria-hidden="true"><rect x="1" y="0" width="8" height="1"/><rect x="0" y="1" width="1" height="1"/><rect x="9" y="1" width="1" height="1"/><rect x="0" y="2" width="1" height="1"/><rect x="7" y="2" width="1" height="1"/><rect x="9" y="2" width="1" height="1"/><rect x="0" y="3" width="1" height="1"/><rect x="4" y="3" width="2" height="1"/><rect x="9" y="3" width="1" height="1"/><rect x="0" y="4" width="1" height="1"/><rect x="3" y="4" width="1" height="1"/><rect x="6" y="4" width="1" height="1"/><rect x="9" y="4" width="1" height="1"/><rect x="0" y="5" width="1" height="1"/><rect x="3" y="5" width="1" height="1"/><rect x="6" y="5" width="1" height="1"/><rect x="9" y="5" width="1" height="1"/><rect x="0" y="6" width="1" height="1"/><rect x="4" y="6" width="2" height="1"/><rect x="9" y="6" width="1" height="1"/><rect x="0" y="7" width="1" height="1"/><rect x="9" y="7" width="1" height="1"/><rect x="0" y="8" width="1" height="1"/><rect x="9" y="8" width="1" height="1"/><rect x="1" y="9" width="8" height="1"/></svg></a>
+            <a class="social" href="https://play.pixeldoro.io/twitter" aria-label="x"><svg viewBox="0 0 10 10" width="15" height="15" aria-hidden="true"><rect x="0" y="0" width="3" height="1"/><rect x="8" y="0" width="1" height="1"/><rect x="1" y="1" width="2" height="1"/><rect x="7" y="1" width="1" height="1"/><rect x="2" y="2" width="2" height="1"/><rect x="6" y="2" width="1" height="1"/><rect x="3" y="3" width="3" height="1"/><rect x="4" y="4" width="2" height="1"/><rect x="4" y="5" width="3" height="1"/><rect x="3" y="6" width="1" height="1"/><rect x="5" y="6" width="2" height="1"/><rect x="2" y="7" width="1" height="1"/><rect x="6" y="7" width="2" height="1"/><rect x="1" y="8" width="1" height="1"/><rect x="7" y="8" width="2" height="1"/><rect x="0" y="9" width="1" height="1"/><rect x="7" y="9" width="3" height="1"/></svg></a>
+            <button class="discord-btn" type="button" popovertarget="discord-pop" aria-label="{{ t.nav.discord | escape }}"><svg viewBox="0 0 14 10" aria-hidden="true"><rect x="2" y="0" width="2" height="1"/><rect x="10" y="0" width="2" height="1"/><rect x="1" y="1" width="12" height="1"/><rect x="0" y="2" width="14" height="1"/><rect x="0" y="3" width="14" height="1"/><rect x="0" y="4" width="3" height="1"/><rect x="5" y="4" width="4" height="1"/><rect x="11" y="4" width="3" height="1"/><rect x="0" y="5" width="3" height="1"/><rect x="5" y="5" width="4" height="1"/><rect x="11" y="5" width="3" height="1"/><rect x="0" y="6" width="14" height="1"/><rect x="0" y="7" width="14" height="1"/><rect x="1" y="8" width="3" height="1"/><rect x="10" y="8" width="3" height="1"/><rect x="2" y="9" width="1" height="1"/><rect x="11" y="9" width="1" height="1"/></svg></button>
+            <button class="lang-btn" type="button" popovertarget="lang-pop" aria-label="{{ t.nav.language | escape }}"><svg viewBox="0 0 11 11" aria-hidden="true"><rect x="3" y="0" width="5" height="1"/><rect x="1" y="1" width="2" height="1"/><rect x="5" y="1" width="1" height="1"/><rect x="8" y="1" width="2" height="1"/><rect x="1" y="2" width="1" height="1"/><rect x="4" y="2" width="1" height="1"/><rect x="6" y="2" width="1" height="1"/><rect x="9" y="2" width="1" height="1"/><rect x="0" y="3" width="1" height="1"/><rect x="4" y="3" width="1" height="1"/><rect x="6" y="3" width="1" height="1"/><rect x="10" y="3" width="1" height="1"/><rect x="0" y="4" width="1" height="1"/><rect x="4" y="4" width="1" height="1"/><rect x="6" y="4" width="1" height="1"/><rect x="10" y="4" width="1" height="1"/><rect x="0" y="5" width="11" height="1"/><rect x="0" y="6" width="1" height="1"/><rect x="4" y="6" width="1" height="1"/><rect x="6" y="6" width="1" height="1"/><rect x="10" y="6" width="1" height="1"/><rect x="0" y="7" width="1" height="1"/><rect x="4" y="7" width="1" height="1"/><rect x="6" y="7" width="1" height="1"/><rect x="10" y="7" width="1" height="1"/><rect x="1" y="8" width="1" height="1"/><rect x="4" y="8" width="1" height="1"/><rect x="6" y="8" width="1" height="1"/><rect x="9" y="8" width="1" height="1"/><rect x="1" y="9" width="2" height="1"/><rect x="5" y="9" width="1" height="1"/><rect x="8" y="9" width="2" height="1"/><rect x="3" y="10" width="5" height="1"/></svg><span class="lang-code">{{ lang.code }}</span></button>
+        </nav>
+    </header>
+
+{{ body }}
+
+    <div class="discord-pop" id="discord-pop" popover>
+        <img src="/images/icons/tomato.png" width="11" height="11" alt="">
+        <h2>{{ t.discord.title }}</h2>
+        <p>{{ t.discord.text }}</p>
+        <p>{{ t.discord.note }}</p>
+        <button type="button" popovertarget="discord-pop" popovertargetaction="hide">{{ t.discord.close }}</button>
+    </div>
+
+    <div class="lang-pop" id="lang-pop" popover>
+        <h2>{{ t.nav.language }}</h2>
+        {%- for l in site.data.languages %}
+        <a href="{{ l.path }}{{ file }}" hreflang="{{ l.hreflang }}" lang="{{ l.html }}"{% if l.code == lang.code %} aria-current="page"{% endif %}>{{ l.name }}</a>
+        {%- endfor %}
+    </div>
+
+    <footer>
+        <div class="footer-cols">
+            <div>
+                <h2>{{ t.footer.play }}</h2>
+                <a href="https://play.pixeldoro.io/web-beta">{{ t.footer.browser }}</a>
+                <a href="https://play.pixeldoro.io/ios">{{ t.footer.iphone_ipad }}</a>
+                <a href="https://play.pixeldoro.io/macos">{{ t.footer.mac }}</a>
+                <a href="{{ android }}">{{ t.footer.android }}</a>
+                <a href="{{ lang.path }}windows.html">{{ t.platforms.windows }}</a>
+                <a href="{{ lang.path }}linux.html">{{ t.platforms.linux }}</a>
+                <a href="https://play.pixeldoro.io/discord-activity">{{ t.footer.discord_activity }}</a>
+                <a href="{{ lang.path }}mini.html">{{ t.footer.mini }}</a>
+            </div>
+            <div>
+                <h2>{{ t.footer.community }}</h2>
+                <a href="https://play.pixeldoro.io/youtube">youtube</a>
+                <a href="https://play.pixeldoro.io/tiktok">tiktok</a>
+                <a href="https://play.pixeldoro.io/ig">instagram</a>
+                <a href="https://play.pixeldoro.io/twitter">x</a>
+                <a href="https://play.pixeldoro.io/twitch">twitch</a>
+                <button type="button" popovertarget="discord-pop">{{ t.footer.discord }}</button>
+                <a href="mailto:hello@pixeldoro.io">hello@pixeldoro.io</a>
+            </div>
+            <div>
+                <h2>{{ t.footer.guides }}</h2>
+                <a href="{{ lang.path }}study-with-me.html">{{ t.footer.study_with_me }}</a>
+                <a href="{{ lang.path }}pomodoro-timer.html">{{ t.footer.pomodoro_timer }}</a>
+                <a href="{{ lang.path }}adhd-focus-app.html">{{ t.footer.adhd_focus_app }}</a>
+            </div>
+            <div>
+                <h2>{{ t.footer.legal }}</h2>
+                <a href="/privacy.html"{{ legal }}>{{ t.footer.privacy }}</a>
+                <a href="/terms.html"{{ legal }}>{{ t.footer.terms }}</a>
+            </div>
+        </div>
+        <p class="footer-langs" aria-label="{{ t.footer.languages | escape }}">
+            {%- for l in site.data.languages %}
+            <a href="{{ l.path }}{{ file }}" hreflang="{{ l.hreflang }}" lang="{{ l.html }}"{% if l.code == lang.code %} aria-current="page"{% endif %}>{{ l.name }}</a>
+            {%- endfor %}
+        </p>
+        <p class="copyright">© 2026 Pixeldoro Labs · Sergei Andrei Postnov, IE</p>
+    </footer>
+
+{% include lang-suggest.html file=file %}
+</body>
+</html>

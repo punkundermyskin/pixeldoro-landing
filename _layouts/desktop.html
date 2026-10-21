@@ -1,0 +1,256 @@
+{%- comment -%}
+The desktop page, once per language. Text comes from _data/pages/<lang>/desktop.yml, shared strings from _data/i18n/<lang>.yml.
+{%- endcomment -%}
+{%- assign lang = site.data.languages | where: "code", page.lang | first -%}
+{%- assign t = site.data.i18n[page.lang] -%}
+{%- assign d = site.data.pages[page.lang].desktop.text -%}
+{%- if lang.code == "en" %}{% assign hl = "" %}{% else %}{% assign hl = "?hl=" | append: lang.hl %}{% endif -%}
+<!DOCTYPE html>
+<html lang="{{ lang.html }}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ d.title }}</title>
+    <meta name="robots" content="noindex, follow">
+{% include page-lang.html file="desktop.html" redirect=true %}
+    <link rel="icon" href="/images/favicon.ico" sizes="any">
+    <link rel="icon" type="image/png" sizes="192x192" href="/images/favicon-192.png">
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+    <link rel="preload" href="/fonts/pixeldoro.woff2" as="font" type="font/woff2" crossorigin>
+    <style>
+        @font-face {
+            font-family: 'Pixeldoro';
+            src: url('/fonts/pixeldoro.woff2') format('woff2');
+            font-display: swap;
+        }
+
+        :root {
+            --orange: #edb83f;
+            --white: #ffffff;
+            --dark: #212b2c;
+            --on-bg: #ffffff;
+            --on-bg-muted: rgba(255, 255, 255, 0.82);
+            --pixel: 'Pixeldoro', 'Courier New', monospace;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--pixel);
+            background-color: #060f1a;
+            color: var(--on-bg);
+            text-shadow: 0 2px 0 rgba(0, 0, 0, 0.35);
+            line-height: 1.5;
+            -webkit-font-smoothing: none;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 40px 16px;
+            text-align: center;
+        }
+
+        a {
+            color: inherit;
+        }
+
+        /* The game's Urban_Night1 scene behind the page, same as the home page */
+        .backdrop {
+            position: fixed;
+            z-index: -1;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            height: 100lvh;
+            background: #060f1a url('/images/bg-urban-night.webp') center / cover no-repeat;
+            image-rendering: pixelated;
+        }
+
+        .backdrop::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(rgba(33, 43, 44, 0.35), rgba(33, 43, 44, 0.6));
+        }
+
+        /* No rubber-band bounce: it pulls the page off the fixed backdrop */
+        html {
+            overscroll-behavior: none;
+        }
+
+        .headline {
+            max-width: 760px;
+            font-size: 35px;
+            font-weight: normal;
+            line-height: 1.2;
+            margin-bottom: 24px;
+        }
+
+        .headline-icon {
+            width: 40px;
+            height: 40px;
+            vertical-align: -6px;
+            margin-left: 10px;
+            image-rendering: pixelated;
+        }
+
+        /* Device mockup, floats on the scene */
+        .screenshot {
+            width: min(100%, 520px);
+            margin-bottom: 24px;
+        }
+
+        .screenshot img {
+            width: 100%;
+            height: auto;
+            display: block;
+            filter: drop-shadow(0 10px 24px rgba(0, 0, 0, 0.45));
+        }
+
+        .reasons {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+            width: min(100%, 760px);
+            margin-top: 32px;
+        }
+
+        .reason {
+            padding: 14px 16px;
+            border: 3px solid var(--white);
+            border-radius: 14px;
+            background: rgba(33, 43, 44, 0.75);
+            box-shadow: 0 4px 0 rgba(0, 0, 0, 0.35);
+        }
+
+        .reason-title {
+            font-size: 20px;
+            margin-bottom: 6px;
+        }
+
+        .reason-desc {
+            font-size: 15px;
+            color: var(--on-bg-muted);
+        }
+
+        .reason.highlight {
+            border-color: var(--orange);
+        }
+
+        .reason.highlight .reason-title {
+            color: var(--orange);
+        }
+
+        /* Platform buttons, pixel style */
+        .downloads {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .dl-btn {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px 20px;
+            border: 3px solid var(--white);
+            border-radius: 12px;
+            background: rgba(33, 43, 44, 0.75);
+            box-shadow: 0 4px 0 rgba(0, 0, 0, 0.35);
+            font-size: 20px;
+            text-decoration: none;
+            transition: transform 0.1s ease, box-shadow 0.1s ease;
+        }
+
+        .dl-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 0 rgba(0, 0, 0, 0.35);
+        }
+
+        .dl-btn:active {
+            transform: translateY(3px);
+            box-shadow: 0 1px 0 rgba(0, 0, 0, 0.35);
+        }
+
+        .dl-icon {
+            width: 20px;
+            height: 20px;
+            flex-shrink: 0;
+            filter: brightness(0) invert(1);
+        }
+
+        @media (max-width: 700px) {
+            body {
+                justify-content: flex-start;
+            }
+
+            .headline {
+                font-size: 30px;
+            }
+
+            .headline-icon {
+                width: 30px;
+                height: 30px;
+                vertical-align: -4px;
+            }
+
+            .reasons {
+                grid-template-columns: 1fr;
+                gap: 12px;
+                margin-bottom: 28px;
+            }
+
+            .downloads {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                width: 100%;
+            }
+
+            .dl-btn {
+                justify-content: center;
+                font-size: 15px;
+                padding: 10px 12px;
+            }
+        }
+    </style>
+    <script src="/analytics.js" async></script>
+</head>
+<body>
+    <div class="backdrop" aria-hidden="true"></div>
+
+    <h1 class="headline">{{ d.headline }}<img src="/images/tomato-48.png" width="48" height="48" alt="" class="headline-icon"></h1>
+
+    <div class="screenshot">
+        <img src="/images/laptop.webp" width="1400" height="1151" alt="{{ d.shot_alt | escape }}">
+    </div>
+
+    <div class="downloads">
+        <a href="https://play.pixeldoro.io/dl-mac" class="dl-btn"><img src="/images/apple.svg" alt="" class="dl-icon">macOS</a>
+        <a href="https://github.com/pixeldoro/desktop/releases/latest/download/pixeldoro-setup.exe" class="dl-btn"><img src="/images/windows.svg" alt="" class="dl-icon">Windows</a>
+        <a href="https://github.com/pixeldoro/desktop/releases/latest/download/pixeldoro-linux.tar.gz" class="dl-btn"><img src="/images/linux.svg" alt="" class="dl-icon">Linux</a>
+        <a href="https://play.pixeldoro.io/dl-web" class="dl-btn"><img src="/images/web.svg" alt="" class="dl-icon">{{ d.browser }}</a>
+    </div>
+
+    <div class="reasons">
+        <div class="reason">
+            <div class="reason-title">{{ d.reasons[0].title }}</div>
+            <div class="reason-desc">{{ d.reasons[0].text }}</div>
+        </div>
+        <div class="reason">
+            <div class="reason-title">{{ d.reasons[1].title }}</div>
+            <div class="reason-desc">{{ d.reasons[1].text }}</div>
+        </div>
+        <div class="reason highlight">
+            <div class="reason-title">{{ d.reasons[2].title }}</div>
+            <div class="reason-desc">{{ d.reasons[2].text }}</div>
+        </div>
+    </div>
+</body>
+</html>

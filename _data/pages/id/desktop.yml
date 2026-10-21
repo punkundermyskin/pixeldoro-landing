@@ -1,0 +1,13 @@
+# Halaman desktop, bahasa Indonesia. Key mengikuti text di en/desktop.yml.
+text:
+  title: "Pixeldoro di Desktop"
+  headline: "sekarang bisa belajar di laptop juga"
+  shot_alt: "Pixeldoro di laptop"
+  reasons:
+    - title: "layar lebih besar, fokus lebih dalam"
+      text: "dunia pixel layar penuh, tanpa gangguan hp"
+    - title: "semuanya tersinkron"
+      text: "koin, progres, karakter, semuanya ada"
+    - title: "100 koin di pomo pertamamu"
+      text: "cukup dengan nyobain"
+  browser: "Browser"

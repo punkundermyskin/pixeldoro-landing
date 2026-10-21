@@ -1,0 +1,37 @@
+---
+layout: null
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+{%- for page in site.data.languages %}
+  <url>
+    <loc>https://pixeldoro.io{{ page.path }}</loc>
+    <lastmod>2026-10-22</lastmod>
+    {%- for l in site.data.languages %}
+    <xhtml:link rel="alternate" hreflang="{{ l.hreflang }}" href="https://pixeldoro.io{{ l.path }}"/>
+    {%- endfor %}
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pixeldoro.io/"/>
+  </url>
+{%- endfor %}
+  <url>
+    <loc>https://pixeldoro.io/privacy.html</loc>
+    <lastmod>2026-10-22</lastmod>
+  </url>
+  <url>
+    <loc>https://pixeldoro.io/terms.html</loc>
+    <lastmod>2026-10-22</lastmod>
+  </url>
+{%- assign docs = "mini.html,study-with-me.html,pomodoro-timer.html,adhd-focus-app.html,windows.html,linux.html" | split: "," %}
+{%- for doc in docs %}
+{%- for page in site.data.languages %}
+  <url>
+    <loc>https://pixeldoro.io{{ page.path }}{{ doc }}</loc>
+    <lastmod>2026-10-22</lastmod>
+    {%- for l in site.data.languages %}
+    <xhtml:link rel="alternate" hreflang="{{ l.hreflang }}" href="https://pixeldoro.io{{ l.path }}{{ doc }}"/>
+    {%- endfor %}
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pixeldoro.io/{{ doc }}"/>
+  </url>
+{%- endfor %}
+{%- endfor %}
+</urlset>

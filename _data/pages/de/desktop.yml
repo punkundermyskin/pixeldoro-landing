@@ -1,0 +1,13 @@
+# Die desktop-Seite, Deutsch. Spiegelt die Schlüssel unter "text" aus en/desktop.yml.
+text:
+  title: "Pixeldoro auf dem Desktop"
+  headline: "lern jetzt auch auf dem laptop"
+  shot_alt: "Pixeldoro auf einem Laptop"
+  reasons:
+    - title: "größerer bildschirm, tieferer fokus"
+      text: "pixel-welt im vollbild, keine ablenkung vom handy"
+    - title: "alles wird synchronisiert"
+      text: "münzen, fortschritt, figur, alles ist da"
+    - title: "100 münzen für deinen ersten pomo"
+      text: "einfach fürs ausprobieren"
+  browser: "Browser"

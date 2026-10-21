@@ -1,0 +1,7 @@
+    <p class="footer-langs" aria-label="{{ site.data.i18n[page.lang].footer.languages | escape }}">
+        {%- for l in site.data.languages %}
+        <a href="{{ l.path }}{{ include.file }}" hreflang="{{ l.hreflang }}" lang="{{ l.html }}"{% if l.code == page.lang %} aria-current="page"{% endif %}>{{ l.name }}</a>
+        {%- endfor %}
+    </p>
+
+{% include lang-suggest.html file=include.file %}

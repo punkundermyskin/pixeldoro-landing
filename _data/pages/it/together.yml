@@ -1,0 +1,20 @@
+# La pagina together, italiano. Rispecchia le chiavi "text" di en/together.yml.
+text:
+  title: "un amico ti invita su pixeldoro"
+  title_from: "{name} ti invita su pixeldoro"
+  description: "qualcuno vuole darci dentro insieme a te. stesso mondo in pixel, stesso timer, focus in tempo reale con gente vera."
+  share: "stesso mondo in pixel. stesso timer. lofi. vieni a darci dentro insieme."
+  pill: "hai un invito"
+  friend: "un tuo amico"
+  headline: "{name} vuole darci dentro insieme a te"
+  subline: "è lì dentro proprio ora, a sgobbare in solitaria. vai a fargli un po' di compagnia."
+  shot_alt: "Lista degli amici nella community: l'avatar di ogni amico, su cosa si sta concentrando, in quale stanza si trova e quanti pomodori ha fatto, accanto a un caffè pieno di gente che studia"
+  reasons:
+    - title: "vi vedrete davvero"
+      text: "il suo personaggino che va in giro e sgobba. proprio lì, accanto al tuo."
+    - title: "focus in sincronia"
+      text: "avvia un pomodoro e dacci dentro. niente call, niente pressione. vi tenete d'occhio a vicenda, ma in versione cozy."
+    - title: "100 monete al tuo primo pomo"
+      text: "solo perché ci sei"
+  cta_label: "prendilo su quello che hai 👇"
+  what: "aspetta, ma cos'è? <a href=\"{home}\">pixeldoro, spiegato →</a>"

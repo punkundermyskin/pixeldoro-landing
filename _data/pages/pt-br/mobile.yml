@@ -1,0 +1,12 @@
+# A página mobile, português do Brasil.
+text:
+  title: "Pixeldoro no celular"
+  headline: "agora dá pra estudar no celular também"
+  shot_alt: "Pixeldoro num celular: o campo cheio de gente estudando, com o botão de iniciar o timer no topo"
+  reasons:
+    - title: "estude em qualquer lugar"
+      text: "ônibus, café, biblioteca, cama"
+    - title: "tudo sincroniza"
+      text: "mesma conta, mesmas moedas, mesmo mundo"
+    - title: "100 moedas no seu primeiro pomo"
+      text: "só por testar"

@@ -1,0 +1,13 @@
+# desktop sayfası, Türkçe.
+text:
+  title: "Masaüstünde Pixeldoro"
+  headline: "artık dizüstünde de ders çalış"
+  shot_alt: "Dizüstü bilgisayarda Pixeldoro"
+  reasons:
+    - title: "büyük ekran, derin odak"
+      text: "tam ekran piksel dünya, telefon dikkatini dağıtmaz"
+    - title: "her şey senkronize"
+      text: "jetonlar, ilerleme, karakter, hepsi orada"
+    - title: "ilk pomona 100 jeton"
+      text: "sırf denediğin için"
+  browser: "Tarayıcı"
