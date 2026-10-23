@@ -4,7 +4,7 @@
 meta:
   title: "Pixeldoro: Ders Çalışma için Cozy Pomodoro Zamanlayıcı"
   description: "Cozy piksel dünyada ücretsiz pomodoro zamanlayıcı. Gerçek insanlarla ders çalış, lofi dinle. DEHB dostu odaklanma. iPhone, Mac, Android, PC, web."
-  share: "Pixeldoro, cozy bir piksel art dünyanın içinde gerçek insanların yanında ders çalıştığın ücretsiz bir pomodoro zamanlayıcı."
+  share: "Pixeldoro, lofi radyosu, evcil hayvanları ve dekore edebileceğin bir odasıyla cozy bir piksel art dünyada ücretsiz bir pomodoro zamanlayıcı."
 
 nav:
   online: "{n} kişi çevrimiçi"
@@ -46,7 +46,7 @@ hero:
     friends:
       caption: "arkadaşlarının neye ve nerede odaklandığını gör"
       alt: "Topluluk panelindeki arkadaş listesi: her arkadaşın avatarı, neye odaklandığı, hangi odada olduğu ve pomodoro sayısı; yanında ders çalışan insanlarla dolu bir kafe"
-  tagline: "gerçek insanlarla ders çalıştığın, odaklandığın ve takıldığın sıcacık bir piksel dünya."
+  tagline: "arkadaşlarınla ders çalıştığın, odaklandığın ve takıldığın sıcacık bir piksel dünya."
   play: "hemen oyna"
   browser_note: "ücretsiz · tarayıcında çalışır"
   or_get: "ya da uygulamayı indir"

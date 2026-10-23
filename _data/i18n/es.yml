@@ -4,7 +4,7 @@
 meta:
   title: "Pixeldoro: temporizador pomodoro para estudiar con amigos"
   description: "Temporizador pomodoro gratis en un mundo cozy de pixel art. Estudia con personas reales, escucha radio lofi y mejora tu concentración, también con TDAH."
-  share: "Pixeldoro es un temporizador pomodoro gratis dentro de un mundo acogedor de pixel art donde estudias junto a personas reales."
+  share: "Pixeldoro es un temporizador pomodoro gratis dentro de un mundo acogedor de pixel art, con radio lofi, mascotas y un cuarto para decorar."
 
 nav:
   online: "{n} personas online"
@@ -46,7 +46,7 @@ hero:
     friends:
       caption: "mira en qué se están enfocando tus amigos, y dónde"
       alt: "Lista de amigos en la comunidad: el avatar de cada amigo, en qué se está enfocando, en qué sala está y su número de pomodoros, junto a un café lleno de gente estudiando"
-  tagline: "un mundo pixel acogedor donde estudias, te concentras y pasas el rato con personas reales."
+  tagline: "un mundo pixel acogedor donde estudias, te concentras y pasas el rato con amigos."
   play: "jugar ahora"
   browser_note: "gratis · funciona en tu navegador"
   or_get: "o descárgalo para"

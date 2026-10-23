@@ -4,7 +4,7 @@
 meta:
   title: "Pixeldoro: timer pomodoro cozy per studiare con gli amici"
   description: "Timer pomodoro gratis in un mondo cozy in pixel art. Studia accanto a persone vere, ascolta la radio lofi e ritrova la concentrazione, anche con l'ADHD."
-  share: "Pixeldoro è un timer pomodoro gratuito dentro un mondo cozy in pixel art, dove studi accanto a persone vere."
+  share: "Pixeldoro è un timer pomodoro gratuito dentro un mondo cozy in pixel art, con radio lofi, animali e una stanza da arredare."
 
 nav:
   online: "{n} persone online"
@@ -46,7 +46,7 @@ hero:
     friends:
       caption: "guarda su cosa si concentrano i tuoi amici, e dove"
       alt: "Lista degli amici nella community: l'avatar di ogni amico, su cosa si sta concentrando, in quale stanza si trova e quanti pomodori ha fatto, accanto a un caffè pieno di gente che studia"
-  tagline: "un mondo cozy in pixel art dove studi, ti concentri e passi il tempo con persone vere."
+  tagline: "un mondo cozy in pixel art dove studi, ti concentri e passi il tempo con gli amici."
   play: "gioca ora"
   browser_note: "gratis · funziona nel browser"
   or_get: "oppure scaricalo per"

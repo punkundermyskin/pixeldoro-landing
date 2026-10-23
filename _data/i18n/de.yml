@@ -4,7 +4,7 @@
 meta:
   title: "Pixeldoro: cozy Pomodoro Timer & Lerntimer mit Freunden"
   description: "Kostenloser Pomodoro Timer in einer cozy Pixel-Welt: Lernen neben echten Menschen, konzentrieren mit Lofi-Radio, Münzen sammeln. Auch für ADHS-Köpfe."
-  share: "Pixeldoro ist ein kostenloser Pomodoro-Timer in einer gemütlichen Pixel-Art-Welt, in der du neben echten Menschen lernst."
+  share: "Pixeldoro ist ein kostenloser Pomodoro-Timer in einer gemütlichen Pixel-Art-Welt, mit Lofi-Radio, Haustieren und einem Zimmer zum Einrichten."
 
 nav:
   online: "{n} leute online"
@@ -46,7 +46,7 @@ hero:
     friends:
       caption: "sieh, worauf sich deine freunde gerade fokussieren und wo"
       alt: "Freundesliste im Treffpunkt: der Avatar jedes Freundes, worauf er sich gerade fokussiert, in welchem Raum er ist und seine Pomodoro-Zahl, daneben ein Café voller lernender Leute"
-  tagline: "eine gemütliche pixel-welt, in der du mit echten menschen lernst, dich fokussierst und abhängst."
+  tagline: "eine gemütliche pixel-welt, in der du mit freunden lernst, dich fokussierst und abhängst."
   play: "jetzt spielen"
   browser_note: "kostenlos · läuft im browser"
   or_get: "oder hol es dir für"

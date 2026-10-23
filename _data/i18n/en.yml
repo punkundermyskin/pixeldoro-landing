@@ -4,7 +4,7 @@
 meta:
   title: "Pixeldoro: a cozy pixel pomodoro timer to study with friends"
   description: "Free pomodoro timer in a cozy pixel art world. Study next to real people, play lofi radio, earn coins, decorate your room. iPhone, Mac, Android, PC, web."
-  share: "Pixeldoro is a free pomodoro timer inside a cozy pixel art world where you study next to real people."
+  share: "Pixeldoro is a free pomodoro timer inside a cozy pixel art world, with lofi radio, pets and a room to decorate."
 
 nav:
   online: "{n} people online"
@@ -46,7 +46,7 @@ hero:
     friends:
       caption: "see what your friends are focusing on, and where"
       alt: "Social hub friends list: each friend's avatar, what they're focusing on, which room they're in and their pomodoro count, next to a cafe full of people studying"
-  tagline: "a cozy pixel world where you study, focus and hang out with real people."
+  tagline: "a cozy pixel world where you study, focus and hang out with friends."
   play: "play now"
   browser_note: "free · runs in your browser"
   or_get: "or get it for"

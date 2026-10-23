@@ -4,7 +4,7 @@
 meta:
   title: "Pixeldoro: minuteur pomodoro cosy pour étudier entre amis"
   description: "Minuteur pomodoro gratuit dans un monde pixel art cosy. Étudie avec de vrais joueurs, radio lofi, concentration même avec un TDAH. Mobile, PC et web."
-  share: "Pixeldoro est un minuteur pomodoro gratuit dans un monde cosy en pixel art, où tu étudies à côté de vraies personnes."
+  share: "Pixeldoro est un minuteur pomodoro gratuit dans un monde cosy en pixel art, avec une radio lofi, des animaux et une chambre à décorer."
 
 nav:
   online: "{n} personnes en ligne"
@@ -46,7 +46,7 @@ hero:
     friends:
       caption: "vois sur quoi tes amis se concentrent, et où"
       alt: "Liste d'amis de l'espace communauté: l'avatar de chaque ami, ce sur quoi il se concentre, la salle où il se trouve et son nombre de pomodoros, à côté d'un café plein de gens qui étudient"
-  tagline: "un monde pixel cosy où tu étudies, te concentres et traînes avec de vraies personnes."
+  tagline: "un monde pixel cosy où tu étudies, te concentres et traînes avec tes potes."
   play: "jouer"
   browser_note: "gratuit · dans ton navigateur"
   or_get: "ou installe-le sur"

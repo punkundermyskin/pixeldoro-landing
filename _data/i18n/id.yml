@@ -4,7 +4,7 @@
 meta:
   title: "Pixeldoro: Timer Pomodoro Cozy untuk Fokus Belajar Bareng"
   description: "Timer pomodoro gratis di dunia pixel art yang cozy. Fokus belajar bareng orang sungguhan, radio lofi, koin, dan kamar sendiri. Cocok untuk ADHD."
-  share: "Pixeldoro adalah timer pomodoro gratis di dalam dunia pixel art yang cozy, tempat kamu belajar bareng orang sungguhan."
+  share: "Pixeldoro adalah timer pomodoro gratis di dalam dunia pixel art yang cozy, lengkap dengan radio lofi, hewan peliharaan, dan kamar untuk didekorasi."
 
 nav:
   online: "{n} orang online"
@@ -46,7 +46,7 @@ hero:
     friends:
       caption: "lihat temanmu lagi fokus ke apa, dan di mana"
       alt: "Daftar teman di hub sosial: avatar tiap teman, apa yang sedang mereka fokuskan, ruangan tempat mereka berada, dan jumlah pomodoronya, di samping kafe yang penuh orang belajar"
-  tagline: "dunia pixel yang cozy, tempat kamu belajar, fokus, dan nongkrong bareng orang sungguhan."
+  tagline: "dunia pixel yang cozy, tempat kamu belajar, fokus, dan nongkrong bareng teman."
   play: "main sekarang"
   browser_note: "gratis · langsung di browser"
   or_get: "atau download untuk"
