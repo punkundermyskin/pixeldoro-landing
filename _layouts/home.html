@@ -34,7 +34,7 @@ The home page, once per language. Text comes from _data/i18n/<page.lang>.yml, th
     <meta property="og:url" content="{{ url }}">
     <meta property="og:title" content="{{ t.meta.title | escape }}">
     <meta property="og:description" content="{{ t.meta.share | escape }}">
-    <meta property="og:image" content="https://pixeldoro.io/images/social-preview.png">
+    <meta property="og:image" content="https://pixeldoro.io/images/social-preview.jpg">
     <meta property="og:site_name" content="Pixeldoro">
     <meta property="og:locale" content="{{ lang.og }}">
 {%- for l in site.data.languages %}{% if l.code != lang.code %}
@@ -46,7 +46,7 @@ The home page, once per language. Text comes from _data/i18n/<page.lang>.yml, th
     <meta name="twitter:url" content="{{ url }}">
     <meta name="twitter:title" content="{{ t.meta.title | escape }}">
     <meta name="twitter:description" content="{{ t.meta.share | escape }}">
-    <meta name="twitter:image" content="https://pixeldoro.io/images/social-preview.png">
+    <meta name="twitter:image" content="https://pixeldoro.io/images/social-preview.jpg">
     <meta name="twitter:site" content="@pixeldoro">
 
     <script type="application/ld+json">
@@ -102,7 +102,7 @@ The home page, once per language. Text comes from _data/i18n/<page.lang>.yml, th
        "applicationCategory": "BusinessApplication",
        "applicationSubCategory": "Productivity",
        "operatingSystem": "iOS, iPadOS, macOS, Android, Windows, Linux, Web",
-       "image": "https://pixeldoro.io/images/social-preview.png",
+       "image": "https://pixeldoro.io/images/social-preview.jpg",
        "screenshot": "https://pixeldoro.io/images/shots/countryside.webp",
        "inLanguage": [{% for l in site.data.languages %}{{ l.hreflang | jsonify }}{% unless forloop.last %}, {% endunless %}{% endfor %}],
        "installUrl": [
