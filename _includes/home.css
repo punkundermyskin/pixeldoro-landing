@@ -785,8 +785,8 @@ body:has(> .lang-suggest:not([hidden])) .slider {
 }
 
 .discord-btn svg {
-    width: 21px;
-    height: 15px;
+    width: 28px;
+    height: 20px;
     fill: currentColor;
     shape-rendering: crispEdges;
 }
@@ -1000,8 +1000,8 @@ footer a:hover,
 }
 
 .lang-btn svg {
-    width: 15px;
-    height: 15px;
+    width: 22px;
+    height: 22px;
     fill: currentColor;
     shape-rendering: crispEdges;
 }
