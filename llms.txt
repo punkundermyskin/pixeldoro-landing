@@ -44,4 +44,4 @@ Pixeldoro Mini is a separate, minimal app for iPhone and Android: just a timer, 
 - [Privacy policy](https://pixeldoro.io/privacy.html)
 - [Terms of use](https://pixeldoro.io/terms.html)
 - Contact: hello@pixeldoro.io
-- Community: [YouTube](https://www.youtube.com/@pixeldoro), [TikTok](https://www.tiktok.com/@pixeldoro), [Instagram](https://www.instagram.com/pixeldoro/), [X](https://x.com/pixeldoro), [Twitch](https://www.twitch.tv/pixeldoro), [Reddit](https://www.reddit.com/r/pixeldoro/). The Discord server is private: an invite appears in the app after 50 pomodoros.
+- Community: [YouTube](https://www.youtube.com/@pixeldoro), [TikTok](https://www.tiktok.com/@pixeldoro), [Instagram](https://www.instagram.com/pixeldoro/), [X](https://x.com/pixeldoro), [Twitch](https://www.twitch.tv/pixeldoro), [Reddit](https://www.reddit.com/r/pixeldoro/). The Discord server is private: an invite appears in the app after 30 pomodoros.
